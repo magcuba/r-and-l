@@ -65,7 +65,7 @@ const recommendations = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       {/* Hero Section */}
       <section className="border-b bg-muted/30">
         <div className="container max-w-7xl mx-auto px-4 py-16">
@@ -160,6 +160,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
