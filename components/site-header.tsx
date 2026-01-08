@@ -2,23 +2,28 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Instagram, Facebook, Youtube, Globe } from "lucide-react"
+import { Instagram, Facebook, Youtube, Globe, Menu, X } from "lucide-react"
 import { useState } from "react"
 
 export function SiteHeader() {
   const [language, setLanguage] = useState<"en" | "es">("en")
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "en" ? "es" : "en"))
+  }
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((prev) => !prev)
   }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Top Bar */}
       <div className="border-b bg-muted/30">
-        <div className="container max-w-7xl mx-auto flex h-10 items-center justify-between text-sm">
+        <div className="container max-w-7xl mx-auto flex h-10 items-center justify-between text-sm px-4">
           <div className="flex items-center gap-4">
-            <span className="text-muted-foreground">{"Follow us:"}</span>
+            <span className="text-muted-foreground hidden sm:inline">{"Follow us:"}</span>
             <div className="flex gap-2">
               <Link
                 href="https://instagram.com"
@@ -64,7 +69,7 @@ export function SiteHeader() {
       </div>
 
       {/* Main Header */}
-      <div className="container max-w-7xl mx-auto">
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
@@ -76,7 +81,7 @@ export function SiteHeader() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
               {"Home"}
             </Link>
@@ -90,8 +95,47 @@ export function SiteHeader() {
               {"Store Hours & Location"}
             </Link>
           </nav>
+
+          <Button variant="ghost" size="icon" className="lg:hidden" onClick={toggleMobileMenu} aria-label="Toggle menu">
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
         </div>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t bg-background">
+          <nav className="container max-w-7xl mx-auto px-4 py-4 flex flex-col gap-4">
+            <Link
+              href="/"
+              className="text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {"Home"}
+            </Link>
+            <Link
+              href="/shop"
+              className="text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {"Shop By Brand"}
+            </Link>
+            <Link
+              href="/blog"
+              className="text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {"Blog"}
+            </Link>
+            <Link
+              href="/store"
+              className="text-base font-medium hover:text-primary transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {"Store Hours & Location"}
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
