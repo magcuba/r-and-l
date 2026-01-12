@@ -73,14 +73,7 @@ export function SiteHeader() {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/images/logo.png"
-              alt="R&L Imports Logo"
-              width={120}
-              height={60}
-              className="h-14 w-auto"
-              priority
-            />
+            <Image src="/images/logo.png" alt="R&L Logo" width={140} height={70} className="h-16 w-auto" priority />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
