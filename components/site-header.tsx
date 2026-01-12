@@ -71,11 +71,28 @@ export function SiteHeader() {
 
       {/* Main Header */}
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image src="/images/logo.png" alt="R&L Logo" width={140} height={70} className="h-16 w-auto" priority />
+        <div className="flex h-20 items-center justify-between lg:justify-between">
+          {/* Hamburger menu on left for mobile */}
+          <Button variant="ghost" size="icon" className="lg:hidden" onClick={toggleMobileMenu} aria-label="Toggle menu">
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+
+          {/* Logo - centered on mobile, left-aligned on desktop */}
+          <Link
+            href="/"
+            className="flex items-center space-x-2 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="R&L Logo"
+              width={240}
+              height={120}
+              className="h-[88px] w-auto lg:h-16"
+              priority
+            />
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
             <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
               {"Home"}
@@ -91,9 +108,8 @@ export function SiteHeader() {
             </Link>
           </nav>
 
-          <Button variant="ghost" size="icon" className="lg:hidden" onClick={toggleMobileMenu} aria-label="Toggle menu">
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {/* Placeholder for layout balance on mobile */}
+          <div className="w-10 lg:hidden" />
         </div>
       </div>
 

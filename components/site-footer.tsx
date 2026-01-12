@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Instagram, Facebook, Youtube } from "lucide-react"
 
 export function SiteFooter() {
@@ -8,13 +9,7 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
-                {"R&L"}
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold leading-tight">{"R&L"}</span>
-                <span className="text-xs text-muted-foreground leading-tight">{"Car Care Products"}</span>
-              </div>
+              <Image src="/images/logo.png" alt="R&L Logo" width={100} height={50} className="h-12 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground text-pretty">
               {"Your trusted source for premium car wash and detailing products."}
