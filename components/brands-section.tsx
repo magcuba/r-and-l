@@ -1,17 +1,18 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useLanguage } from "@/components/language-provider"
 
 const brands = [
-  { name: "Meguiar's", logo: "/meguiars-logo.jpg" },
-  { name: "Chemical Guys", logo: "/chemical-guys-logo.jpg" },
-  { name: "Turtle Wax", logo: "/turtle-wax-logo.jpg" },
-  { name: "Mothers", logo: "/mothers-car-care-logo.jpg" },
-  { name: "3M", logo: "/3m-automotive-logo.jpg" },
-  { name: "Griot's Garage", logo: "/griots-garage-logo.jpg" },
+  { name: "P&S", logo: "/ps-logo.png" },
+  { name: "Koch-Chemie", logo: "/koch-chemie-logo.png" },
+  { name: "FalconPro", logo: "/falconpro-logo.png" },
+  { name: "Lake Country", logo: "/lake-country-logo.png" },
 ]
 
+
 export function BrandsSection() {
+  const { t } = useLanguage()
   const scrollRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)
 
@@ -41,11 +42,9 @@ export function BrandsSection() {
       <div className="container max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-balance">
-            {"Trusted Brands"}
+            {t("brands_title")}
           </h2>
-          <p className="text-muted-foreground text-lg max-w-[800px] mx-auto text-pretty">
-            {"We carry premium products from the industry's most respected brands"}
-          </p>
+          <p className="text-muted-foreground text-lg max-w-[800px] mx-auto text-pretty">{t("brands_subtitle")}</p>
         </div>
 
         <div

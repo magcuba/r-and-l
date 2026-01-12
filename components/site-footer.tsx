@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Instagram, Facebook, Youtube } from "lucide-react"
+import { useLanguage } from "@/components/language-provider"
 
 export function SiteFooter() {
+  const { t } = useLanguage()
+
   return (
     <footer className="w-full border-t bg-muted/30">
       <div className="container max-w-7xl mx-auto py-12 md:py-16">
@@ -11,52 +16,50 @@ export function SiteFooter() {
             <div className="flex items-center space-x-2">
               <Image src="/images/logo.png" alt="R&L Logo" width={100} height={50} className="h-12 w-auto" />
             </div>
-            <p className="text-sm text-muted-foreground text-pretty">
-              {"Your trusted source for premium car wash and detailing products."}
-            </p>
+            <p className="text-sm text-muted-foreground text-pretty">{t("footer_tagline")}</p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold">{"Quick Links"}</h3>
+            <h3 className="text-sm font-semibold">{t("footer_quick_links")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {"Home"}
+                  {t("home")}
                 </Link>
               </li>
               <li>
                 <Link href="/shop" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {"Shop By Brand"}
+                  {t("shop_by_brand")}
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {"Blog"}
+                  {t("blog")}
                 </Link>
               </li>
               <li>
                 <Link href="/store" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {"Store Hours & Location"}
+                  {t("store_hours_location")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold">{"Contact"}</h3>
+            <h3 className="text-sm font-semibold">{t("footer_contact")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>{"8009 Benjamin Road"}</li>
-              <li>{"Tampa, FL 33634"}</li>
+              <li>{t("footer_address_line_1")}</li>
+              <li>{t("footer_address_line_2")}</li>
               <li>
-                <a href="tel:813-819-7900" className="hover:text-foreground transition-colors">
-                  {"813-819-7900"}
+                <a href="tel:8136029576" className="hover:text-foreground transition-colors">
+                  813-602-9576
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold">{"Follow Us"}</h3>
+            <h3 className="text-sm font-semibold">{t("footer_follow_us")}</h3>
             <div className="flex gap-4">
               <Link
                 href="https://instagram.com"
@@ -66,6 +69,7 @@ export function SiteFooter() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
+
               <Link
                 href="https://tiktok.com"
                 target="_blank"
@@ -76,6 +80,7 @@ export function SiteFooter() {
                 </svg>
                 <span className="sr-only">TikTok</span>
               </Link>
+
               <Link
                 href="https://facebook.com"
                 target="_blank"
@@ -84,6 +89,7 @@ export function SiteFooter() {
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
+
               <Link
                 href="https://youtube.com"
                 target="_blank"
@@ -97,7 +103,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>{"© 2025 R&L Car Care Products. All rights reserved."}</p>
+          <p>{t("footer_copyright")}</p>
         </div>
       </div>
     </footer>
