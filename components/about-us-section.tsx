@@ -13,9 +13,8 @@ export function AboutUsSection() {
 
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              We are a specialized distributor of professional-grade products for automotive washing and detailing, as
-              well as cleaning solutions for restaurants, offices, and residential environments. Our mission is to
-              provide high-quality, dependable products at accessible prices for professionals and enthusiasts alike.
+              At R&L, we believe you should have access to the best detailing brands at the best prices — all in one place. Whether you're a car enthusiast or a professional detailer, we have the products to elevate your car-washing experience and make your vehicle look brand new, every single time.
+              We are proud distributors of top national and international detailing brands such as P&S, Koch-Chemie, FalconPro, Lake Country and many more. With a carefully curated selection and a commitment to quality, R&L is your trusted source for all car care.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
