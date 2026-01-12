@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Instagram, Facebook, Youtube, Globe, Menu, X } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 export function SiteHeader() {
   const [language, setLanguage] = useState<"en" | "es">("en")
@@ -72,13 +73,14 @@ export function SiteHeader() {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
-              {"R&L"}
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold leading-tight">{"R&L"}</span>
-              <span className="text-xs text-muted-foreground leading-tight">{"Car Care Products"}</span>
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="R&L Imports Logo"
+              width={120}
+              height={60}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
