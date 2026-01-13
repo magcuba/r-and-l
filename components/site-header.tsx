@@ -9,9 +9,12 @@ import { useState } from "react"
 import Image from "next/image"
 import { FEATURED_BRANDS } from "@/lib/brands"
 import { useLanguage } from "@/components/language-provider"
+import { useRouter, usePathname } from "next/navigation"
 
 export function SiteHeader() {
   const { lang, toggleLang, t } = useLanguage()
+  const router = useRouter()
+  const pathname = usePathname()
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false)
@@ -29,8 +32,15 @@ export function SiteHeader() {
 
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    window.scrollTo({ top: 0, behavior: "smooth" })
     setMobileMenuOpen(false)
+
+    if (pathname !== "/") {
+      // If not on home page, navigate to home first
+      router.push("/")
+    } else {
+      // If already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
   }
 
   return (
