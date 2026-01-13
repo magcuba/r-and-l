@@ -10,7 +10,6 @@ const brands = [
   { name: "Lake Country", logo: "/lake-country-logo.png" },
 ]
 
-
 export function BrandsSection() {
   const { t } = useLanguage()
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -51,8 +50,36 @@ export function BrandsSection() {
           ref={scrollRef}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="overflow-hidden"
+          className="overflow-x-auto overflow-y-hidden group scrollbar-hide hover:scrollbar-show"
+          style={{ cursor: "grab" }}
+          onMouseDown={(e) => {
+            const el = e.currentTarget
+            el.style.cursor = "grabbing"
+          }}
+          onMouseUp={(e) => {
+            const el = e.currentTarget
+            el.style.cursor = "grab"
+          }}
         >
+          <style jsx>{`
+            .scrollbar-hide::-webkit-scrollbar {
+              width: 0px;
+              height: 0px;
+            }
+            .scrollbar-hide:hover::-webkit-scrollbar {
+              height: 8px;
+            }
+            .scrollbar-hide::-webkit-scrollbar-track {
+              background: transparent;
+            }
+            .scrollbar-hide::-webkit-scrollbar-thumb {
+              background: rgba(0, 0, 0, 0.3);
+              border-radius: 4px;
+            }
+            .scrollbar-hide::-webkit-scrollbar-thumb:hover {
+              background: rgba(0, 0, 0, 0.5);
+            }
+          `}</style>
           <div className="flex gap-12 py-8">
             {[...brands, ...brands].map((brand, index) => (
               <div

@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Instagram, Facebook, Youtube, Globe, Menu, X, ChevronDown, ChevronRight } from "lucide-react"
@@ -15,6 +17,21 @@ export function SiteHeader() {
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false)
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev)
+
+  const scrollToStore = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const storeSection = document.getElementById("location")
+    if (storeSection) {
+      storeSection.scrollIntoView({ behavior: "smooth" })
+    }
+    setMobileMenuOpen(false)
+  }
+
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: "smooth" })
+    setMobileMenuOpen(false)
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -65,10 +82,9 @@ export function SiteHeader() {
           </div>
 
           <Button variant="ghost" size="sm" onClick={toggleLang} className="h-8 text-xs">
-  <Globe className="h-3 w-3 mr-1" />
-  {lang === "en" ? "Español" : "English"}
+            <Globe className="h-3 w-3 mr-1" />
+            {lang === "en" ? "Español" : "English"}
           </Button>
-
         </div>
       </div>
 
@@ -83,6 +99,7 @@ export function SiteHeader() {
           {/* Logo */}
           <Link
             href="/"
+            onClick={scrollToTop}
             className="flex items-center space-x-2 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
           >
             <Image
@@ -97,7 +114,7 @@ export function SiteHeader() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/" onClick={scrollToTop} className="text-sm font-medium hover:text-primary transition-colors">
               {t("home")}
             </Link>
 
@@ -145,9 +162,13 @@ export function SiteHeader() {
               {t("blog")}
             </Link>
 
-            <Link href="/store" className="text-sm font-medium hover:text-primary transition-colors">
+            <a
+              href="#location"
+              onClick={scrollToStore}
+              className="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+            >
               {t("store_hours_location")}
-            </Link>
+            </a>
           </nav>
 
           {/* Placeholder for layout balance on mobile */}
@@ -161,8 +182,8 @@ export function SiteHeader() {
           <nav className="container max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
             <Link
               href="/"
+              onClick={scrollToTop}
               className="text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted"
-              onClick={() => setMobileMenuOpen(false)}
             >
               {t("home")}
             </Link>
@@ -216,13 +237,13 @@ export function SiteHeader() {
               {t("blog")}
             </Link>
 
-            <Link
-              href="/store"
-              className="text-base font-medium hover:text-primary transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+            <a
+              href="#location"
+              onClick={scrollToStore}
+              className="text-base font-medium hover:text-primary transition-colors py-2 cursor-pointer"
             >
               {t("store_hours_location")}
-            </Link>
+            </a>
           </nav>
         </div>
       )}
