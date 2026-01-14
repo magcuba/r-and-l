@@ -78,6 +78,18 @@ footer_address_line_2: "Tampa, FL 33619",
 footer_copyright: "© R&L UNIVERSAL SUPPLIES. All rights reserved.",
 
 
+// Best Sellers
+best_sellers_title: "Best Selling Products",
+best_sellers_subtitle: "Top-rated products trusted by professionals and enthusiasts",
+best_sellers_badge: "Best Seller",
+
+// Optional: category labels (only if you want categories translated)
+category_washing: "Washing",
+category_protection: "Protection",
+category_interior: "Interior",
+category_cleaning: "Cleaning",
+
+
   },
   es: {
     follow_us: "Síguenos:",
@@ -141,6 +153,18 @@ footer_follow_us: "Síguenos",
 footer_address_line_1: "1100 N 50th St Unit 3A",
 footer_address_line_2: "Tampa, FL 33619",
 footer_copyright: "© R&L UNIVERSAL SUPPLIES. Todos los derechos reservados.",
+
+
+// Best Sellers
+best_sellers_title: "Productos Más Vendidos",
+best_sellers_subtitle: "Productos mejor valorados, confiables para profesionales y entusiastas",
+best_sellers_badge: "Más Vendido",
+
+// Optional: category labels (only if you want categories translated)
+category_washing: "Lavado",
+category_protection: "Protección",
+category_interior: "Interior",
+category_cleaning: "Limpieza",
 
 
   },
