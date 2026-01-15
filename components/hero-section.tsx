@@ -13,7 +13,7 @@ export function HeroSection() {
       { id: 2, title: t("hero_slide_2_title"), url: "/car-detailing-polish.jpg" },
       { id: 3, title: t("hero_slide_3_title"), url: "/car-care-products-store.jpg" },
     ],
-    [t]
+    [t],
   )
 
   useEffect(() => {
@@ -28,13 +28,15 @@ export function HeroSection() {
       <div className="container max-w-7xl mx-auto py-16 md:py-24">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-balance">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-balance text-center lg:text-left">
               {t("hero_title")}
             </h1>
 
-            <p className="text-lg text-muted-foreground text-pretty max-w-[600px]">{t("hero_subtitle")}</p>
+            <p className="text-lg text-muted-foreground text-pretty max-w-[600px] text-center lg:text-left mx-auto lg:mx-0">
+              {t("hero_subtitle")}
+            </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#brands"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
