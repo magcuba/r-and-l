@@ -20,10 +20,15 @@ export function StoreLocation() {
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="relative aspect-video lg:aspect-square overflow-hidden rounded-lg border bg-muted">
-            <img
-              src="/google-maps-tampa-florida-store-location.jpg"
-              alt={t("store_map_alt")}
-              className="h-full w-full object-cover"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.9385976447985!2d-82.40687!3d27.986236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c0b5e0c8e999%3A0x0!2s1100%20N%2050th%20St%20Unit%203A%2C%20Tampa%2C%20FL%2033619!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="R&L Store Location Map"
             />
           </div>
 

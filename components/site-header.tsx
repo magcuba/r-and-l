@@ -117,7 +117,7 @@ export function SiteHeader() {
               alt="R&L Logo"
               width={240}
               height={120}
-              className="h-[88px] w-auto lg:h-16"
+              className="h-[135px] md:!h-[135px] lg:h-16 w-auto"
               priority
             />
           </Link>
