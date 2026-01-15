@@ -72,7 +72,7 @@ export function SiteHeader() {
               </Link>
 
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/17yRkRphLn/?mibextid=wwXIfr"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
