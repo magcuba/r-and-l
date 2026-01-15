@@ -20,14 +20,14 @@ export function VideoLinksSection() {
       {
         id: "1",
         platform: "tiktok",
-        url: "https://www.tiktok.com/@yourhandle",
+        url: "https://www.tiktok.com/@rluniversalsupplies?_r=1&_t=ZP-9356bCPOkJy",
         thumbnail: "/car-wash-foam-cannon-action.jpg",
         title: t("video_1_title"),
       },
       {
         id: "2",
-        platform: "instagram",
-        url: "https://www.instagram.com/p/yourpost",
+        platform: "Facebook",
+        url: "https://www.facebook.com/share/17yRkRphLn/?mibextid=wwXIfr",
         thumbnail: "/car-detailing-before-after.jpg",
         title: t("video_2_title"),
       },
@@ -41,7 +41,7 @@ export function VideoLinksSection() {
       {
         id: "4",
         platform: "tiktok",
-        url: "https://www.tiktok.com/@yourhandle",
+        url: "https://www.tiktok.com/@rluniversalsupplies?_r=1&_t=ZP-9356bCPOkJy",
         thumbnail: "/ceramic-coating-application.png",
         title: t("video_4_title"),
       },
@@ -99,7 +99,7 @@ export function VideoLinksSection() {
           <p className="text-muted-foreground mb-4">{t("videos_follow_text")}</p>
           <div className="flex justify-center gap-4">
             <a
-              href="https://www.tiktok.com/@yourhandle"
+              href="https://www.tiktok.com/@rluniversalsupplies?_r=1&_t=ZP-9356bCPOkJy"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
@@ -108,12 +108,12 @@ export function VideoLinksSection() {
             </a>
             <span className="text-muted-foreground">•</span>
             <a
-              href="https://www.instagram.com/yourhandle"
+              href="https://www.facebook.com/share/17yRkRphLn/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
             >
-              Instagram
+              Facebook
             </a>
             <span className="text-muted-foreground">•</span>
             <a

@@ -61,7 +61,7 @@ export function SiteHeader() {
               </Link>
 
               <Link
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@rluniversalsupplies?_r=1&_t=ZP-9356bCPOkJy"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
