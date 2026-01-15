@@ -26,7 +26,7 @@ export function VideoLinksSection() {
       },
       {
         id: "2",
-        platform: "Facebook",
+        platform: "facebook",
         url: "https://www.facebook.com/share/17yRkRphLn/?mibextid=wwXIfr",
         thumbnail: "/car-detailing-before-after.jpg",
         title: t("video_2_title"),
