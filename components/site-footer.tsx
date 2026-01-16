@@ -10,16 +10,16 @@ export function SiteFooter() {
 
   return (
     <footer className="w-full border-t bg-muted/30">
-      <div className="container max-w-7xl mx-auto py-12 md:py-16">
+      <div className="container max-w-7xl mx-auto py-12 md:py-16 px-4">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+          <div className="space-y-4 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start space-x-2">
               <Image src="/images/logo.png" alt="R&L Logo" width={100} height={50} className="h-12 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground text-pretty">{t("footer_tagline")}</p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h3 className="text-sm font-semibold">{t("footer_quick_links")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -45,7 +45,7 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h3 className="text-sm font-semibold">{t("footer_contact")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>{t("footer_address_line_1")}</li>
@@ -58,9 +58,9 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h3 className="text-sm font-semibold">{t("footer_follow_us")}</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <Link
                 href="https://instagram.com"
                 target="_blank"
