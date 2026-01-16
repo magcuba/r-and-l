@@ -14,7 +14,7 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2">
-              <Image src="/images/logo.png" alt="R&L Logo" width={100} height={50} className="h-12 w-auto" />
+              <Image src="/images/logo.png" alt="R&L Logo" width={140} height={70} className="h-16 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground text-pretty">{t("footer_tagline")}</p>
           </div>
