@@ -6,7 +6,6 @@ import { useLanguage } from "@/components/language-provider"
 interface Product {
   id: number
   name: string
-  price: string
   image: string
   category: string
 }
@@ -15,56 +14,48 @@ const bestSellers: Product[] = [
   {
     id: 1,
     name: "Falcon Pro Wash & Wax Concentrate",
-    price: "$19.99",
     image: "/falcon-pro-wash-wax.png",
     category: "Washing",
   },
   {
     id: 2,
     name: "Koch Chemie Protector Wax",
-    price: "$34.99",
     image: "/koch-chemie-protector-wax.png",
     category: "Protection",
   },
   {
     id: 3,
     name: "P&S Xpress Interior Cleaner",
-    price: "$24.99",
     image: "/ps-xpress-interior-cleaner.png",
     category: "Interior",
   },
   {
     id: 4,
     name: "WAB Aluminum & Stainless Steel Cleaner",
-    price: "$16.99",
     image: "/wab-aluminum-cleaner.png",
     category: "Cleaning",
   },
   {
     id: 5,
     name: "Falcon Pro Wash & Wax Concentrate",
-    price: "$19.99",
     image: "/falcon-pro-wash-wax.png",
     category: "Washing",
   },
   {
     id: 6,
     name: "Koch Chemie Protector Wax",
-    price: "$34.99",
     image: "/koch-chemie-protector-wax.png",
     category: "Protection",
   },
   {
     id: 7,
     name: "P&S Xpress Interior Cleaner",
-    price: "$24.99",
     image: "/ps-xpress-interior-cleaner.png",
     category: "Interior",
   },
   {
     id: 8,
     name: "WAB Aluminum & Stainless Steel Cleaner",
-    price: "$16.99",
     image: "/wab-aluminum-cleaner.png",
     category: "Cleaning",
   },
@@ -93,9 +84,7 @@ export function BestSellersSection() {
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            {t("best_sellers_title")}
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t("best_sellers_title")}</h2>
           <p className="text-lg text-gray-600">{t("best_sellers_subtitle")}</p>
         </div>
 
@@ -124,10 +113,7 @@ export function BestSellersSection() {
                     </div>
                     <div className="p-4">
                       <div className="text-sm text-blue-600 font-medium mb-1">{categoryLabel}</div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">{product.name}</h3>
-                      <div className="flex items-center justify-center">
-                        <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 line-clamp-2">{product.name}</h3>
                     </div>
                   </div>
                 )
