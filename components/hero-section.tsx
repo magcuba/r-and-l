@@ -36,20 +36,22 @@ export function HeroSection() {
               {t("hero_subtitle")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="#brands"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                {t("shop_by_brand")}
-              </a>
+            <div className="px-[10%] sm:px-0">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="#brands"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                >
+                  {t("shop_by_brand")}
+                </a>
 
-              <a
-                href="#location"
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                {t("visit_our_store")}
-              </a>
+                <a
+                  href="#location"
+                  className="inline-flex items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  {t("visit_our_store")}
+                </a>
+              </div>
             </div>
           </div>
 
