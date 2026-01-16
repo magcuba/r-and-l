@@ -39,14 +39,14 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#brands"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-xs sm:px-8 sm:py-3 sm:text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 {t("shop_by_brand")}
               </a>
 
               <a
                 href="#location"
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-2 text-xs sm:px-8 sm:py-3 sm:text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 {t("visit_our_store")}
               </a>
