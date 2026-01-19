@@ -36,8 +36,8 @@ export function VideoLinksSection() {
       },
       {
         id: "3",
-        platform: "youtube",
-        url: "https://www.youtube.com/watch?v=yourvideo",
+        platform: "instagram",
+        url: "https://www.instagram.com/rluniversalsuppliesen/",
         thumbnail: "/professional-car-wash-tutorial.jpg",
         title: t("video_3_title"),
       },
@@ -126,12 +126,12 @@ export function VideoLinksSection() {
             </a>
             <span className="text-muted-foreground">•</span>
             <a
-              href="https://www.youtube.com/@yourhandle"
+              href="https://www.instagram.com/rluniversalsuppliesen/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
             >
-              YouTube
+              Instagram
             </a>
           </div>
         </div>

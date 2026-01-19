@@ -84,7 +84,7 @@ export function BrandsSection() {
             {[...brands, ...brands].map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
-                className="flex-shrink-0 flex items-center justify-center w-40 h-20 grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
+                className="flex-shrink-0 flex items-center justify-center w-40 h-20 transition-all opacity-100"
               >
                 <img
                   src={brand.logo || "/placeholder.svg"}
