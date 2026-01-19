@@ -51,9 +51,9 @@ export function VideoLinksCard({ title, platform, url, thumbnail, description }:
           </Badge>
         </div>
         <CardContent className="p-4 space-y-2">
-          <h3 className="font-semibold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
-            {title}
-          </h3>
+  <h3 className="font-semibold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
+    {title}
+  </h3>
           <p className="text-sm text-muted-foreground line-clamp-2">{description}</p>
           <div className="flex items-center gap-1 text-sm text-primary pt-2">
             <span className="font-medium">{"Watch Video"}</span>

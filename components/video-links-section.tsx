@@ -15,6 +15,9 @@ interface VideoLink {
 export function VideoLinksSection() {
   const { t, lang } = useLanguage()
 
+  // Toggle to show/hide video titles
+  const SHOW_VIDEO_TITLES = false
+
   const videos = useMemo<VideoLink[]>(() => {
     return [
       {
@@ -73,7 +76,11 @@ export function VideoLinksSection() {
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <div className="aspect-[3/4] relative">
-                <img src={video.thumbnail || "/placeholder.svg"} alt={video.title} className="w-full h-full object-cover" />
+                <img
+                  src={video.thumbnail || "/placeholder.svg"}
+                  alt={video.title}
+                  className="w-full h-full object-cover"
+                />
 
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center">
                   <div className="bg-white/90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
@@ -88,9 +95,11 @@ export function VideoLinksSection() {
                 </div>
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <p className="text-white font-semibold text-sm">{video.title}</p>
-              </div>
+              {SHOW_VIDEO_TITLES && (
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                  <p className="text-white font-semibold text-sm">{video.title}</p>
+                </div>
+              )}
             </a>
           ))}
         </div>
