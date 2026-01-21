@@ -79,9 +79,10 @@ export default async function BrandPage({
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {brandProducts.map((product) => (
-              <div
+              <Link
                 key={product.id}
-                className="group rounded-xl border bg-background hover:bg-muted/40 transition-colors overflow-hidden"
+                href={`/shop/${brandSlug}/${product.id}`}
+                className="group rounded-xl border bg-background hover:bg-muted/40 transition-colors overflow-hidden block"
               >
                 {/* Image area */}
                 <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
@@ -98,9 +99,9 @@ export default async function BrandPage({
                   <div className="font-semibold leading-snug group-hover:text-primary transition-colors">
                     {product.name}
                   </div>
-                  <div className="text-sm text-muted-foreground">View details (coming soon)</div>
+                  <div className="text-sm text-muted-foreground">View details</div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
