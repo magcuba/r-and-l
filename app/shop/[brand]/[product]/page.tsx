@@ -1,9 +1,9 @@
-import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { BRANDS } from "@/lib/brands"
 import { PRODUCTS } from "@/lib/products"
 import { ProductContent } from "./product-content"
+import { ProductHero } from "./product-hero"
 
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ brand: p.brandSlug, product: p.id }))
@@ -41,15 +41,10 @@ export default async function ProductPage({
       </div>
 
       <div className="rounded-xl border overflow-hidden">
-        <div className="relative w-full aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-          <Image
-            src={product.image || "/placeholder.png"}
-            alt={product.name}
-            fill
-            className="object-contain p-8"
-          />
-        </div>
+        {/* Image + Size Selector */}
+        <ProductHero product={product} />
 
+        {/* Text content */}
         <ProductContent content={product.content} />
       </div>
     </main>

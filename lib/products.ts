@@ -1,3 +1,10 @@
+export type Variant = {
+  size: "1L" | "5L"
+  image: string
+  sku?: string
+  price?: number
+}
+
 export type Product = {
   id: string
   brandSlug: string
@@ -5,6 +12,9 @@ export type Product = {
   name: string
   image: string
   href?: string
+
+  // Optional size variants (1L / 5L)
+  variants?: Variant[]
 
   content?: {
     description: { en: string; es: string }
@@ -19,705 +29,731 @@ export const PRODUCTS: Product[] = [
     brandSlug: "koch-chemie",
     slug: "protector-wax-pw",
     name: "Protector Wax (PW)",
-    image: "/koch-chemie-protector-wax.png",
+    image: "/koch-chemie-protector-wax.png", // 1L (default)
+    variants: [
+      { size: "1L", image: "/koch-chemie-protector-wax.png" },
+      { size: "5L", image: "/koch-chemie-protector-wax5L.png" },
+    ],
     content: {
       description: {
-  en: "Koch Chemie Protector Wax is a high-performance spray wax designed to add instant gloss, protection, and strong water beading in just one step. Applied during the wash process, it creates a smooth, hydrophobic protective layer that helps repel water, dirt, and road grime while leaving a deep, showroom-style shine. This advanced formula is safe for paint, glass, plastic, rubber, and trim, making it perfect for both professional detailers and car enthusiasts looking for fast, consistent results. Protector Wax is ideal as a maintenance wax or drying aid, helping vehicles stay cleaner longer and making drying quicker and easier.",
-  es: "Koch Chemie Protector Wax es una cera en spray de alto rendimiento diseñada para brindar brillo instantáneo, protección y una fuerte repelencia al agua en un solo paso. Aplicada durante el proceso de lavado, crea una capa protectora hidrofóbica y suave que ayuda a repeler el agua, la suciedad y los residuos de la carretera, dejando un brillo profundo tipo showroom. Su fórmula avanzada es segura para pintura, vidrio, plástico, goma y molduras, lo que la hace perfecta tanto para detallistas profesionales como para entusiastas que buscan resultados rápidos y consistentes. Protector Wax es ideal como cera de mantenimiento o como ayuda de secado, manteniendo el vehículo limpio por más tiempo y facilitando un secado más rápido y sencillo.",
-},
-
+        en: "Koch Chemie Protector Wax is a high-performance spray wax designed to add instant gloss, protection, and strong water beading in just one step. Applied during the wash process, it creates a smooth, hydrophobic protective layer that helps repel water, dirt, and road grime while leaving a deep, showroom-style shine. This advanced formula is safe for paint, glass, plastic, rubber, and trim, making it perfect for both professional detailers and car enthusiasts looking for fast, consistent results. Protector Wax is ideal as a maintenance wax or drying aid, helping vehicles stay cleaner longer and making drying quicker and easier.",
+        es: "Koch Chemie Protector Wax es una cera en spray de alto rendimiento diseñada para brindar brillo instantáneo, protección y una fuerte repelencia al agua en un solo paso. Aplicada durante el proceso de lavado, crea una capa protectora hidrofóbica y suave que ayuda a repeler el agua, la suciedad y los residuos de la carretera, dejando un brillo profundo tipo showroom. Su fórmula avanzada es segura para pintura, vidrio, plástico, goma y molduras, lo que la hace perfecta tanto para detallistas profesionales como para entusiastas que buscan resultados rápidos y consistentes. Protector Wax es ideal como cera de mantenimiento o como ayuda de secado, manteniendo el vehículo limpio por más tiempo y facilitando un secado más rápido y sencillo.",
+      },
       benefits: {
-  en: [
-    "Adds instant gloss and slickness",
-    "Strong hydrophobic water beading",
-    "Protects against dirt and environmental contaminants",
-    "Safe for paint, glass, trim, plastic, and rubber",
-    "Fast spray-on, rinse-off application",
-    "Perfect for maintenance washes and high-volume detailing",
-  ],
-  es: [
-    "Aporta brillo instantáneo y acabado sedoso",
-    "Fuerte repelencia al agua (efecto hidrofóbico)",
-    "Protege contra la suciedad y contaminantes ambientales",
-    "Seguro para pintura, vidrio, molduras, plástico y goma",
-    "Aplicación rápida con spray y enjuague",
-    "Ideal para lavados de mantenimiento y detallado de alto volumen",
-  ],
-},
-
-     howToUse: {
-  en: "Apply to a clean, wet vehicle using a foam cannon or sprayer, rinse off, and dry. Protection and shine in minutes.",
-  es: "Aplicar sobre un vehículo limpio y mojado usando una pistola de espuma o pulverizador, enjuagar y secar. Protección y brillo en minutos.",
-},
-
+        en: [
+          "Adds instant gloss and slickness",
+          "Strong hydrophobic water beading",
+          "Protects against dirt and environmental contaminants",
+          "Safe for paint, glass, trim, plastic, and rubber",
+          "Fast spray-on, rinse-off application",
+          "Perfect for maintenance washes and high-volume detailing",
+        ],
+        es: [
+          "Aporta brillo instantáneo y acabado sedoso",
+          "Fuerte repelencia al agua (efecto hidrofóbico)",
+          "Protege contra la suciedad y contaminantes ambientales",
+          "Seguro para pintura, vidrio, molduras, plástico y goma",
+          "Aplicación rápida con spray y enjuague",
+          "Ideal para lavados de mantenimiento y detallado de alto volumen",
+        ],
+      },
+      howToUse: {
+        en: "Apply to a clean, wet vehicle using a foam cannon or sprayer, rinse off, and dry. Protection and shine in minutes.",
+        es: "Aplicar sobre un vehículo limpio y mojado usando una pistola de espuma o pulverizador, enjuagar y secar. Protección y brillo en minutos.",
+      },
     },
   },
+
   {
-  id: "kc-mzr-degreaser",
-  brandSlug: "koch-chemie",
-  slug: "mzr-degreaser",
-  name: "MZR Degreaser",
-  image: "/mzr-degreaser.png",
- content: {
-  description: {
-    en: "MZR Degreaser is a powerful, fast-acting degreaser designed to remove heavy grease, oil, road grime, and built-up dirt from tough surfaces. Formulated for professional use, it cuts through stubborn contamination while remaining versatile enough for multiple cleaning applications. Ideal for engines, wheel wells, undercarriages, shop floors, and industrial surfaces, this degreaser delivers strong cleaning performance without excessive scrubbing, helping you save time and effort on every job.",
-    es: "MZR Degreaser es un desengrasante potente y de acción rápida diseñado para eliminar grasa pesada, aceite, suciedad de la carretera y acumulación de contaminantes en superficies difíciles. Formulado para uso profesional, corta la contaminación más resistente manteniendo la versatilidad para múltiples aplicaciones de limpieza. Es ideal para motores, pasos de rueda, bajos, pisos de taller y superficies industriales, ofreciendo un alto poder de limpieza sin necesidad de frotar en exceso, ahorrando tiempo y esfuerzo en cada trabajo.",
-  },
-  benefits: {
-    en: [
-      "Heavy-duty degreasing power",
-      "Removes oil, grease, and road grime fast",
-      "Ideal for engines, undercarriages, and wheel wells",
-      "Works on metal, plastic, and hard surfaces",
-      "Concentrated formula for dilution control",
-      "Perfect for professional and high-volume use",
+    id: "kc-mzr-degreaser",
+    brandSlug: "koch-chemie",
+    slug: "mzr-degreaser",
+    name: "MZR Degreaser",
+    image: "/mzr-degreaser.png", // 1L (default)
+    variants: [
+      { size: "1L", image: "/mzr-degreaser.png" },
+      { size: "5L", image: "/mzr-degreaser5L.png" },
     ],
-    es: [
-      "Alto poder desengrasante de uso pesado",
-      "Elimina rápidamente aceite, grasa y suciedad de la carretera",
-      "Ideal para motores, bajos y pasos de rueda",
-      "Funciona en metal, plástico y superficies duras",
-      "Fórmula concentrada para control de dilución",
-      "Perfecto para uso profesional y de alto volumen",
+    content: {
+      description: {
+        en: "MZR Degreaser is a powerful, fast-acting degreaser designed to remove heavy grease, oil, road grime, and built-up dirt from tough surfaces. Formulated for professional use, it cuts through stubborn contamination while remaining versatile enough for multiple cleaning applications. Ideal for engines, wheel wells, undercarriages, shop floors, and industrial surfaces, this degreaser delivers strong cleaning performance without excessive scrubbing, helping you save time and effort on every job.",
+        es: "MZR Degreaser es un desengrasante potente y de acción rápida diseñado para eliminar grasa pesada, aceite, suciedad de la carretera y acumulación de contaminantes en superficies difíciles. Formulado para uso profesional, corta la contaminación más resistente manteniendo la versatilidad para múltiples aplicaciones de limpieza. Es ideal para motores, pasos de rueda, bajos, pisos de taller y superficies industriales, ofreciendo un alto poder de limpieza sin necesidad de frotar en exceso, ahorrando tiempo y esfuerzo en cada trabajo.",
+      },
+      benefits: {
+        en: [
+          "Heavy-duty degreasing power",
+          "Removes oil, grease, and road grime fast",
+          "Ideal for engines, undercarriages, and wheel wells",
+          "Works on metal, plastic, and hard surfaces",
+          "Concentrated formula for dilution control",
+          "Perfect for professional and high-volume use",
+        ],
+        es: [
+          "Alto poder desengrasante de uso pesado",
+          "Elimina rápidamente aceite, grasa y suciedad de la carretera",
+          "Ideal para motores, bajos y pasos de rueda",
+          "Funciona en metal, plástico y superficies duras",
+          "Fórmula concentrada para control de dilución",
+          "Perfecto para uso profesional y de alto volumen",
+        ],
+      },
+      howToUse: {
+        en: "Dilute as needed based on contamination level, spray on the surface, agitate if necessary, and rinse thoroughly.",
+        es: "Diluir según el nivel de suciedad, aplicar sobre la superficie, agitar si es necesario y enjuagar completamente.",
+      },
+    },
+  },
+
+  {
+    id: "kc-eulex-adhesive-tar-remover",
+    brandSlug: "koch-chemie",
+    slug: "eulex-adhesive-tar-remover",
+    name: "Eulex – Adhesive & Tar Remover",
+    image: "/eulex.png",
+    content: {
+      description: {
+        en: "Eulex is a powerful solvent-based cleaner designed to safely and effectively remove adhesive residues, tar, rubber marks, tree sap, and stubborn contamination from paint, glass, and hard surfaces. Its fast-acting formula dissolves sticky and oily residues without damaging clear coat, making it ideal for decal removal, shipping film, and label glue.",
+        es: "Eulex es un limpiador potente a base de solventes diseñado para eliminar de forma segura y eficaz residuos de adhesivos, alquitrán, marcas de goma, savia de árboles y contaminantes difíciles de pintura, vidrio y superficies duras. Su fórmula de acción rápida disuelve residuos pegajosos y aceitosos sin dañar el barniz, siendo ideal para remover calcomanías, películas de transporte y restos de pegamento.",
+      },
+      benefits: {
+        en: [
+          "Removes adhesive, tar, sap, and rubber residue",
+          "Safe on paint, glass, and clear coat",
+          "Fast-acting solvent formula",
+          "Ideal for decal and sticker removal",
+          "Leaves surfaces clean with no sticky residue",
+          "Professional-grade cleaning performance",
+        ],
+        es: [
+          "Elimina residuos de adhesivos, alquitrán, savia y goma",
+          "Seguro para pintura, vidrio y barniz",
+          "Fórmula solvente de acción rápida",
+          "Ideal para remover calcomanías y pegatinas",
+          "Deja las superficies limpias sin residuos pegajosos",
+          "Rendimiento de limpieza de nivel profesional",
+        ],
+      },
+      howToUse: {
+        en: "Apply to the contaminated area, allow to dwell briefly, wipe off with a microfiber towel, and repeat if necessary. Do not use on hot surfaces or in direct sunlight.",
+        es: "Aplicar sobre el área contaminada, dejar actuar brevemente, limpiar con una toalla de microfibra y repetir si es necesario. No usar sobre superficies calientes ni bajo luz solar directa.",
+      },
+    },
+  },
+
+  {
+    id: "kc-pol-star",
+    brandSlug: "koch-chemie",
+    slug: "pol-star",
+    name: "Pol Star – Interior & Leather Cleaner",
+    image: "/pol-star.png", // 1L (default)
+    variants: [
+      { size: "1L", image: "/pol-star.png" },
+      { size: "5L", image: "/pol-star5L.png" },
     ],
+    content: {
+      description: {
+        en: "Pol Star is a gentle yet effective interior and leather cleaner designed to remove dirt, body oils, and light stains while preserving the natural look and feel of surfaces. Its pH-balanced formula cleans deeply without drying out or damaging delicate materials, making it ideal for leather, vinyl, plastic, and upholstery.",
+        es: "Pol Star es un limpiador interior y de cuero suave pero eficaz, diseñado para eliminar suciedad, aceites corporales y manchas ligeras, conservando el aspecto y la textura natural de las superficies. Su fórmula con pH balanceado limpia a profundidad sin resecar ni dañar materiales delicados, siendo ideal para cuero, vinilo, plástico y tapicería.",
+      },
+      benefits: {
+        en: [
+          "Safe for leather, vinyl, plastic, and fabric",
+          "pH-balanced formula for gentle cleaning",
+          "Removes body oils and interior grime",
+          "Preserves natural texture and finish",
+          "Leaves no sticky or glossy residue",
+          "Ideal for professional interior detailing",
+        ],
+        es: [
+          "Seguro para cuero, vinilo, plástico y telas",
+          "Fórmula con pH balanceado para limpieza suave",
+          "Elimina aceites corporales y suciedad interior",
+          "Conserva la textura y el acabado natural",
+          "No deja residuos pegajosos ni brillosos",
+          "Ideal para detallado interior profesional",
+        ],
+      },
+      howToUse: {
+        en: "Dilute as recommended, apply with a soft brush or microfiber, gently agitate, and wipe clean. For leather, follow with a conditioner if desired.",
+        es: "Diluir según recomendación, aplicar con cepillo suave o microfibra, agitar ligeramente y limpiar. En cuero, aplicar acondicionador después si se desea.",
+      },
+    },
   },
-  howToUse: {
-    en: "Dilute as needed based on contamination level, spray on the surface, agitate if necessary, and rinse thoroughly.",
-    es: "Diluir según el nivel de suciedad, aplicar sobre la superficie, agitar si es necesario y enjuagar completamente.",
-  },
-},
-},
 
   {
-  id: "kc-eulex-adhesive-tar-remover",
-  brandSlug: "koch-chemie",
-  slug: "eulex-adhesive-tar-remover",
-  name: "Eulex – Adhesive & Tar Remover",
-  image: "/eulex.png",
-  content: {
-    description: {
-      en: "Eulex is a powerful solvent-based cleaner designed to safely and effectively remove adhesive residues, tar, rubber marks, tree sap, and stubborn contamination from paint, glass, and hard surfaces. Its fast-acting formula dissolves sticky and oily residues without damaging clear coat, making it ideal for decal removal, shipping film, and label glue.",
-      es: "Eulex es un limpiador potente a base de solventes diseñado para eliminar de forma segura y eficaz residuos de adhesivos, alquitrán, marcas de goma, savia de árboles y contaminantes difíciles de pintura, vidrio y superficies duras. Su fórmula de acción rápida disuelve residuos pegajosos y aceitosos sin dañar el barniz, siendo ideal para remover calcomanías, películas de transporte y restos de pegamento.",
-    },
-    benefits: {
-      en: [
-        "Removes adhesive, tar, sap, and rubber residue",
-        "Safe on paint, glass, and clear coat",
-        "Fast-acting solvent formula",
-        "Ideal for decal and sticker removal",
-        "Leaves surfaces clean with no sticky residue",
-        "Professional-grade cleaning performance",
-      ],
-      es: [
-        "Elimina residuos de adhesivos, alquitrán, savia y goma",
-        "Seguro para pintura, vidrio y barniz",
-        "Fórmula solvente de acción rápida",
-        "Ideal para remover calcomanías y pegatinas",
-        "Deja las superficies limpias sin residuos pegajosos",
-        "Rendimiento de limpieza de nivel profesional",
-      ],
-    },
-    howToUse: {
-      en: "Apply to the contaminated area, allow to dwell briefly, wipe off with a microfiber towel, and repeat if necessary. Do not use on hot surfaces or in direct sunlight.",
-      es: "Aplicar sobre el área contaminada, dejar actuar brevemente, limpiar con una toalla de microfibra y repetir si es necesario. No usar sobre superficies calientes ni bajo luz solar directa.",
-    },
-  },
-},
-  {
-  id: "kc-pol-star",
-  brandSlug: "koch-chemie",
-  slug: "pol-star",
-  name: "Pol Star – Interior & Leather Cleaner",
-  image: "/pol-star.png",
-  content: {
-    description: {
-      en: "Pol Star is a gentle yet effective interior and leather cleaner designed to remove dirt, body oils, and light stains while preserving the natural look and feel of surfaces. Its pH-balanced formula cleans deeply without drying out or damaging delicate materials, making it ideal for leather, vinyl, plastic, and upholstery.",
-      es: "Pol Star es un limpiador interior y de cuero suave pero eficaz, diseñado para eliminar suciedad, aceites corporales y manchas ligeras, conservando el aspecto y la textura natural de las superficies. Su fórmula con pH balanceado limpia a profundidad sin resecar ni dañar materiales delicados, siendo ideal para cuero, vinilo, plástico y tapicería.",
-    },
-    benefits: {
-      en: [
-        "Safe for leather, vinyl, plastic, and fabric",
-        "pH-balanced formula for gentle cleaning",
-        "Removes body oils and interior grime",
-        "Preserves natural texture and finish",
-        "Leaves no sticky or glossy residue",
-        "Ideal for professional interior detailing",
-      ],
-      es: [
-        "Seguro para cuero, vinilo, plástico y telas",
-        "Fórmula con pH balanceado para limpieza suave",
-        "Elimina aceites corporales y suciedad interior",
-        "Conserva la textura y el acabado natural",
-        "No deja residuos pegajosos ni brillosos",
-        "Ideal para detallado interior profesional",
-      ],
-    },
-    howToUse: {
-      en: "Dilute as recommended, apply with a soft brush or microfiber, gently agitate, and wipe clean. For leather, follow with a conditioner if desired.",
-      es: "Diluir según recomendación, aplicar con cepillo suave o microfibra, agitar ligeramente y limpiar. En cuero, aplicar acondicionador después si se desea.",
+    id: "kc-fine-cut-f6-01",
+    brandSlug: "koch-chemie",
+    slug: "fine-cut-f6-01",
+    name: "Fine Cut F6.01 – Medium Cut Polish",
+    image: "/fine-cut-f6-01.png",
+    content: {
+      description: {
+        en: "Fine Cut F6.01 is a medium cut polish designed to remove moderate defects such as swirl marks, oxidation, and sanding marks while leaving a high-gloss finish. It delivers strong correction with an excellent finishing result, making it a go-to polish for one-step or two-step paint correction on modern clear coats.",
+        es: "Fine Cut F6.01 es un pulimento de corte medio diseñado para eliminar defectos moderados como marcas circulares, oxidación y marcas de lijado, dejando un acabado de alto brillo. Ofrece buena corrección con un excelente resultado de terminación, siendo ideal para correcciones de pintura de uno o dos pasos en barnices modernos.",
+      },
+      benefits: {
+        en: [
+          "Removes swirl marks and moderate paint defects",
+          "High-gloss finish with strong correction",
+          "Low dusting and easy wipe-off",
+          "Works well in one-step or two-step correction",
+          "Suitable for modern clear coats",
+          "Professional-grade polishing performance",
+        ],
+        es: [
+          "Elimina marcas circulares y defectos moderados",
+          "Acabado de alto brillo con buena corrección",
+          "Bajo polvo y fácil de retirar",
+          "Ideal para corrección en uno o dos pasos",
+          "Apto para barnices modernos",
+          "Rendimiento de pulido de nivel profesional",
+        ],
+      },
+      howToUse: {
+        en: "Use with a polishing machine and appropriate pad. Work section by section, then wipe off residue with a clean microfiber towel.",
+        es: "Usar con máquina pulidora y el pad adecuado. Trabajar por secciones y retirar los residuos con una microfibra limpia.",
+      },
     },
   },
-},
-  {
-  id: "kc-fine-cut-f6-01",
-  brandSlug: "koch-chemie",
-  slug: "fine-cut-f6-01",
-  name: "Fine Cut F6.01 – Medium Cut Polish",
-  image: "/fine-cut-f6-01.png",
-  content: {
-    description: {
-      en: "Fine Cut F6.01 is a medium cut polish designed to remove moderate defects such as swirl marks, oxidation, and sanding marks while leaving a high-gloss finish. It delivers strong correction with an excellent finishing result, making it a go-to polish for one-step or two-step paint correction on modern clear coats.",
-      es: "Fine Cut F6.01 es un pulimento de corte medio diseñado para eliminar defectos moderados como marcas circulares, oxidación y marcas de lijado, dejando un acabado de alto brillo. Ofrece buena corrección con un excelente resultado de terminación, siendo ideal para correcciones de pintura de uno o dos pasos en barnices modernos.",
-    },
-    benefits: {
-      en: [
-        "Removes swirl marks and moderate paint defects",
-        "High-gloss finish with strong correction",
-        "Low dusting and easy wipe-off",
-        "Works well in one-step or two-step correction",
-        "Suitable for modern clear coats",
-        "Professional-grade polishing performance",
-      ],
-      es: [
-        "Elimina marcas circulares y defectos moderados",
-        "Acabado de alto brillo con buena corrección",
-        "Bajo polvo y fácil de retirar",
-        "Ideal para corrección en uno o dos pasos",
-        "Apto para barnices modernos",
-        "Rendimiento de pulido de nivel profesional",
-      ],
-    },
-    howToUse: {
-      en: "Use with a polishing machine and appropriate pad. Work section by section, then wipe off residue with a clean microfiber towel.",
-      es: "Usar con máquina pulidora y el pad adecuado. Trabajar por secciones y retirar los residuos con una microfibra limpia.",
-    },
-  },
-},
 
   {
-  id: "kc-fresh-up",
-  brandSlug: "koch-chemie",
-  slug: "fresh-up",
-  name: "Fresh Up – Odor Eliminator",
-  image: "/fresh-up.png",
-  content: {
-    description: {
-      en: "Fresh Up is an interior odor eliminator designed to neutralize unpleasant smells and leave a clean, fresh scent behind. It helps reduce odors caused by smoke, pets, food, and general interior contamination, making it ideal for professional detailing and quick refresh services.",
-      es: "Fresh Up es un eliminador de olores para interiores diseñado para neutralizar malos olores y dejar una fragancia limpia y fresca. Ayuda a reducir olores causados por humo, mascotas, comida y contaminación general del interior, siendo ideal para detallado profesional y servicios rápidos de refrescado.",
-    },
-    benefits: {
-      en: [
-        "Neutralizes unpleasant interior odors",
-        "Leaves a fresh, clean scent",
-        "Ideal for smoke, pet, and food odors",
-        "Quick and easy spray application",
-        "Great add-on service for detail shops",
-        "Professional interior finishing touch",
-      ],
-      es: [
-        "Neutraliza malos olores en el interior",
-        "Deja una fragancia fresca y limpia",
-        "Ideal para olores de humo, mascotas y comida",
-        "Aplicación rápida y sencilla en spray",
-        "Excelente servicio adicional para detallistas",
-        "Toque final profesional para interiores",
-      ],
-    },
-    howToUse: {
-      en: "Lightly mist into the interior (carpets, mats, and air space). Allow to dry and ventilate as needed. Avoid over-application.",
-      es: "Rociar ligeramente en el interior (alfombras, tapetes y el ambiente). Dejar secar y ventilar si es necesario. Evitar aplicar en exceso.",
+    id: "kc-fresh-up",
+    brandSlug: "koch-chemie",
+    slug: "fresh-up",
+    name: "Fresh Up – Odor Eliminator",
+    image: "/fresh-up.png",
+    content: {
+      description: {
+        en: "Fresh Up is an interior odor eliminator designed to neutralize unpleasant smells and leave a clean, fresh scent behind. It helps reduce odors caused by smoke, pets, food, and general interior contamination, making it ideal for professional detailing and quick refresh services.",
+        es: "Fresh Up es un eliminador de olores para interiores diseñado para neutralizar malos olores y dejar una fragancia limpia y fresca. Ayuda a reducir olores causados por humo, mascotas, comida y contaminación general del interior, siendo ideal para detallado profesional y servicios rápidos de refrescado.",
+      },
+      benefits: {
+        en: [
+          "Neutralizes unpleasant interior odors",
+          "Leaves a fresh, clean scent",
+          "Ideal for smoke, pet, and food odors",
+          "Quick and easy spray application",
+          "Great add-on service for detail shops",
+          "Professional interior finishing touch",
+        ],
+        es: [
+          "Neutraliza malos olores en el interior",
+          "Deja una fragancia fresca y limpia",
+          "Ideal para olores de humo, mascotas y comida",
+          "Aplicación rápida y sencilla en spray",
+          "Excelente servicio adicional para detallistas",
+          "Toque final profesional para interiores",
+        ],
+      },
+      howToUse: {
+        en: "Lightly mist into the interior (carpets, mats, and air space). Allow to dry and ventilate as needed. Avoid over-application.",
+        es: "Rociar ligeramente en el interior (alfombras, tapetes y el ambiente). Dejar secar y ventilar si es necesario. Evitar aplicar en exceso.",
+      },
     },
   },
-},
 
   {
-  id: "kc-guf",
-  brandSlug: "koch-chemie",
-  slug: "guf",
-  name: "GUF – Rubber & Plastic Care",
-  image: "/guf.png",
-  content: {
-    description: {
-      en: "GUF is a conditioning and care product designed to restore and protect rubber and plastic surfaces with a clean, factory-fresh look. It helps revive faded trim, seals, and exterior plastics while providing long-lasting protection against UV exposure and environmental wear.",
-      es: "GUF es un producto de acondicionamiento y cuidado diseñado para restaurar y proteger superficies de goma y plástico con un aspecto limpio, tipo original de fábrica. Ayuda a revitalizar molduras, sellos y plásticos exteriores, ofreciendo protección duradera contra los rayos UV y el desgaste ambiental.",
-    },
-    benefits: {
-      en: [
-        "Restores rubber and plastic to a fresh appearance",
-        "Helps revive faded trim and exterior plastics",
-        "Provides UV and environmental protection",
-        "Leaves a clean, non-greasy finish",
-        "Suitable for seals, trim, and plastic components",
-        "Long-lasting professional results",
-      ],
-      es: [
-        "Restaura la goma y el plástico a un aspecto renovado",
-        "Ayuda a revitalizar molduras y plásticos desgastados",
-        "Ofrece protección contra UV y el ambiente",
-        "Deja un acabado limpio sin sensación grasosa",
-        "Apto para sellos, molduras y componentes plásticos",
-        "Resultados duraderos de nivel profesional",
-      ],
-    },
-    howToUse: {
-      en: "Apply a small amount to a foam applicator or microfiber, spread evenly on the surface, and allow to dry. Buff lightly if needed.",
-      es: "Aplicar una pequeña cantidad en un aplicador de espuma o microfibra, distribuir de forma uniforme y dejar secar. Retirar exceso suavemente si es necesario.",
+    id: "kc-guf",
+    brandSlug: "koch-chemie",
+    slug: "guf",
+    name: "GUF – Rubber & Plastic Care",
+    image: "/guf.png",
+    content: {
+      description: {
+        en: "GUF is a conditioning and care product designed to restore and protect rubber and plastic surfaces with a clean, factory-fresh look. It helps revive faded trim, seals, and exterior plastics while providing long-lasting protection against UV exposure and environmental wear.",
+        es: "GUF es un producto de acondicionamiento y cuidado diseñado para restaurar y proteger superficies de goma y plástico con un aspecto limpio, tipo original de fábrica. Ayuda a revitalizar molduras, sellos y plásticos exteriores, ofreciendo protección duradera contra los rayos UV y el desgaste ambiental.",
+      },
+      benefits: {
+        en: [
+          "Restores rubber and plastic to a fresh appearance",
+          "Helps revive faded trim and exterior plastics",
+          "Provides UV and environmental protection",
+          "Leaves a clean, non-greasy finish",
+          "Suitable for seals, trim, and plastic components",
+          "Long-lasting professional results",
+        ],
+        es: [
+          "Restaura la goma y el plástico a un aspecto renovado",
+          "Ayuda a revitalizar molduras y plásticos desgastados",
+          "Ofrece protección contra UV y el ambiente",
+          "Deja un acabado limpio sin sensación grasosa",
+          "Apto para sellos, molduras y componentes plásticos",
+          "Resultados duraderos de nivel profesional",
+        ],
+      },
+      howToUse: {
+        en: "Apply a small amount to a foam applicator or microfiber, spread evenly on the surface, and allow to dry. Buff lightly if needed.",
+        es: "Aplicar una pequeña cantidad en un aplicador de espuma o microfibra, distribuir de forma uniforme y dejar secar. Retirar exceso suavemente si es necesario.",
+      },
     },
   },
-},
 
   {
-  id: "kc-dosing-cap",
-  brandSlug: "koch-chemie",
-  slug: "dosing-cap",
-  name: "Dosing Cap",
-  image: "/dosing-cap.png",
-  content: {
-    description: {
-      en: "The Koch Chemie Dosing Cap is a practical measuring accessory designed to ensure accurate dilution of cleaning and care products. It helps maintain correct mixing ratios, improving product performance and preventing waste during professional and DIY detailing.",
-      es: "El Dosing Cap de Koch Chemie es un accesorio práctico de medición diseñado para garantizar una dilución precisa de productos de limpieza y cuidado. Ayuda a mantener las proporciones correctas de mezcla, mejorando el rendimiento del producto y evitando desperdicios tanto en uso profesional como doméstico.",
-    },
-    benefits: {
-      en: [
-        "Ensures precise product dilution",
-        "Helps maintain correct mixing ratios",
-        "Prevents product waste and overuse",
-        "Easy to read measurement markings",
-        "Ideal for professional detailing and workshops",
-        "Durable and chemical-resistant design",
-      ],
-      es: [
-        "Garantiza una dilución precisa del producto",
-        "Ayuda a mantener proporciones correctas de mezcla",
-        "Evita el desperdicio y el uso excesivo",
-        "Marcas de medición fáciles de leer",
-        "Ideal para detallado profesional y talleres",
-        "Diseño duradero y resistente a químicos",
-      ],
-    },
-    howToUse: {
-      en: "Attach the dosing cap to the product bottle, measure the required amount according to dilution guidelines, and mix with water as instructed.",
-      es: "Colocar el dosificador en la botella, medir la cantidad requerida según las indicaciones de dilución y mezclar con agua conforme a las instrucciones.",
-    },
-  },
-},
-
- {
-  id: "kc-motorplast",
-  brandSlug: "koch-chemie",
-  slug: "motorplast",
-  name: "Motorplast – Engine Bay Protectant",
-  image: "/motorplast.png",
-  content: {
-    description: {
-      en: "Engine bay dressing that restores and protects plastic, rubber, and metal surfaces.",
-      es: "Acondicionador para motor que restaura y protege plástico, goma y metal.",
-    },
-    benefits: {
-      en: ["Natural satin finish", "Water-repellent", "Heat resistant", "Prevents corrosion"],
-      es: ["Acabado satinado natural", "Repelente al agua", "Resistente al calor", "Previene corrosión"],
-    },
-    howToUse: {
-      en: "Spray on clean engine bay and allow to dry.",
-      es: "Rociar en el motor limpio y dejar secar.",
+    id: "kc-dosing-cap",
+    brandSlug: "koch-chemie",
+    slug: "dosing-cap",
+    name: "Dosing Cap",
+    image: "/dosing-cap.png",
+    content: {
+      description: {
+        en: "The Koch Chemie Dosing Cap is a practical measuring accessory designed to ensure accurate dilution of cleaning and care products. It helps maintain correct mixing ratios, improving product performance and preventing waste during professional and DIY detailing.",
+        es: "El Dosing Cap de Koch Chemie es un accesorio práctico de medición diseñado para garantizar una dilución precisa de productos de limpieza y cuidado. Ayuda a mantener las proporciones correctas de mezcla, mejorando el rendimiento del producto y evitando desperdicios tanto en uso profesional como doméstico.",
+      },
+      benefits: {
+        en: [
+          "Ensures precise product dilution",
+          "Helps maintain correct mixing ratios",
+          "Prevents product waste and overuse",
+          "Easy to read measurement markings",
+          "Ideal for professional detailing and workshops",
+          "Durable and chemical-resistant design",
+        ],
+        es: [
+          "Garantiza una dilución precisa del producto",
+          "Ayuda a mantener proporciones correctas de mezcla",
+          "Evita el desperdicio y el uso excesivo",
+          "Marcas de medición fáciles de leer",
+          "Ideal para detallado profesional y talleres",
+          "Diseño duradero y resistente a químicos",
+        ],
+      },
+      howToUse: {
+        en: "Attach the dosing cap to the product bottle, measure the required amount according to dilution guidelines, and mix with water as instructed.",
+        es: "Colocar el dosificador en la botella, medir la cantidad requerida según las indicaciones de dilución y mezclar con agua conforme a las instrucciones.",
+      },
     },
   },
-},
 
-{
-  id: "kc-panel-prep-spray",
-  brandSlug: "koch-chemie",
-  slug: "panel-prep-spray",
-  name: "Panel Preparation Spray",
-  image: "/panel-prep-spray.png",
-  content: {
-    description: {
-      en: "Surface cleaner that removes oils and residues before wax or coating application.",
-      es: "Limpiador de superficie que elimina aceites y residuos antes de aplicar cera o recubrimiento.",
-    },
-    benefits: {
-      en: ["Improves coating bonding", "Removes polish oils", "Residue-free finish", "Easy spray application"],
-      es: ["Mejora la adhesión del recubrimiento", "Elimina aceites de pulimento", "Acabado sin residuos", "Aplicación fácil en spray"],
-    },
-    howToUse: {
-      en: "Spray onto surface and wipe with microfiber.",
-      es: "Rociar sobre la superficie y limpiar con microfibra.",
+  {
+    id: "kc-motorplast",
+    brandSlug: "koch-chemie",
+    slug: "motorplast",
+    name: "Motorplast – Engine Bay Protectant",
+    image: "/motorplast.png",
+    content: {
+      description: {
+        en: "Engine bay dressing that restores and protects plastic, rubber, and metal surfaces.",
+        es: "Acondicionador para motor que restaura y protege plástico, goma y metal.",
+      },
+      benefits: {
+        en: ["Natural satin finish", "Water-repellent", "Heat resistant", "Prevents corrosion"],
+        es: ["Acabado satinado natural", "Repelente al agua", "Resistente al calor", "Previene corrosión"],
+      },
+      howToUse: {
+        en: "Spray on clean engine bay and allow to dry.",
+        es: "Rociar en el motor limpio y dejar secar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-active-foam",
-  brandSlug: "koch-chemie",
-  slug: "active-foam",
-  name: "Active Foam",
-  image: "/active-foam.png",
-  content: {
-    description: {
-      en: "High-foaming pre-wash shampoo that loosens dirt and road film for safer washing.",
-      es: "Champú de prelavado de alta espuma que afloja la suciedad y la película de carretera para un lavado más seguro.",
-    },
-    benefits: {
-      en: ["Thick foam clings to surfaces", "Loosens heavy dirt", "pH-friendly for many surfaces", "Ideal for foam cannons"],
-      es: ["Espuma espesa que se adhiere", "Afloja suciedad pesada", "pH amigable para muchas superficies", "Ideal para pistolas de espuma"],
-    },
-    howToUse: {
-      en: "Dilute, apply with foam cannon, allow to dwell, then rinse.",
-      es: "Diluir, aplicar con cañón de espuma, dejar actuar y enjuagar.",
+  {
+    id: "kc-panel-prep-spray",
+    brandSlug: "koch-chemie",
+    slug: "panel-prep-spray",
+    name: "Panel Preparation Spray",
+    image: "/panel-prep-spray.png",
+    content: {
+      description: {
+        en: "Surface cleaner that removes oils and residues before wax or coating application.",
+        es: "Limpiador de superficie que elimina aceites y residuos antes de aplicar cera o recubrimiento.",
+      },
+      benefits: {
+        en: ["Improves coating bonding", "Removes polish oils", "Residue-free finish", "Easy spray application"],
+        es: ["Mejora la adhesión del recubrimiento", "Elimina aceites de pulimento", "Acabado sin residuos", "Aplicación fácil en spray"],
+      },
+      howToUse: {
+        en: "Spray onto surface and wipe with microfiber.",
+        es: "Rociar sobre la superficie y limpiar con microfibra.",
+      },
     },
   },
-},
 
-{
-  id: "kc-leather-star",
-  brandSlug: "koch-chemie",
-  slug: "leather-star",
-  name: "Leather Star – Leather Conditioner",
-  image: "/leather-star.png",
-  content: {
-    description: {
-      en: "Leather care conditioner that nourishes, protects, and maintains a natural finish.",
-      es: "Acondicionador para cuero que nutre, protege y mantiene un acabado natural.",
-    },
-    benefits: {
-      en: ["Keeps leather soft", "Prevents drying and cracking", "Natural look finish", "Adds light protection"],
-      es: ["Mantiene el cuero suave", "Previene resequedad y grietas", "Acabado de aspecto natural", "Aporta protección ligera"],
-    },
-    howToUse: {
-      en: "Apply thinly with applicator, allow to absorb, then buff if needed.",
-      es: "Aplicar una capa fina, dejar absorber y retirar exceso si es necesario.",
+  {
+    id: "kc-active-foam",
+    brandSlug: "koch-chemie",
+    slug: "active-foam",
+    name: "Active Foam",
+    image: "/active-foam.png", // 1L (default)
+    variants: [
+      { size: "1L", image: "/active-foam.png" },
+      // If you keep the space in the filename, keep this line as-is.
+      // Recommended rename: /active-foam5L.png (no space) and update this line.
+      { size: "5L", image: "/active-foam 5L.png" },
+    ],
+    content: {
+      description: {
+        en: "High-foaming pre-wash shampoo that loosens dirt and road film for safer washing.",
+        es: "Champú de prelavado de alta espuma que afloja la suciedad y la película de carretera para un lavado más seguro.",
+      },
+      benefits: {
+        en: ["Thick foam clings to surfaces", "Loosens heavy dirt", "pH-friendly for many surfaces", "Ideal for foam cannons"],
+        es: ["Espuma espesa que se adhiere", "Afloja suciedad pesada", "pH amigable para muchas superficies", "Ideal para pistolas de espuma"],
+      },
+      howToUse: {
+        en: "Dilute, apply with foam cannon, allow to dwell, then rinse.",
+        es: "Diluir, aplicar con cañón de espuma, dejar actuar y enjuagar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-tea-textile-cleaner",
-  brandSlug: "koch-chemie",
-  slug: "tea-textile-cleaner",
-  name: "Tea – Textile & Upholstery Cleaner",
-  image: "/tea-textile-cleaner.png",
-  content: {
-    description: {
-      en: "Textile cleaner for upholstery and carpets that lifts dirt and stains while leaving fibers refreshed.",
-      es: "Limpiador textil para tapicería y alfombras que elimina suciedad y manchas dejando las fibras renovadas.",
-    },
-    benefits: {
-      en: ["Effective stain removal", "Safe on upholstery and carpets", "Freshens fibers", "Great for interior detailing"],
-      es: ["Eliminación efectiva de manchas", "Seguro para tapicería y alfombras", "Renueva las fibras", "Ideal para detallado interior"],
-    },
-    howToUse: {
-      en: "Dilute, apply, agitate, then extract or wipe clean.",
-      es: "Diluir, aplicar, agitar y extraer o limpiar.",
+  {
+    id: "kc-leather-star",
+    brandSlug: "koch-chemie",
+    slug: "leather-star",
+    name: "Leather Star – Leather Conditioner",
+    image: "/leather-star.png",
+    content: {
+      description: {
+        en: "Leather care conditioner that nourishes, protects, and maintains a natural finish.",
+        es: "Acondicionador para cuero que nutre, protege y mantiene un acabado natural.",
+      },
+      benefits: {
+        en: ["Keeps leather soft", "Prevents drying and cracking", "Natural look finish", "Adds light protection"],
+        es: ["Mantiene el cuero suave", "Previene resequedad y grietas", "Acabado de aspecto natural", "Aporta protección ligera"],
+      },
+      howToUse: {
+        en: "Apply thinly with applicator, allow to absorb, then buff if needed.",
+        es: "Aplicar una capa fina, dejar absorber y retirar exceso si es necesario.",
+      },
     },
   },
-},
 
-{
-  id: "kc-foamer",
-  brandSlug: "koch-chemie",
-  slug: "foamer",
-  name: "Foamer",
-  image: "/foamer.png",
-  content: {
-    description: {
-      en: "Foam sprayer accessory for applying cleaners evenly to surfaces with controlled foam output.",
-      es: "Accesorio espumador para aplicar limpiadores de manera uniforme con espuma controlada.",
-    },
-    benefits: {
-      en: ["Even product distribution", "Reduces overspray", "Adjustable foam output", "Ideal for interiors and wheels"],
-      es: ["Distribución uniforme", "Reduce el exceso de rociado", "Espuma ajustable", "Ideal para interiores y ruedas"],
-    },
-    howToUse: {
-      en: "Fill with diluted product, pump, and apply foam to surface.",
-      es: "Llenar con producto diluido, bombear y aplicar espuma.",
+  {
+    id: "kc-tea-textile-cleaner",
+    brandSlug: "koch-chemie",
+    slug: "tea-textile-cleaner",
+    name: "Tea – Textile & Upholstery Cleaner",
+    image: "/tea-textile-cleaner.png",
+    content: {
+      description: {
+        en: "Textile cleaner for upholstery and carpets that lifts dirt and stains while leaving fibers refreshed.",
+        es: "Limpiador textil para tapicería y alfombras que elimina suciedad y manchas dejando las fibras renovadas.",
+      },
+      benefits: {
+        en: ["Effective stain removal", "Safe on upholstery and carpets", "Freshens fibers", "Great for interior detailing"],
+        es: ["Eliminación efectiva de manchas", "Seguro para tapicería y alfombras", "Renueva las fibras", "Ideal para detallado interior"],
+      },
+      howToUse: {
+        en: "Dilute, apply, agitate, then extract or wipe clean.",
+        es: "Diluir, aplicar, agitar y extraer o limpiar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-glass-cleaner",
-  brandSlug: "koch-chemie",
-  slug: "glass-cleaner",
-  name: "Glass Cleaner",
-  image: "/glass-cleaner.png",
-  content: {
-    description: {
-      en: "Streak-free glass cleaner that removes fingerprints, film, and light contamination for crystal clarity.",
-      es: "Limpiador de vidrios sin rayas que elimina huellas, película y suciedad ligera para una claridad total.",
-    },
-    benefits: {
-      en: ["Streak-free finish", "Cuts through film and fingerprints", "Safe on tinted windows", "Fast wipe-off"],
-      es: ["Acabado sin rayas", "Elimina película y huellas", "Seguro en vidrios polarizados", "Fácil de retirar"],
-    },
-    howToUse: {
-      en: "Spray onto glass and wipe with microfiber or glass towel.",
-      es: "Rociar sobre el vidrio y limpiar con microfibra.",
+  {
+    id: "kc-foamer",
+    brandSlug: "koch-chemie",
+    slug: "foamer",
+    name: "Foamer",
+    image: "/foamer.png",
+    content: {
+      description: {
+        en: "Foam sprayer accessory for applying cleaners evenly to surfaces with controlled foam output.",
+        es: "Accesorio espumador para aplicar limpiadores de manera uniforme con espuma controlada.",
+      },
+      benefits: {
+        en: ["Even product distribution", "Reduces overspray", "Adjustable foam output", "Ideal for interiors and wheels"],
+        es: ["Distribución uniforme", "Reduce el exceso de rociado", "Espuma ajustable", "Ideal para interiores y ruedas"],
+      },
+      howToUse: {
+        en: "Fill with diluted product, pump, and apply foam to surface.",
+        es: "Llenar con producto diluido, bombear y aplicar espuma.",
+      },
     },
   },
-},
 
-{
-  id: "kc-green-star",
-  brandSlug: "koch-chemie",
-  slug: "green-star",
-  name: "Green Star – Universal Cleaner",
-  image: "/green-star.png",
-  content: {
-    description: {
-      en: "Concentrated universal cleaner for interior and exterior use, suitable for heavy and general cleaning.",
-      es: "Limpiador universal concentrado para uso interior y exterior, ideal para limpieza general o pesada.",
-    },
-    benefits: {
-      en: ["Highly concentrated", "Versatile interior/exterior use", "Strong cleaning performance", "Dilution control"],
-      es: ["Altamente concentrado", "Uso versátil interior/exterior", "Gran poder de limpieza", "Control de dilución"],
-    },
-    howToUse: {
-      en: "Dilute based on task, apply, agitate if needed, then wipe or rinse.",
-      es: "Diluir según la tarea, aplicar, agitar si es necesario y limpiar o enjuagar.",
+  {
+    id: "kc-glass-cleaner",
+    brandSlug: "koch-chemie",
+    slug: "glass-cleaner",
+    name: "Glass Cleaner",
+    image: "/glass-cleaner.png",
+    content: {
+      description: {
+        en: "Streak-free glass cleaner that removes fingerprints, film, and light contamination for crystal clarity.",
+        es: "Limpiador de vidrios sin rayas que elimina huellas, película y suciedad ligera para una claridad total.",
+      },
+      benefits: {
+        en: ["Streak-free finish", "Cuts through film and fingerprints", "Safe on tinted windows", "Fast wipe-off"],
+        es: ["Acabado sin rayas", "Elimina película y huellas", "Seguro en vidrios polarizados", "Fácil de retirar"],
+      },
+      howToUse: {
+        en: "Spray onto glass and wipe with microfiber or glass towel.",
+        es: "Rociar sobre el vidrio y limpiar con microfibra.",
+      },
     },
   },
-},
 
-{
-  id: "kc-hydro-plast-care",
-  brandSlug: "koch-chemie",
-  slug: "hydro-plast-care",
-  name: "Hydro Plast Care",
-  image: "/hydro-plast-care.png",
-  content: {
-    description: {
-      en: "Water-based plastic care product that refreshes and protects exterior plastics with a clean finish.",
-      es: "Producto a base de agua para cuidar plásticos exteriores, renovando y protegiendo con un acabado limpio.",
-    },
-    benefits: {
-      en: ["Water-based formula", "Restores plastics", "UV protection support", "Non-greasy finish"],
-      es: ["Fórmula a base de agua", "Restaura plásticos", "Apoyo contra rayos UV", "Acabado no grasoso"],
-    },
-    howToUse: {
-      en: "Apply with applicator, spread evenly, allow to dry.",
-      es: "Aplicar con aplicador, distribuir y dejar secar.",
+  {
+    id: "kc-green-star",
+    brandSlug: "koch-chemie",
+    slug: "green-star",
+    name: "Green Star – Universal Cleaner",
+    image: "/green-star.png", // 1L (default)
+    variants: [
+      { size: "1L", image: "/green-star.png" },
+      // Recommended: rename your 5L image to /green-star5L.png so the selector changes the image.
+      { size: "5L", image: "/green-star5L.png" },
+    ],
+    content: {
+      description: {
+        en: "Concentrated universal cleaner for interior and exterior use, suitable for heavy and general cleaning.",
+        es: "Limpiador universal concentrado para uso interior y exterior, ideal para limpieza general o pesada.",
+      },
+      benefits: {
+        en: ["Highly concentrated", "Versatile interior/exterior use", "Strong cleaning performance", "Dilution control"],
+        es: ["Altamente concentrado", "Uso versátil interior/exterior", "Gran poder de limpieza", "Control de dilución"],
+      },
+      howToUse: {
+        en: "Dilute based on task, apply, agitate if needed, then wipe or rinse.",
+        es: "Diluir según la tarea, aplicar, agitar si es necesario y limpiar o enjuagar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-h902-heavy-cut",
-  brandSlug: "koch-chemie",
-  slug: "h902-heavy-cut",
-  name: "H902 – Heavy Cut Compound",
-  image: "/h902-heavy-cut.png",
-  content: {
-    description: {
-      en: "Heavy cut compound for removing severe defects such as deep swirls and sanding marks.",
-      es: "Compuesto de corte fuerte para eliminar defectos severos como remolinos profundos y marcas de lijado.",
-    },
-    benefits: {
-      en: ["Strong defect removal", "Effective on hard clear coats", "Professional correction", "Good working time"],
-      es: ["Gran eliminación de defectos", "Eficaz en barnices duros", "Corrección profesional", "Buen tiempo de trabajo"],
-    },
-    howToUse: {
-      en: "Use with cutting pad and machine polisher, then wipe residue.",
-      es: "Usar con pad de corte y pulidora, luego retirar residuos.",
+  {
+    id: "kc-hydro-plast-care",
+    brandSlug: "koch-chemie",
+    slug: "hydro-plast-care",
+    name: "Hydro Plast Care",
+    image: "/hydro-plast-care.png",
+    content: {
+      description: {
+        en: "Water-based plastic care product that refreshes and protects exterior plastics with a clean finish.",
+        es: "Producto a base de agua para cuidar plásticos exteriores, renovando y protegiendo con un acabado limpio.",
+      },
+      benefits: {
+        en: ["Water-based formula", "Restores plastics", "UV protection support", "Non-greasy finish"],
+        es: ["Fórmula a base de agua", "Restaura plásticos", "Apoyo contra rayos UV", "Acabado no grasoso"],
+      },
+      howToUse: {
+        en: "Apply with applicator, spread evenly, allow to dry.",
+        es: "Aplicar con aplicador, distribuir y dejar secar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-hydrofoam-sealant",
-  brandSlug: "koch-chemie",
-  slug: "hydrofoam-sealant",
-  name: "HydroFoam Sealant",
-  image: "/hydrofoam-sealant.png",
-  content: {
-    description: {
-      en: "Foam-applied sealant that adds hydrophobic protection and gloss during the wash process.",
-      es: "Sellador aplicado con espuma que agrega protección hidrofóbica y brillo durante el proceso de lavado.",
-    },
-    benefits: {
-      en: ["Adds hydrophobic protection", "Enhances gloss", "Fast application", "Great for maintenance washes"],
-      es: ["Aporta protección hidrofóbica", "Mejora el brillo", "Aplicación rápida", "Ideal para lavados de mantenimiento"],
-    },
-    howToUse: {
-      en: "Apply via foam cannon, allow to dwell briefly, rinse off, and dry.",
-      es: "Aplicar con cañón de espuma, dejar actuar brevemente, enjuagar y secar.",
+  {
+    id: "kc-h902-heavy-cut",
+    brandSlug: "koch-chemie",
+    slug: "h902-heavy-cut",
+    name: "H902 – Heavy Cut Compound",
+    image: "/h902-heavy-cut.png",
+    content: {
+      description: {
+        en: "Heavy cut compound for removing severe defects such as deep swirls and sanding marks.",
+        es: "Compuesto de corte fuerte para eliminar defectos severos como remolinos profundos y marcas de lijado.",
+      },
+      benefits: {
+        en: ["Strong defect removal", "Effective on hard clear coats", "Professional correction", "Good working time"],
+        es: ["Gran eliminación de defectos", "Eficaz en barnices duros", "Corrección profesional", "Buen tiempo de trabajo"],
+      },
+      howToUse: {
+        en: "Use with cutting pad and machine polisher, then wipe residue.",
+        es: "Usar con pad de corte y pulidora, luego retirar residuos.",
+      },
     },
   },
-},
 
-{
-  id: "kc-gentle-snow-foam",
-  brandSlug: "koch-chemie",
-  slug: "gentle-snow-foam",
-  name: "Gentle Snow Foam",
-  image: "/gentle-snow-foam.png",
-  content: {
-    description: {
-      en: "Gentle foaming pre-wash that loosens dirt while being friendly to protected surfaces.",
-      es: "Prelavado de espuma suave que afloja la suciedad siendo amigable con superficies protegidas.",
-    },
-    benefits: {
-      en: ["Gentle on wax/sealants", "Rich foam", "Helps reduce wash marring", "Pleasant wash experience"],
-      es: ["Suave con ceras/selladores", "Espuma rica", "Reduce marcas de lavado", "Lavado más seguro"],
-    },
-    howToUse: {
-      en: "Dilute, foam the vehicle, let dwell, then rinse thoroughly.",
-      es: "Diluir, espumar el vehículo, dejar actuar y enjuagar.",
+  {
+    id: "kc-hydrofoam-sealant",
+    brandSlug: "koch-chemie",
+    slug: "hydrofoam-sealant",
+    name: "HydroFoam Sealant",
+    image: "/hydrofoam-sealant.png",
+    content: {
+      description: {
+        en: "Foam-applied sealant that adds hydrophobic protection and gloss during the wash process.",
+        es: "Sellador aplicado con espuma que agrega protección hidrofóbica y brillo durante el proceso de lavado.",
+      },
+      benefits: {
+        en: ["Adds hydrophobic protection", "Enhances gloss", "Fast application", "Great for maintenance washes"],
+        es: ["Aporta protección hidrofóbica", "Mejora el brillo", "Aplicación rápida", "Ideal para lavados de mantenimiento"],
+      },
+      howToUse: {
+        en: "Apply via foam cannon, allow to dwell briefly, rinse off, and dry.",
+        es: "Aplicar con cañón de espuma, dejar actuar brevemente, enjuagar y secar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-magic-wheel-cleaner",
-  brandSlug: "koch-chemie",
-  slug: "magic-wheel-cleaner",
-  name: "Magic Wheel Cleaner",
-  image: "/magic-wheel-cleaner.png",
-  content: {
-    description: {
-      en: "Wheel cleaner designed to remove brake dust and road grime effectively from wheel surfaces.",
-      es: "Limpiador de ruedas diseñado para eliminar polvo de frenos y suciedad de carretera de manera efectiva.",
-    },
-    benefits: {
-      en: ["Removes brake dust", "Strong cleaning action", "Works on many wheel finishes", "Easy rinse-off"],
-      es: ["Elimina polvo de frenos", "Acción de limpieza fuerte", "Funciona en varios acabados", "Fácil de enjuagar"],
-    },
-    howToUse: {
-      en: "Spray on wheels, allow to dwell, agitate if needed, then rinse.",
-      es: "Rociar en las ruedas, dejar actuar, agitar si es necesario y enjuagar.",
+  {
+    id: "kc-gentle-snow-foam",
+    brandSlug: "koch-chemie",
+    slug: "gentle-snow-foam",
+    name: "Gentle Snow Foam",
+    image: "/gentle-snow-foam.png", // 1L (default)
+    variants: [
+      { size: "1L", image: "/gentle-snow-foam.png" },
+      { size: "5L", image: "/gentle-snow-foam5L.png" },
+    ],
+    content: {
+      description: {
+        en: "Gentle foaming pre-wash that loosens dirt while being friendly to protected surfaces.",
+        es: "Prelavado de espuma suave que afloja la suciedad siendo amigable con superficies protegidas.",
+      },
+      benefits: {
+        en: ["Gentle on wax/sealants", "Rich foam", "Helps reduce wash marring", "Pleasant wash experience"],
+        es: ["Suave con ceras/selladores", "Espuma rica", "Reduce marcas de lavado", "Lavado más seguro"],
+      },
+      howToUse: {
+        en: "Dilute, foam the vehicle, let dwell, then rinse thoroughly.",
+        es: "Diluir, espumar el vehículo, dejar actuar y enjuagar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-nano-magic-shampoo",
-  brandSlug: "koch-chemie",
-  slug: "nano-magic-shampoo",
-  name: "Nano Magic Shampoo",
-  image: "/nano-magic-shampoo.png",
-  content: {
-    description: {
-      en: "Wash shampoo that cleans while leaving a protective, hydrophobic effect and enhanced gloss.",
-      es: "Champú de lavado que limpia mientras deja un efecto protector hidrofóbico y más brillo.",
-    },
-    benefits: {
-      en: ["Cleans and protects", "Hydrophobic effect", "Improves gloss", "Great maintenance shampoo"],
-      es: ["Limpia y protege", "Efecto hidrofóbico", "Mejora el brillo", "Ideal para mantenimiento"],
-    },
-    howToUse: {
-      en: "Dilute in wash bucket, wash as normal, then rinse and dry.",
-      es: "Diluir en cubeta, lavar normalmente, enjuagar y secar.",
+  {
+    id: "kc-magic-wheel-cleaner",
+    brandSlug: "koch-chemie",
+    slug: "magic-wheel-cleaner",
+    name: "Magic Wheel Cleaner",
+    image: "/magic-wheel-cleaner.png",
+    content: {
+      description: {
+        en: "Wheel cleaner designed to remove brake dust and road grime effectively from wheel surfaces.",
+        es: "Limpiador de ruedas diseñado para eliminar polvo de frenos y suciedad de carretera de manera efectiva.",
+      },
+      benefits: {
+        en: ["Removes brake dust", "Strong cleaning action", "Works on many wheel finishes", "Easy rinse-off"],
+        es: ["Elimina polvo de frenos", "Acción de limpieza fuerte", "Funciona en varios acabados", "Fácil de enjuagar"],
+      },
+      howToUse: {
+        en: "Spray on wheels, allow to dwell, agitate if needed, then rinse.",
+        es: "Rociar en las ruedas, dejar actuar, agitar si es necesario y enjuagar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-alkaline-wheel-cleaner",
-  brandSlug: "koch-chemie",
-  slug: "alkaline-wheel-cleaner",
-  name: "Alkaline Wheel Cleaner",
-  image: "/alkaline-wheel-cleaner.png",
-  content: {
-    description: {
-      en: "Alkaline wheel cleaner for strong removal of road grime and oily contamination from wheels and tires.",
-      es: "Limpiador alcalino de ruedas para eliminar suciedad de carretera y contaminación aceitosa de ruedas y llantas.",
-    },
-    benefits: {
-      en: ["Strong alkaline cleaning", "Cuts oily grime", "Great for tires and wheels", "Professional performance"],
-      es: ["Limpieza alcalina fuerte", "Corta suciedad aceitosa", "Ideal para llantas y ruedas", "Rendimiento profesional"],
-    },
-    howToUse: {
-      en: "Dilute if needed, spray on, agitate, and rinse thoroughly.",
-      es: "Diluir si es necesario, rociar, agitar y enjuagar bien.",
+  {
+    id: "kc-nano-magic-shampoo",
+    brandSlug: "koch-chemie",
+    slug: "nano-magic-shampoo",
+    name: "Nano Magic Shampoo",
+    image: "/nano-magic-shampoo.png",
+    content: {
+      description: {
+        en: "Wash shampoo that cleans while leaving a protective, hydrophobic effect and enhanced gloss.",
+        es: "Champú de lavado que limpia mientras deja un efecto protector hidrofóbico y más brillo.",
+      },
+      benefits: {
+        en: ["Cleans and protects", "Hydrophobic effect", "Improves gloss", "Great maintenance shampoo"],
+        es: ["Limpia y protege", "Efecto hidrofóbico", "Mejora el brillo", "Ideal para mantenimiento"],
+      },
+      howToUse: {
+        en: "Dilute in wash bucket, wash as normal, then rinse and dry.",
+        es: "Diluir en cubeta, lavar normalmente, enjuagar y secar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-one-cut-finish-p6-02",
-  brandSlug: "koch-chemie",
-  slug: "one-cut-finish-p6-02",
-  name: "One Cut & Finish P6.02",
-  image: "/one-cut-finish-p6-02.png",
-  content: {
-    description: {
-      en: "One-step polish that combines defect removal with high-gloss finishing for efficient paint correction.",
-      es: "Pulimento de un paso que combina corrección de defectos con acabado de alto brillo para una corrección eficiente.",
-    },
-    benefits: {
-      en: ["One-step correction and finish", "High-gloss result", "Efficient workflow", "Reduced dusting"],
-      es: ["Corrección y acabado en un paso", "Resultado de alto brillo", "Flujo de trabajo eficiente", "Menos polvo"],
-    },
-    howToUse: {
-      en: "Use with polishing pad and machine, work section by section, wipe off.",
-      es: "Usar con pad de pulido y máquina, trabajar por secciones y limpiar.",
+  {
+    id: "kc-alkaline-wheel-cleaner",
+    brandSlug: "koch-chemie",
+    slug: "alkaline-wheel-cleaner",
+    name: "Alkaline Wheel Cleaner",
+    image: "/alkaline-wheel-cleaner.png",
+    content: {
+      description: {
+        en: "Alkaline wheel cleaner for strong removal of road grime and oily contamination from wheels and tires.",
+        es: "Limpiador alcalino de ruedas para eliminar suciedad de carretera y contaminación aceitosa de ruedas y llantas.",
+      },
+      benefits: {
+        en: ["Strong alkaline cleaning", "Cuts oily grime", "Great for tires and wheels", "Professional performance"],
+        es: ["Limpieza alcalina fuerte", "Corta suciedad aceitosa", "Ideal para llantas y ruedas", "Rendimiento profesional"],
+      },
+      howToUse: {
+        en: "Dilute if needed, spray on, agitate, and rinse thoroughly.",
+        es: "Diluir si es necesario, rociar, agitar y enjuagar bien.",
+      },
     },
   },
-},
 
-{
-  id: "kc-gentle-snow-foam-xmas",
-  brandSlug: "koch-chemie",
-  slug: "gentle-snow-foam-christmas-edition",
-  name: "Gentle Snow Foam – Christmas Edition",
-  image: "/gentle-snow-foam-christmas-edition.png",
-  content: {
-    description: {
-      en: "Limited edition Gentle Snow Foam with the same safe cleaning performance and festive presentation.",
-      es: "Edición limitada de Gentle Snow Foam con el mismo rendimiento de limpieza seguro y presentación festiva.",
-    },
-    benefits: {
-      en: ["Gentle on protected surfaces", "Rich foam cleaning", "Ideal pre-wash step", "Limited edition packaging"],
-      es: ["Suave con superficies protegidas", "Limpieza con espuma rica", "Ideal como prelavado", "Empaque edición limitada"],
-    },
-    howToUse: {
-      en: "Dilute, foam the vehicle, let dwell, then rinse thoroughly.",
-      es: "Diluir, espumar el vehículo, dejar actuar y enjuagar.",
+  {
+    id: "kc-one-cut-finish-p6-02",
+    brandSlug: "koch-chemie",
+    slug: "one-cut-finish-p6-02",
+    name: "One Cut & Finish P6.02",
+    image: "/one-cut-finish-p6-02.png",
+    content: {
+      description: {
+        en: "One-step polish that combines defect removal with high-gloss finishing for efficient paint correction.",
+        es: "Pulimento de un paso que combina corrección de defectos con acabado de alto brillo para una corrección eficiente.",
+      },
+      benefits: {
+        en: ["One-step correction and finish", "High-gloss result", "Efficient workflow", "Reduced dusting"],
+        es: ["Corrección y acabado en un paso", "Resultado de alto brillo", "Flujo de trabajo eficiente", "Menos polvo"],
+      },
+      howToUse: {
+        en: "Use with polishing pad and machine, work section by section, wipe off.",
+        es: "Usar con pad de pulido y máquina, trabajar por secciones y limpiar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-allround-surface-cleaner",
-  brandSlug: "koch-chemie",
-  slug: "allround-surface-cleaner",
-  name: "Allround Surface Cleaner",
-  image: "/allround-surface-cleaner.png",
-  content: {
-    description: {
-      en: "All-purpose surface cleaner for interior and exterior areas that removes dirt and light contamination.",
-      es: "Limpiador multiusos para interior y exterior que elimina suciedad y contaminación ligera.",
-    },
-    benefits: {
-      en: ["Versatile use", "Effective daily cleaning", "Safe on many hard surfaces", "Easy wipe-off"],
-      es: ["Uso versátil", "Limpieza diaria efectiva", "Seguro en muchas superficies duras", "Fácil de limpiar"],
-    },
-    howToUse: {
-      en: "Spray onto surface and wipe clean; dilute if needed.",
-      es: "Rociar sobre la superficie y limpiar; diluir si es necesario.",
+  {
+    id: "kc-gentle-snow-foam-xmas",
+    brandSlug: "koch-chemie",
+    slug: "gentle-snow-foam-christmas-edition",
+    name: "Gentle Snow Foam – Christmas Edition",
+    image: "/gentle-snow-foam-christmas-edition.png",
+    content: {
+      description: {
+        en: "Limited edition Gentle Snow Foam with the same safe cleaning performance and festive presentation.",
+        es: "Edición limitada de Gentle Snow Foam con el mismo rendimiento de limpieza seguro y presentación festiva.",
+      },
+      benefits: {
+        en: ["Gentle on protected surfaces", "Rich foam cleaning", "Ideal pre-wash step", "Limited edition packaging"],
+        es: ["Suave con superficies protegidas", "Limpieza con espuma rica", "Ideal como prelavado", "Empaque edición limitada"],
+      },
+      howToUse: {
+        en: "Dilute, foam the vehicle, let dwell, then rinse thoroughly.",
+        es: "Diluir, espumar el vehículo, dejar actuar y enjuagar.",
+      },
     },
   },
-},
 
-{
-  id: "kc-m302-micro-cut",
-  brandSlug: "koch-chemie",
-  slug: "m302-micro-cut",
-  name: "M302 – Micro Cut Polish",
-  image: "/m302-micro-cut.png",
-  content: {
-    description: {
-      en: "Micro cut polish designed for refining paint and removing fine haze to achieve a high-gloss finish.",
-      es: "Pulimento de micro corte diseñado para refinar la pintura y eliminar velo fino logrando un acabado de alto brillo.",
-    },
-    benefits: {
-      en: ["Refines finish to high gloss", "Removes fine haze and micro-marring", "Great final polishing step", "Professional results"],
-      es: ["Refina el acabado a alto brillo", "Elimina velo fino y micro marcas", "Ideal como paso final", "Resultados profesionales"],
-    },
-    howToUse: {
-      en: "Use with finishing pad and polisher, then wipe off residue.",
-      es: "Usar con pad de acabado y pulidora, luego retirar residuos.",
+  {
+    id: "kc-allround-surface-cleaner",
+    brandSlug: "koch-chemie",
+    slug: "allround-surface-cleaner",
+    name: "Allround Surface Cleaner",
+    image: "/allround-surface-cleaner.png",
+    content: {
+      description: {
+        en: "All-purpose surface cleaner for interior and exterior areas that removes dirt and light contamination.",
+        es: "Limpiador multiusos para interior y exterior que elimina suciedad y contaminación ligera.",
+      },
+      benefits: {
+        en: ["Versatile use", "Effective daily cleaning", "Safe on many hard surfaces", "Easy wipe-off"],
+        es: ["Uso versátil", "Limpieza diaria efectiva", "Seguro en muchas superficies duras", "Fácil de limpiar"],
+      },
+      howToUse: {
+        en: "Spray onto surface and wipe clean; dilute if needed.",
+        es: "Rociar sobre la superficie y limpiar; diluir si es necesario.",
+      },
     },
   },
-},
 
+  {
+    id: "kc-m302-micro-cut",
+    brandSlug: "koch-chemie",
+    slug: "m302-micro-cut",
+    name: "M302 – Micro Cut Polish",
+    image: "/m302-micro-cut.png",
+    content: {
+      description: {
+        en: "Micro cut polish designed for refining paint and removing fine haze to achieve a high-gloss finish.",
+        es: "Pulimento de micro corte diseñado para refinar la pintura y eliminar velo fino logrando un acabado de alto brillo.",
+      },
+      benefits: {
+        en: ["Refines finish to high gloss", "Removes fine haze and micro-marring", "Great final polishing step", "Professional results"],
+        es: ["Refina el acabado a alto brillo", "Elimina velo fino y micro marcas", "Ideal como paso final", "Resultados profesionales"],
+      },
+      howToUse: {
+        en: "Use with finishing pad and polisher, then wipe off residue.",
+        es: "Usar con pad de acabado y pulidora, luego retirar residuos.",
+      },
+    },
+  },
 ]

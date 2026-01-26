@@ -20,7 +20,11 @@ export default async function BrandPage({
   const brand = BRANDS.find((b: Brand) => b.slug === brandSlug)
   if (!brand) return notFound()
 
-  const brandProducts = PRODUCTS.filter((p) => p.brandSlug === brandSlug)
+  const brandProducts = PRODUCTS
+  .filter((p) => p.brandSlug === brandSlug)
+  .slice()
+  .sort((a, b) => a.name.localeCompare(b.name))
+
 
   return (
     <main className="container max-w-7xl mx-auto px-4 py-12 space-y-10">
