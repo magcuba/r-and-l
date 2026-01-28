@@ -40,7 +40,7 @@ export function ProductHero({ product }: { product: Product }) {
   return (
     <div className="space-y-4">
       {/* Image */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-xl bg-white">
+      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-xl bg-muted">
         <Image
           src={img}
           alt={product.name}
