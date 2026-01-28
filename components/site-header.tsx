@@ -16,13 +16,13 @@ export function SiteHeader() {
   const { lang, toggleLang, t } = useLanguage()
   const router = useRouter()
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false)
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
   }
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev)
