@@ -81,11 +81,11 @@ export function BestSellersSection() {
   const duplicatedProducts = [...bestSellers, ...bestSellers]
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t("best_sellers_title")}</h2>
-          <p className="text-lg text-gray-600">{t("best_sellers_subtitle")}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t("best_sellers_title")}</h2>
+          <p className="text-lg text-muted-foreground">{t("best_sellers_subtitle")}</p>
         </div>
 
         <div className="relative overflow-hidden">
@@ -98,22 +98,22 @@ export function BestSellersSection() {
                 return (
                   <div
                     key={`${product.id}-${index}`}
-                    className="flex-shrink-0 w-64 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                    className="flex-shrink-0 w-64 bg-card rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-border"
                   >
-                    <div className="relative h-56 bg-gray-100 p-4">
+                    <div className="relative h-56 bg-muted p-4">
                       <Image
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
                         className="object-contain"
                       />
-                      <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <div className="absolute top-3 right-3 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-semibold">
                         {t("best_sellers_badge")}
                       </div>
                     </div>
                     <div className="p-4">
-                      <div className="text-sm text-blue-600 font-medium mb-1">{categoryLabel}</div>
-                      <h3 className="text-lg font-bold text-gray-900 line-clamp-2">{product.name}</h3>
+                      <div className="text-sm text-secondary font-medium mb-1">{categoryLabel}</div>
+                      <h3 className="text-lg font-bold text-card-foreground line-clamp-2">{product.name}</h3>
                     </div>
                   </div>
                 )
@@ -150,17 +150,17 @@ export function BestSellersSection() {
         }
 
         .best-sellers-scroll::-webkit-scrollbar-track {
-          background: rgba(0, 0, 0, 0.05);
+          background: var(--muted);
           border-radius: 10px;
         }
 
         .best-sellers-scroll::-webkit-scrollbar-thumb {
-          background: rgba(0, 0, 0, 0.3);
+          background: var(--border);
           border-radius: 10px;
         }
 
         .best-sellers-scroll::-webkit-scrollbar-thumb:hover {
-          background: rgba(0, 0, 0, 0.5);
+          background: var(--muted-foreground);
         }
       `}</style>
     </section>
