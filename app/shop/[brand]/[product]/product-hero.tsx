@@ -1,5 +1,5 @@
 "use client"
-
+// test push from VS Code
 import Image from "next/image"
 import { useMemo, useState } from "react"
 import type { Product } from "@/lib/products"
