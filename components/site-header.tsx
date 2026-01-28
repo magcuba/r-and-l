@@ -4,20 +4,26 @@ import type React from "react"
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Instagram, Facebook, Youtube, Globe, Menu, X, ChevronDown, ChevronRight } from "lucide-react"
+import { Instagram, Facebook, Youtube, Globe, Menu, X, ChevronDown, ChevronRight, Moon, Sun } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import { FEATURED_BRANDS } from "@/lib/brands"
 import { useLanguage } from "@/components/language-provider"
 import { useRouter, usePathname } from "next/navigation"
+import { useTheme } from "next-themes"
 
 export function SiteHeader() {
   const { lang, toggleLang, t } = useLanguage()
   const router = useRouter()
   const pathname = usePathname()
+  const { theme, setTheme } = useTheme()
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false)
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev)
 
@@ -91,10 +97,17 @@ export function SiteHeader() {
             </div>
           </div>
 
-          <Button variant="ghost" size="sm" onClick={toggleLang} className="h-8 text-xs">
-            <Globe className="h-3 w-3 mr-1" />
-            {lang === "en" ? "Español" : "English"}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="sm" onClick={toggleTheme} className="h-8 w-8 p-0">
+              <Sun className="h-3.5 w-3.5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-3.5 w-3.5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+            <Button variant="ghost" size="sm" onClick={toggleLang} className="h-8 text-xs">
+              <Globe className="h-3 w-3 mr-1" />
+              {lang === "en" ? "Español" : "English"}
+            </Button>
+          </div>
         </div>
       </div>
 

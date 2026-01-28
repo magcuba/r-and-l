@@ -70,14 +70,14 @@ export function BrandsSection() {
               height: 8px;
             }
             .scrollbar-hide::-webkit-scrollbar-track {
-              background: transparent;
+              background: var(--muted);
             }
             .scrollbar-hide::-webkit-scrollbar-thumb {
-              background: rgba(0, 0, 0, 0.3);
+              background: var(--border);
               border-radius: 4px;
             }
             .scrollbar-hide::-webkit-scrollbar-thumb:hover {
-              background: rgba(0, 0, 0, 0.5);
+              background: var(--muted-foreground);
             }
           `}</style>
           <div className="flex gap-12 py-8">
