@@ -263,10 +263,26 @@ export function SiteHeader() {
             <a
               href="#location"
               onClick={scrollToStore}
-              className="text-base font-medium hover:text-primary transition-colors py-2 cursor-pointer"
+              className="text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted cursor-pointer"
             >
               {t("store_hours_location")}
             </a>
+
+            {/* Theme and Language toggles for mobile */}
+            <div className="flex items-center justify-between py-3">
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">{t("theme") || "Theme"}</span>
+                <Button variant="outline" size="sm" onClick={toggleTheme} className="h-9 w-9 p-0">
+                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </div>
+              <Button variant="outline" size="sm" onClick={toggleLang} className="h-9 text-sm">
+                <Globe className="h-4 w-4 mr-2" />
+                {lang === "en" ? "Español" : "English"}
+              </Button>
+            </div>
           </nav>
         </div>
       )}
