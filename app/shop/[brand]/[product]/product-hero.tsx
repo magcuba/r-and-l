@@ -40,11 +40,17 @@ export function ProductHero({ product }: { product: Product }) {
   return (
     <div className="space-y-4">
       {/* Image */}
-      <div className="relative w-full aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-        <Image src={img} alt={product.name} fill className="object-contain p-8" />
+      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-xl bg-white">
+        <Image
+          src={img}
+          alt={product.name}
+          fill
+          className="object-contain p-3 sm:p-6"
+          priority
+        />
       </div>
 
-      {/* Size selector (now above Description, below image) */}
+      {/* Size selector */}
       {hasVariants && (
         <div className="flex items-center gap-2 px-4">
           <span className="text-sm text-muted-foreground">Size:</span>
