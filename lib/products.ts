@@ -761,10 +761,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "wash-wax",
     name: "Wash & Wax",
-    image: "/images/Wash & Wax 1 Gal.png",
+    image: "/images/Wash&Wax1Gal.png",
     variants: [
-      { size: "1 Gal", image: "/images/Wash & Wax 1 Gal.png" },
-      { size: "5 Gal", image: "/images/Wash & Wax 1 Gal.png" },
+      { size: "1 Gal", image: "/images/Wash&Wax1Gal.png" },
+      { size: "5 Gal", image: "/images/Wash&Wax1Gal.png" },
     ],
     content: {
       description: {
@@ -802,10 +802,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "car-wash",
     name: "Car Wash",
-    image: "/images/Car Wash 1 Gal.png",
+    image: "/images/CarWash1Gal.png",
     variants: [
-      { size: "1 Gal", image: "/images/Car Wash 1 Gal.png" },
-      { size: "5 Gal", image: "/images/Car Wash 1 Gal.png" },
+      { size: "1 Gal", image: "/images/CarWash1Gal.png" },
+      { size: "5 Gal", image: "/images/CarWash1Gal.png" },
     ],
     content: {
       description: {
@@ -841,10 +841,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "speed-wax",
     name: "Speed Wax",
-    image: "/images/Speed Wax 32 oz.png",
+    image: "/images/SpeedWax32oz.png",
     variants: [
-      { size: "32 oz", image: "/images/Speed Wax 32 oz.png" },
-      { size: "1 Gal", image: "/images/Speed Wax 1 gal.png" },
+      { size: "32 oz", image: "/images/SpeedWax32oz.png" },
+      { size: "1 Gal", image: "/images/SpeedWax1gal.png" },
     ],
     content: {
       description: {
@@ -882,8 +882,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "ceramic-quick-detailer",
     name: "Ceramic Quick Detailer",
-    image: "/images/Ceramic Quick Detailer 16 Oz.png",
-    variants: [{ size: "16 oz", image: "/images/Ceramic Quick Detailer 16 Oz.png" }],
+    image: "/images/CeramicQuickDetailer16Oz.png",
+    variants: [{ size: "16 oz", image: "/images/CeramicQuickDetailer16Oz.png" }],
     content: {
       description: {
         en: "Advanced ceramic quick detailer designed to maintain a sleek, high-gloss finish between washes. This professional formula enhances shine while adding ceramic protection, removing light dust, fingerprints, and water spots. Leaves a durable, hydrophobic layer that repels dirt and water, keeping your vehicle looking freshly detailed and protected.",
@@ -920,10 +920,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "better-wax",
     name: "Better Wax",
-    image: "/images/Better Wax 1 Gal.png",
+    image: "/images/BetterWax1Gal.png",
     variants: [
-      { size: "1 Gal", image: "/images/Better Wax 1 Gal.png" },
-      { size: "1 Pint", image: "/images/Better Wax 1 Gal.png" },
+      { size: "1 Gal", image: "/images/BetterWax1Gal.png" },
+      { size: "1 Pint", image: "/images/BetterWax1Gal.png" },
     ],
     content: {
       description: {
@@ -961,10 +961,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "foam-pad-polish",
     name: "Foam Pad Polish",
-    image: "/images/Foam Pad Polish 1 Quart.png",
+    image: "/images/FoamPadPolish1Gal.png",
     variants: [
-            { size: "1 Quart", image: "/images/Foam Pad Polish 1 Quart.png" },
-            { size: "1 Gal", image: "/images/Foam Pad Polish 1 Gal.png" },
+            { size: "1 Quart", image: "/images/FoamPadPolish1Quart.png" },
+            { size: "1 Gal", image: "/images/FoamPadPolish1Gal.png" },
     ],
     content: {
       description: {
@@ -1004,10 +1004,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "big-bite-compound",
     name: "Big Bite Compound",
-    image: "/images/Big Bite Gallon.png",
+    image: "/images/BigBiteGallon.png",
     variants: [
-      { size: "1 Gal", image: "/images/Big Bite Gallon.png" },
-      { size: "1 Quart", image: "/images/Big Bite Gallon.png" },
+      { size: "1 Gal", image: "/images/BigBiteGallon.png" },
+      { size: "1 Quart", image: "/images/BigBiteGallon.png" },
     ],
     content: {
       description: {
@@ -1045,10 +1045,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "miracle-cut-1000",
     name: "Miracle Cut 1000",
-    image: "/images/Miracle Cut  quart.png",
+    image: "/images/MiracleCutquart.png",
     variants: [
-        { size: "1 Quart", image: "/images/Miracle Cut  quart.png" },
-        { size: "1 Gal", image: "/images/Miracle Cut Gallon.png" },
+        { size: "1 Quart", image: "/images/MiracleCutquart.png" },
+        { size: "1 Gal", image: "/images/MiracleCutGallon.png" },
     ],
     content: {
       description: {
