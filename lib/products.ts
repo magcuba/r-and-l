@@ -1,5 +1,5 @@
 export type Variant = {
-  size: "1L" | "5L"
+  size: "1L" | "5L" | "1 Gal" | "5 Gal" | "32 oz" | "16 oz" | "1 Pint" | "1 Quart"
   image: string
   sku?: string
   price?: number
@@ -753,6 +753,331 @@ export const PRODUCTS: Product[] = [
       howToUse: {
         en: "Use with finishing pad and polisher, then wipe off residue.",
         es: "Usar con pad de acabado y pulidora, luego retirar residuos.",
+      },
+    },
+  },
+  {
+    id: "falconpro-wash-wax",
+    brandSlug: "falconpro",
+    slug: "wash-wax",
+    name: "Wash & Wax",
+    image: "/images/Wash & Wax 1 Gal.png",
+    variants: [
+      { size: "1 Gal", image: "/images/Wash & Wax 1 Gal.png" },
+      { size: "5 Gal", image: "/images/Wash & Wax 1 Gal.png" },
+    ],
+    content: {
+      description: {
+        en: "High-foaming, pH-balanced wash and wax shampoo that cleans and protects in one step. Infused with premium carnauba wax, it enhances gloss while leaving a protective, water-repellent layer for a just-waxed finish.",
+        es: "Champú de alto espumado con pH balanceado que limpia y encera en un solo paso. Enriquecido con cera de carnauba premium, realza el brillo y deja una capa protectora con efecto repelente al agua para un acabado como recién encerado.",
+      },
+      benefits: {
+        en: [
+          "Cleans and waxes in one step",
+          "High foam for safe, scratch-free washing",
+          "Enriched with premium carnauba wax for shine",
+          "pH-balanced and safe for all surfaces",
+          "Leaves a slick, water-repellent finish",
+          "Streak-free and easy to rinse",
+          "Safe for cars, boats, and RVs",
+        ],
+        es: [
+          "Lava y encera en un solo paso",
+          "Espuma abundante para un lavado seguro",
+          "Contiene cera de carnauba premium para mayor brillo",
+          "pH balanceado, seguro para todas las superficies",
+          "Acabado suave y repelente al agua",
+          "Sin marcas ni residuos",
+          "Apto para autos, botes y RVs",
+        ],
+      },
+      howToUse: {
+        en: "Dilute according to desired foam level. Apply with wash mitt or foam cannon, wash the surface, then rinse thoroughly.",
+        es: "Diluir según el nivel de espuma deseado. Aplicar con guante de lavado o foam cannon, lavar la superficie y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-car-wash",
+    brandSlug: "falconpro",
+    slug: "car-wash",
+    name: "Car Wash",
+    image: "/images/Car Wash 1 Gal.png",
+    variants: [
+      { size: "1 Gal", image: "/images/Car Wash 1 Gal.png" },
+      { size: "5 Gal", image: "/images/Car Wash 1 Gal.png" },
+    ],
+    content: {
+      description: {
+        en: "Premium high-foaming car wash shampoo that produces a rich, deep-cleaning lather to safely remove dirt and grime. Tough on contamination yet gentle on all vehicle surfaces, leaving a sparkling, scratch-free finish.",
+        es: "Champú premium de alto espumado que genera una espuma rica para una limpieza profunda y segura. Elimina suciedad y grasa sin dañar las superficies, dejando un acabado brillante y sin rayones.",
+      },
+      benefits: {
+        en: [
+          "Rich, high-foaming formula",
+          "Deep cleans dirt and road grime",
+          "Safe for all vehicle surfaces",
+          "Gentle, scratch-free washing",
+          "Leaves a bright, clean finish",
+          "Ideal for hand wash and foam cannons",
+        ],
+        es: [
+          "Fórmula de alta espuma",
+          "Limpieza profunda de suciedad y contaminantes",
+          "Seguro para todas las superficies del vehículo",
+          "Lavado suave sin rayar",
+          "Deja un acabado limpio y brillante",
+          "Ideal para lavado a mano y foam cannon",
+        ],
+      },
+      howToUse: {
+        en: "Dilute with water according to desired foam level. Apply with wash mitt or foam cannon, wash the vehicle, then rinse thoroughly.",
+        es: "Diluir con agua según el nivel de espuma deseado. Aplicar con guante de lavado o foam cannon, lavar el vehículo y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-speed-wax",
+    brandSlug: "falconpro",
+    slug: "speed-wax",
+    name: "Speed Wax",
+    image: "/images/Speed Wax 32 oz.png",
+    variants: [
+      { size: "32 oz", image: "/images/Speed Wax 32 oz.png" },
+      { size: "1 Gal", image: "/images/Speed Wax 1 gal.png" },
+    ],
+    content: {
+      description: {
+        en: "Fast and easy spray wax for all painted surfaces, clear coat, plastic, glass, metal, vinyl, and rubber trim. This advanced formula safely removes dust, light road grime, fingerprints, and water spots while leaving a deep wet-look shine. Ideal for waterless washing, spot cleaning, or full vehicle wipe-downs. Body shop safe, anti-static, and streak-free.",
+        es: "Cera en spray rápida y fácil para todas las superficies pintadas, clear coat, plástico, vidrio, metal, vinilo y molduras de goma. Esta fórmula avanzada elimina de forma segura polvo, suciedad ligera, huellas y manchas de agua, dejando un brillo profundo tipo “wet look”. Ideal para lavado sin agua, limpieza puntual o detallado completo. Segura para taller de pintura, antiestática y sin marcas.",
+      },
+      benefits: {
+        en: [
+          "Cleans and waxes without water",
+          "Safe on paint, clear coat, plastic, glass, metal, vinyl, and rubber",
+          "Removes dust, fingerprints, light grime, and water spots",
+          "Leaves a deep wet-look shine",
+          "Anti-static and anti-streak formula",
+          "Non-abrasive and non-silicone",
+          "VOC compliant and body shop safe",
+        ],
+        es: [
+          "Limpia y encera sin usar agua",
+          "Segura para pintura, plástico, vidrio, metal, vinilo y goma",
+          "Elimina polvo, huellas, suciedad ligera y manchas de agua",
+          "Deja un brillo intenso efecto mojado",
+          "Fórmula antiestática y sin rayas",
+          "No abrasiva y sin silicona",
+          "Cumple normas VOC y es segura para body shop",
+        ],
+      },
+      howToUse: {
+        en: "Spray directly onto surface and wipe with a clean microfiber towel. Flip towel and buff to a high-gloss finish. Use as a waterless wash or quick detailer.",
+        es: "Rociar directamente sobre la superficie y limpiar con una toalla de microfibra. Voltear la toalla y pulir hasta obtener alto brillo. Usar como lavado sin agua o detallador rápido.",
+      },
+    },
+  },
+  {
+    id: "falconpro-ceramic-quick-detailer",
+    brandSlug: "falconpro",
+    slug: "ceramic-quick-detailer",
+    name: "Ceramic Quick Detailer",
+    image: "/images/Ceramic Quick Detailer 16 Oz.png",
+    variants: [{ size: "16 oz", image: "/images/Ceramic Quick Detailer 16 Oz.png" }],
+    content: {
+      description: {
+        en: "Advanced ceramic quick detailer designed to maintain a sleek, high-gloss finish between washes. This professional formula enhances shine while adding ceramic protection, removing light dust, fingerprints, and water spots. Leaves a durable, hydrophobic layer that repels dirt and water, keeping your vehicle looking freshly detailed and protected.",
+        es: "Detallador rápido con tecnología cerámica diseñado para mantener un brillo intenso entre lavados. Esta fórmula profesional realza el acabado y añade una capa protectora hidrofóbica que repele el agua y la suciedad, eliminando polvo ligero, huellas y manchas de agua. Mantiene el vehículo protegido y con apariencia de exhibición.",
+      },
+      benefits: {
+        en: [
+          "Enhances gloss with ceramic technology",
+          "Adds hydrophobic, water-repellent protection",
+          "Removes light dust, fingerprints, and water spots",
+          "Safe for paint, glass, and exterior trim",
+          "Quick and easy spray-on, wipe-off application",
+          "Leaves a slick, showroom-ready finish",
+          "Ideal for maintenance between washes and car shows",
+        ],
+        es: [
+          "Aumenta el brillo con tecnología cerámica",
+          "Protección hidrofóbica repelente al agua",
+          "Elimina polvo ligero, huellas y manchas de agua",
+          "Seguro para pintura, vidrio y molduras exteriores",
+          "Aplicación rápida tipo spray y limpieza",
+          "Deja un acabado suave y de alto brillo",
+          "Ideal para mantenimiento entre lavados y exhibiciones",
+        ],
+      },
+      howToUse: {
+        en: "Spray lightly onto the surface and wipe with a clean microfiber towel. Buff with a second towel for maximum gloss and protection.",
+        es: "Rociar ligeramente sobre la superficie y limpiar con una toalla de microfibra. Pulir con otra toalla para máximo brillo y protección.",
+      },
+    },
+  },
+  {
+    id: "falconpro-better-wax",
+    brandSlug: "falconpro",
+    slug: "better-wax",
+    name: "Better Wax",
+    image: "/images/Better Wax 1 Gal.png",
+    variants: [
+      { size: "1 Gal", image: "/images/Better Wax 1 Gal.png" },
+      { size: "1 Pint", image: "/images/Better Wax 1 Gal.png" },
+    ],
+    content: {
+      description: {
+        en: "Premium wax formulated with high-quality yellow carnauba, blended with silicones, polymers, and advanced waxes to deliver durable paint protection and an intense, high-gloss finish. Enhances depth and richness of color while providing long-lasting shine. Easy wipe-on, wipe-off formula for professional results.",
+        es: "Cera premium formulada con carnauba amarilla de alta calidad, combinada con siliconas, polímeros y ceras avanzadas para brindar protección duradera y un brillo intenso. Realza la profundidad y riqueza del color, dejando un acabado de alto brillo. Fórmula fácil de aplicar y retirar.",
+      },
+      benefits: {
+        en: [
+          "Premium yellow carnauba wax formula",
+          "Enhances gloss, depth, and color richness",
+          "Durable protection for painted surfaces",
+          "Easy wipe-on, wipe-off application",
+          "High-gloss, slick finish",
+          "Safe for all glossy paint and clear coat finishes",
+          "Suitable for hand application and DA polisher use",
+        ],
+        es: [
+          "Contiene carnauba amarilla premium",
+          "Aumenta el brillo, la profundidad y la intensidad del color",
+          "Protección duradera para superficies pintadas",
+          "Aplicación fácil: poner y retirar",
+          "Acabado suave y de alto brillo",
+          "Segura para pintura brillante y clear coat",
+          "Apta para aplicación a mano y con pulidora DA",
+        ],
+      },
+      howToUse: {
+        en: "Apply a thin, even layer by hand or with a DA polisher. Allow to haze, then wipe off with a clean microfiber towel to reveal a deep, glossy finish.",
+        es: "Aplicar una capa fina y uniforme a mano o con pulidora DA. Dejar secar ligeramente y retirar con una toalla de microfibra limpia para revelar un brillo profundo.",
+      },
+    },
+  },
+  {
+    id: "falconpro-foam-pad-polish",
+    brandSlug: "falconpro",
+    slug: "foam-pad-polish",
+    name: "Foam Pad Polish",
+    image: "/images/Foam Pad Polish 1 Quart.png",
+    variants: [
+            { size: "1 Quart", image: "/images/Foam Pad Polish 1 Quart.png" },
+            { size: "1 Gal", image: "/images/Foam Pad Polish 1 Gal.png" },
+    ],
+    content: {
+      description: {
+        en: "Final-step finishing polish designed to deliver a brilliant, high-gloss finish while removing buffer swirls, light oxidation, and micro-surface imperfections. Effectively eliminates 3000-grit sanding marks and similar defects. This advanced formula buffs clean without gumming or clogging foam pads and contains no silicones or waxes, leaving a clean, non-oily surface ready for protection.",
+        es: "Pulimento de acabado final diseñado para proporcionar un brillo intenso mientras elimina marcas de pulido, oxidación ligera e imperfecciones microscópicas. Remueve rayas de lijado de grano 3000 y defectos similares. Su fórmula avanzada no empasta ni obstruye las esponjas y no contiene siliconas ni ceras, dejando una superficie limpia y sin residuos grasos.",
+      },
+      benefits: {
+        en: [
+          "Ideal as the final polishing step",
+          "Removes swirl marks and micro-imperfections",
+          "Eliminates 3000-grit sanding scratches",
+          "Restores clarity and deep gloss",
+          "No silicones or waxes",
+          "Non-gumming, non-clogging formula",
+          "Leaves a clean, non-oily finish",
+          "Safe for use with foam polishing pads",
+        ],
+        es: [
+          "Ideal como último paso de pulido",
+          "Elimina remolinos y microimperfecciones",
+          "Remueve marcas de lija grano 3000",
+          "Restaura claridad y alto brillo",
+          "No contiene siliconas ni ceras",
+          "No obstruye ni satura las almohadillas",
+          "Deja un acabado limpio y sin aceite",
+          "Seguro para uso con pads de espuma",
+        ],
+      },
+      howToUse: {
+        en: "Apply with a foam polishing pad using a DA or rotary polisher. Work at moderate speed until defects are removed and gloss is achieved. Wipe residue with a clean microfiber towel.",
+        es: "Aplicar con un pad de espuma usando pulidora DA o rotativa. Trabajar a velocidad moderada hasta eliminar los defectos y obtener brillo. Retirar residuos con una toalla de microfibra limpia.",
+      },
+    },
+  },
+  {
+    id: "falconpro-big-bite-compound",
+    brandSlug: "falconpro",
+    slug: "big-bite-compound",
+    name: "Big Bite Compound",
+    image: "/images/Big Bite Gallon.png",
+    variants: [
+      { size: "1 Gal", image: "/images/Big Bite Gallon.png" },
+      { size: "1 Quart", image: "/images/Big Bite Gallon.png" },
+    ],
+    content: {
+      description: {
+        en: "High-performance heavy-cut compound formulated with advanced technology to remove deep scratches and severe paint defects while restoring a high-gloss finish. Effectively eliminates 1000 to 1500 grit sanding marks on freshly painted or fully cured paint. Silicone-free and body shop safe.",
+        es: "Compuesto de alto rendimiento y corte agresivo formulado con tecnología avanzada para eliminar rayones profundos y defectos severos de pintura, devolviendo un acabado de alto brillo. Remueve marcas de lijado de grano 1000 a 1500 en pinturas recién aplicadas o ya curadas. Libre de siliconas y seguro para talleres de pintura.",
+      },
+      benefits: {
+        en: [
+          "Heavy-cut compound for deep scratch removal",
+          "Removes 1000–1500 grit sanding marks",
+          "Restores clarity and high gloss",
+          "Advanced fast-cut technology",
+          "No silicones – body shop safe",
+          "Suitable for fresh and cured paint",
+          "Works with rotary and DA polishers",
+        ],
+        es: [
+          "Compuesto de corte fuerte para rayones profundos",
+          "Elimina marcas de lija grano 1000–1500",
+          "Restaura brillo y claridad",
+          "Tecnología avanzada de alto poder de corte",
+          "Sin siliconas, seguro para body shop",
+          "Apto para pintura fresca y curada",
+          "Compatible con pulidoras rotativas y DA",
+        ],
+      },
+      howToUse: {
+        en: "Apply with a cutting pad using a rotary or DA polisher. Work at moderate speed until defects are removed, then wipe clean with a microfiber towel.",
+        es: "Aplicar con pad de corte usando pulidora rotativa o DA. Trabajar a velocidad media hasta eliminar defectos y retirar residuos con toalla de microfibra.",
+      },
+    },
+  },
+  {
+    id: "falconpro-miracle-cut-1000",
+    brandSlug: "falconpro",
+    slug: "miracle-cut-1000",
+    name: "Miracle Cut 1000",
+    image: "/images/Miracle Cut  quart.png",
+    variants: [
+        { size: "1 Quart", image: "/images/Miracle Cut  quart.png" },
+        { size: "1 Gal", image: "/images/Miracle Cut Gallon.png" },
+    ],
+    content: {
+      description: {
+        en: "Fast-cutting abrasive compound designed to remove 1000 to 1200 grit sanding scratches, oxidation, and water spots. This quick-acting formula restores clarity and gloss with minimal surface swirling and easy cleanup. Ideal for use on all types of painted surfaces.",
+        es: "Compuesto abrasivo de corte rápido diseñado para eliminar marcas de lija de grano 1000 a 1200, oxidación y manchas de agua. Su fórmula de acción rápida restaura el brillo con mínimos remolinos y fácil limpieza. Ideal para todo tipo de superficies pintadas.",
+      },
+      benefits: {
+        en: [
+          "Removes 1000–1200 grit sanding marks",
+          "Eliminates oxidation and water spots",
+          "Fast-cutting, high-performance compound",
+          "Restores high gloss with minimal swirl marks",
+          "Easy wipe-off and clean-up",
+          "Safe for all painted substrates",
+          "Suitable for rotary and DA polishers",
+        ],
+        es: [
+          "Elimina marcas de lija grano 1000–1200",
+          "Remueve oxidación y manchas de agua",
+          "Compuesto de alto rendimiento y corte rápido",
+          "Restaura alto brillo con pocos remolinos",
+          "Limpieza fácil",
+          "Seguro para todo tipo de pintura",
+          "Compatible con pulidoras rotativas y DA",
+        ],
+      },
+      howToUse: {
+        en: "Apply with a cutting or polishing pad using a rotary or DA polisher. Work at moderate speed until defects are removed, then wipe residue with a clean microfiber towel.",
+        es: "Aplicar con pad de corte o pulido usando pulidora rotativa o DA. Trabajar a velocidad media hasta eliminar defectos y retirar residuos con una toalla de microfibra limpia.",
       },
     },
   },

@@ -20,6 +20,7 @@ export function SiteHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false)
+  const sortedFeaturedBrands = [...FEATURED_BRANDS].sort((a, b) => a.name.localeCompare(b.name))
 
   const toggleTheme = () => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark")
@@ -163,7 +164,7 @@ export function SiteHeader() {
                   <div className="px-2 py-2 text-xs font-semibold text-muted-foreground">Featured Brands</div>
 
                   <div className="flex flex-col">
-                    {FEATURED_BRANDS.map((brand) => (
+                    {sortedFeaturedBrands.map((brand) => (
                       <Link
                         key={brand.slug}
                         href={`/shop/${brand.slug}`}
@@ -230,7 +231,7 @@ export function SiteHeader() {
             {mobileBrandsOpen && (
               <div className="pb-2 border-b border-muted">
                 <div className="flex flex-col gap-1 py-2">
-                  {FEATURED_BRANDS.map((brand) => (
+                  {sortedFeaturedBrands.map((brand) => (
                     <Link
                       key={brand.slug}
                       href={`/shop/${brand.slug}`}

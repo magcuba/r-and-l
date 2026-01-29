@@ -2,14 +2,13 @@
 // test push from VS Code
 import Image from "next/image"
 import { useMemo, useState } from "react"
-import type { Product } from "@/lib/products"
+import type { Product, Variant } from "@/lib/products"
 
-type Size = "1L" | "5L"
+type Size = Variant["size"]
 
 function getDefaultSize(product: Product): Size {
   if (product.variants?.length) {
-    const has1L = product.variants.some((v) => v.size === "1L")
-    return has1L ? "1L" : (product.variants[0].size as Size)
+    return product.variants[0].size
   }
   return "1L"
 }
@@ -17,11 +16,14 @@ function getDefaultSize(product: Product): Size {
 function getSizes(product: Product): Size[] {
   if (!product.variants?.length) return ["1L"]
 
-  const present = new Set(product.variants.map((v) => v.size))
   const sizes: Size[] = []
-  if (present.has("1L")) sizes.push("1L")
-  if (present.has("5L")) sizes.push("5L")
-
+  const seen = new Set<Size>()
+  for (const variant of product.variants) {
+    if (!seen.has(variant.size)) {
+      seen.add(variant.size)
+      sizes.push(variant.size)
+    }
+  }
   return sizes.length ? sizes : ["1L"]
 }
 

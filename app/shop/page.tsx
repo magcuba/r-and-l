@@ -13,7 +13,7 @@ export default function ShopByBrandPage() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {BRANDS.map((brand) => (
+        {[...BRANDS].sort((a, b) => a.name.localeCompare(b.name)).map((brand) => (
           <Link
             key={brand.slug}
             href={`/shop/${brand.slug}`}
