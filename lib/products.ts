@@ -961,7 +961,7 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "foam-pad-polish",
     name: "Foam Pad Polish",
-    image: "/images/FoamPadPolish1Gal.png",
+    image: "/images/FoamPadPolish1Quart.png",
     variants: [
             { size: "1 Quart", image: "/images/FoamPadPolish1Quart.png" },
             { size: "1 Gal", image: "/images/FoamPadPolish1Gal.png" },
