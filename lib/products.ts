@@ -757,6 +757,542 @@ export const PRODUCTS: Product[] = [
     },
   },
   {
+    id: "falconpro-pot-pan-dish-washing-detergent",
+    brandSlug: "falconpro",
+    slug: "pot-pan-dish-washing-detergent",
+    name: "FalconPro Pot & Pan Dish Washing Detergent",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Heavy-duty, concentrated dishwashing detergent designed for powerful cleaning of pots, pans, dishes, and utensils. Its superior grease-cutting formula quickly dissolves tough food residue, baked-on grime, and stubborn grease. Ideal for commercial kitchens, restaurants, and food service operations, delivering spotless, streak-free results while remaining gentle on hands.",
+        es: "Detergente concentrado de alta resistencia diseñado para la limpieza profunda de ollas, sartenes, platos y utensilios. Su potente fórmula corta grasa elimina rápidamente residuos de comida, suciedad incrustada y grasa difícil. Ideal para cocinas comerciales y servicios de alimentos, ofreciendo resultados impecables sin dañar las manos.",
+      },
+      benefits: {
+        en: [
+          "Heavy-duty grease-cutting power",
+          "Concentrated formula for maximum efficiency",
+          "High-foaming, long-lasting lather",
+          "Removes baked-on food and stubborn residue",
+          "Rinses clean with no streaks or residue",
+          "Gentle on hands despite strong cleaning action",
+          "Ideal for commercial and professional kitchens",
+        ],
+        es: [
+          "Gran poder desengrasante",
+          "Fórmula concentrada de alto rendimiento",
+          "Espuma abundante y duradera",
+          "Elimina residuos de comida adheridos",
+          "Enjuague limpio sin marcas ni residuos",
+          "Suave para las manos",
+          "Ideal para cocinas profesionales",
+        ],
+      },
+      howToUse: {
+        en: "Dilute with warm water as needed. Wash dishes using sponge or brush, then rinse thoroughly with clean water.",
+        es: "Diluir con agua tibia según necesidad. Lavar con esponja o cepillo y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-pink-hand-soap",
+    brandSlug: "falconpro",
+    slug: "pink-hand-soap",
+    name: "FalconPro Pink Hand Soap",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Moisturizing hand soap formulated with protective ingredients to gently clean and soften skin. Effectively removes light-duty soils while producing a thick, luxurious lather. Ideal for offices, restaurants, supermarkets, bakeries, hotels, schools, and public restrooms. Biodegradable surfactants ensure effective and responsible cleaning.",
+        es: "Jabón de manos hidratante formulado con ingredientes protectores que limpian y suavizan la piel. Elimina suciedad ligera mientras produce una espuma rica y cremosa. Ideal para oficinas, restaurantes, supermercados, panaderías, hoteles, escuelas y baños públicos. Contiene surfactantes biodegradables.",
+      },
+      benefits: {
+        en: [
+          "Fortified with moisturizers and skin protectants",
+          "Gentle yet effective for light-duty hand cleaning",
+          "Produces rich, luxurious lather",
+          "One pump provides sufficient soap per wash",
+          "Biodegradable surfactants",
+          "Ideal for commercial and public restrooms",
+        ],
+        es: [
+          "Enriquecido con humectantes y protectores de la piel",
+          "Limpieza suave y efectiva",
+          "Espuma espesa y lujosa",
+          "Una sola dosificación es suficiente por lavado",
+          "Surfactantes biodegradables",
+          "Ideal para uso comercial y público",
+        ],
+      },
+      howToUse: {
+        en: "Dispense one pump onto wet hands, lather thoroughly, and rinse with clean water.",
+        es: "Aplicar una dosificación sobre las manos mojadas, frotar y enjuagar con agua limpia.",
+      },
+    },
+  },
+  {
+    id: "falconpro-formula-83-degreaser",
+    brandSlug: "falconpro",
+    slug: "formula-83-degreaser",
+    name: "Formula 83 Degreaser",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Heavy-duty industrial degreaser formulated for superior removal of grease, oil, and grime. This concentrated, biodegradable formula offers controlled foam for fast rinsing and can be diluted for economical use. Highly versatile, it can be applied with sprayers, mops, brushes, pressure sprayers, or automatic scrubbers.",
+        es: "Desengrasante industrial concentrado de alta potencia diseñado para eliminar grasa, aceite y suciedad pesada. Su fórmula biodegradable produce espuma controlada para un enjuague rápido y puede diluirse para mayor economía. Apto para múltiples métodos de aplicación.",
+      },
+      benefits: {
+        en: [
+          "Powerful removal of heavy grease and oil",
+          "Concentrated for economical dilution",
+          "Controlled foam for fast rinsing",
+          "Biodegradable formula",
+          "Highly versatile application methods",
+          "Ideal for engines, machinery, floors, and masonry",
+        ],
+        es: [
+          "Elimina grasa y aceite difíciles",
+          "Fórmula concentrada y económica",
+          "Espuma controlada para enjuague rápido",
+          "Biodegradable",
+          "Aplicación versátil",
+          "Ideal para motores, maquinaria y superficies de mampostería",
+        ],
+      },
+      howToUse: {
+        en: "Dilute according to soil level. Apply using preferred method, scrub if needed, and rinse thoroughly.",
+        es: "Diluir según el nivel de suciedad. Aplicar, frotar si es necesario y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-purple-lightning",
+    brandSlug: "falconpro",
+    slug: "purple-lightning",
+    name: "Purple Lightning",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Ultra-powerful, highly concentrated heavy-duty degreaser engineered to tackle the toughest grease, oil, and grime. Up to three times stronger than Formula 83 Degreaser, making it ideal for extreme cleaning applications on engines, machinery, concrete, and heavy equipment.",
+        es: "Desengrasante ultra potente y altamente concentrado diseñado para las aplicaciones más exigentes. Hasta tres veces más fuerte que el Formula 83 Degreaser, elimina eficazmente grasa, aceite y suciedad pesada en motores, maquinaria, concreto y equipos industriales.",
+      },
+      benefits: {
+        en: [
+          "Extremely powerful degreasing action",
+          "Up to 3× stronger than Formula 83",
+          "Highly concentrated for dilution",
+          "Removes heavy grease, oil, and grime",
+          "Ideal for industrial and commercial use",
+          "Effective on concrete, engines, and equipment",
+        ],
+        es: [
+          "Acción desengrasante extrema",
+          "Hasta 3 veces más potente que Formula 83",
+          "Fórmula concentrada y económica",
+          "Elimina grasa y suciedad pesada",
+          "Ideal para uso industrial y comercial",
+          "Eficaz en concreto y maquinaria pesada",
+        ],
+      },
+      howToUse: {
+        en: "Dilute as needed based on soil level. Apply, agitate if required, and rinse thoroughly.",
+        es: "Diluir según el nivel de suciedad. Aplicar, frotar si es necesario y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-black-lightning",
+    brandSlug: "falconpro",
+    slug: "black-lightning",
+    name: "Black Lightning",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Fast-acting, non-acid wheel and tire cleaner formulated to remove stubborn brake dust, road grime, and grease buildup. Safe for all wheel finishes including chrome, aluminum, and painted surfaces. Enhances appearance while helping reduce future buildup for longer-lasting cleanliness.",
+        es: "Limpiador rápido y no ácido para ruedas y llantas diseñado para eliminar polvo de frenos, suciedad del camino y acumulación de grasa. Seguro para todo tipo de acabados, incluyendo cromo, aluminio y superficies pintadas. Mejora la apariencia y ayuda a reducir futuras acumulaciones.",
+      },
+      benefits: {
+        en: [
+          "Non-acid formula safe for all wheel finishes",
+          "Removes brake dust, grease, and road grime",
+          "Fast-acting and easy to use",
+          "Safe on chrome, aluminum, and painted wheels",
+          "Enhances wheel and tire appearance",
+          "Helps reduce future buildup",
+        ],
+        es: [
+          "Fórmula no ácida, segura para ruedas",
+          "Elimina polvo de frenos y suciedad pesada",
+          "Acción rápida y fácil aplicación",
+          "Seguro para cromo, aluminio y pintura",
+          "Mejora el aspecto de ruedas y llantas",
+          "Reduce la acumulación futura",
+        ],
+      },
+      howToUse: {
+        en: "Spray directly onto wheels and tires. Allow to dwell briefly, agitate if necessary, and rinse thoroughly with water.",
+        es: "Rociar directamente sobre ruedas y llantas. Dejar actuar brevemente, frotar si es necesario y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-sterling-metal-polish",
+    brandSlug: "falconpro",
+    slug: "sterling-metal-polish",
+    name: "FalconPro Sterling Metal Polish",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Pint", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Premium metal polish designed to clean, restore, and protect aluminum, chrome, brass, and stainless steel. Removes tarnish, oxidation, and surface contaminants while leaving a brilliant, long-lasting shine with a protective coating to help prevent future tarnishing.",
+        es: "Pulidor premium para limpiar, restaurar y proteger aluminio, cromo, latón y acero inoxidable. Elimina oxidación y opacidad, dejando un brillo duradero con capa protectora contra el desgaste futuro.",
+      },
+      benefits: {
+        en: [
+          "Cleans and restores metal surfaces",
+          "Removes tarnish and oxidation",
+          "Leaves long-lasting protective shine",
+          "Safe for aluminum, chrome, brass, stainless steel",
+          "Ideal for automotive, industrial, and home use",
+        ],
+        es: [
+          "Limpia y restaura metales",
+          "Elimina oxidación y suciedad",
+          "Brillo duradero con protección",
+          "Seguro para múltiples metales",
+          "Uso automotriz, industrial y doméstico",
+        ],
+      },
+      howToUse: {
+        en: "Apply a small amount to a clean cloth, rub onto surface, then buff to a high shine.",
+        es: "Aplicar con un paño limpio y pulir hasta obtener brillo.",
+      },
+    },
+  },
+  {
+    id: "falconpro-bug-off",
+    brandSlug: "falconpro",
+    slug: "bug-off",
+    name: "Bug Off",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Fast-acting, high-foaming bug remover that softens and removes bugs, bird droppings, tree sap, brake dust, and road film. Produces stable foam when used with foam-generating equipment and rinses freely without residue.",
+        es: "Removedor de insectos de acción rápida y alta espuma. Elimina insectos, excrementos de aves, savia y suciedad del camino. Se enjuaga fácilmente sin dejar residuos.",
+      },
+      benefits: {
+        en: [
+          "Quickly removes bugs and organic residue",
+          "High-foaming, fast-acting formula",
+          "Loosens brake dust and road film",
+          "Rinses clean without residue",
+          "Compatible with foam equipment",
+        ],
+        es: [
+          "Elimina insectos y residuos orgánicos",
+          "Alta espuma y acción rápida",
+          "Afloja suciedad y polvo de frenos",
+          "Enjuague limpio",
+          "Compatible con equipos de espuma",
+        ],
+      },
+      howToUse: {
+        en: "Apply to surface, allow to dwell briefly, agitate if needed, and rinse thoroughly.",
+        es: "Aplicar, dejar actuar brevemente, frotar si es necesario y enjuagar.",
+      },
+    },
+  },
+  {
+    id: "falconpro-aluminum-brightener",
+    brandSlug: "falconpro",
+    slug: "aluminum-brightener",
+    name: "Aluminum Brightener",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Heavy-duty aluminum cleaner designed for trailers, non-polished rims, and ferrous metals. Quickly cuts through road film, diesel smoke, brake dust, and grime. Do not use on anodized or highly polished metals. Recommended dilution: minimum 1:1 with water.",
+        es: "Limpiador potente para aluminio y metales no pulidos. Elimina suciedad, humo diésel y polvo de frenos. No usar en aluminio anodizado o pulido.",
+      },
+      benefits: {
+        en: [
+          "Restores brightness to aluminum surfaces",
+          "Removes heavy road grime and oxidation",
+          "Fast-acting professional formula",
+          "Ideal for trailers and industrial metals",
+        ],
+        es: [
+          "Restaura el brillo del aluminio",
+          "Elimina suciedad pesada",
+          "Acción rápida",
+          "Ideal para remolques y uso industrial",
+        ],
+      },
+      howToUse: {
+        en: "Dilute at least 1:1 with water. Apply, allow short dwell time, and rinse thoroughly.",
+        es: "Diluir mínimo 1:1 con agua. Aplicar y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-carpet-interior-cleaner",
+    brandSlug: "falconpro",
+    slug: "carpet-interior-cleaner",
+    name: "Carpet & Interior Cleaner",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "16 oz", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "High-foaming carpet, fabric, and upholstery cleaner with a pleasant lavender fragrance. Removes stains effectively and economically. Simply spray, scrub, and vacuum.",
+        es: "Limpiador de alfombras y tapicería de alta espuma con fragancia a lavanda. Fácil de usar y muy económico.",
+      },
+      benefits: {
+        en: [
+          "Removes carpet and upholstery stains",
+          "High-foaming, easy to use",
+          "Pleasant lavender scent",
+          "Economical concentrated formula",
+        ],
+        es: [
+          "Elimina manchas en telas y alfombras",
+          "Espuma abundante",
+          "Aroma agradable",
+          "Uso sencillo",
+        ],
+      },
+      howToUse: {
+        en: "Spray onto surface, scrub, and vacuum once dry.",
+        es: "Rociar, frotar y aspirar.",
+      },
+    },
+  },
+  {
+    id: "falconpro-super-high-gloss-protectant",
+    brandSlug: "falconpro",
+    slug: "super-high-gloss-protectant",
+    name: "Super High Gloss Protectant",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Premium protectant for rubber, vinyl, plastic, and leather surfaces. Provides deep gloss and UV protection while preventing cracking and fading. Do not use on floors, fabrics, or pedals.",
+        es: "Protector premium para superficies de goma, vinilo, plástico y cuero. Proporciona brillo profundo y protección UV mientras previene agrietamiento y decoloración. No usar en pisos, telas o pedales.",
+      },
+      benefits: {
+        en: [
+          "Deep, rich gloss finish",
+          "UV protection",
+          "Prevents cracking and fading",
+          "Ideal for interiors, trim, and tires",
+        ],
+        es: [
+          "Brillo profundo",
+          "Protección UV",
+          "Previene agrietamiento y decoloración",
+          "Ideal para interiores, molduras y llantas",
+        ],
+      },
+      howToUse: {
+        en: "Apply evenly with applicator. Wipe excess if needed.",
+        es: "Aplicar de manera uniforme con aplicador. Retirar exceso si es necesario.",
+      },
+    },
+  },
+  {
+    id: "falconpro-formula83-interior-shine-protectant",
+    brandSlug: "falconpro",
+    slug: "formula83-interior-shine-protectant",
+    name: "Formula83 Interior Shine & Protectant",
+    image: "/placeholder.jpg",
+    variants: [{ size: "16 oz", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Interior protectant that restores dashboards, vinyl, and plastic with a satin, non-greasy finish. Provides UV protection and long-lasting appearance enhancement.",
+        es: "Protector interior que restaura tableros, vinilo y plástico con un acabado satinado y no grasoso. Proporciona protección UV y mejora duradera de la apariencia.",
+      },
+      benefits: {
+        en: [
+          "Non-greasy satin finish",
+          "UV protection",
+          "Restores interior surfaces",
+          "Easy spray-and-wipe application",
+        ],
+        es: [
+          "Acabado satinado no grasoso",
+          "Protección UV",
+          "Restaura superficies interiores",
+          "Aplicación fácil en spray y limpieza",
+        ],
+      },
+      howToUse: {
+        en: "Spray onto a clean microfiber, wipe surface evenly, and buff if desired.",
+        es: "Rociar sobre una microfibra limpia, aplicar de forma uniforme y pulir si se desea.",
+      },
+    },
+  },
+  {
+    id: "falconpro-premium-tire-gel",
+    brandSlug: "falconpro",
+    slug: "premium-tire-gel",
+    name: "Premium Tire Gel",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Water-based tire gel delivering ultra-high gloss without sling. Thick formula coats evenly and repels water for long-lasting shine.",
+        es: "Gel para llantas a base de agua que ofrece brillo ultra alto sin salpicaduras. Fórmula espesa que cubre de manera uniforme y repele el agua para un brillo duradero.",
+      },
+      benefits: {
+        en: ["Ultra-high gloss", "No sling", "Water-repellent", "Easy single-coat application"],
+        es: ["Brillo ultra alto", "Sin salpicaduras", "Repelente al agua", "Aplicación fácil en una sola capa"],
+      },
+      howToUse: {
+        en: "Apply to clean, dry tires with an applicator. Allow to level and dry.",
+        es: "Aplicar sobre llantas limpias y secas con un aplicador. Dejar nivelar y secar.",
+      },
+    },
+  },
+  {
+    id: "falconpro-super-high-gloss-silicone-tire-dressing",
+    brandSlug: "falconpro",
+    slug: "super-high-gloss-silicone-tire-dressing",
+    name: "Super High Gloss Silicone Tire Dressing",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "16 oz", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Silicone-based tire dressing that restores a deep wet shine while protecting against UV damage, cracking, and fading.",
+        es: "Acondicionador de llantas a base de silicona que restaura un brillo húmedo profundo mientras protege contra rayos UV, agrietamiento y decoloración.",
+      },
+      benefits: {
+        en: ["Deep wet-look shine", "UV protection", "Helps prevent cracking and fading", "Long-lasting finish"],
+        es: ["Brillo profundo efecto mojado", "Protección UV", "Ayuda a prevenir grietas y decoloración", "Acabado duradero"],
+      },
+      howToUse: {
+        en: "Apply evenly to clean, dry tires and allow to dry.",
+        es: "Aplicar de manera uniforme sobre llantas limpias y secas y dejar secar.",
+      },
+    },
+  },
+  {
+    id: "falconpro-blue-silicone",
+    brandSlug: "falconpro",
+    slug: "blue-silicone",
+    name: "Blue Silicone",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Extreme high-gloss, fast-drying silicone tire dressing. Minimal sling, professional finish. Extremely flammable – tires only.",
+        es: "Acondicionador de llantas de silicona de alto brillo y secado rápido. Mínima salpicadura, acabado profesional. Extremadamente inflamable: solo para llantas.",
+      },
+      benefits: {
+        en: ["Extreme high-gloss finish", "Fast-drying", "Minimal sling", "Professional appearance"],
+        es: ["Acabado de alto brillo extremo", "Secado rápido", "Mínima salpicadura", "Apariencia profesional"],
+      },
+      howToUse: {
+        en: "Apply to clean, dry tires only. Allow to dry before driving.",
+        es: "Aplicar solo en llantas limpias y secas. Dejar secar antes de conducir.",
+      },
+    },
+  },
+  {
+    id: "falconpro-spring-breeze",
+    brandSlug: "falconpro",
+    slug: "spring-breeze",
+    name: "Spring Breeze",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Long-lasting air freshener and neutral pH all-purpose cleaner. Cleans and freshens floors and surfaces while eliminating odors.",
+        es: "Ambientador de larga duración y limpiador multiusos de pH neutro. Limpia y refresca pisos y superficies mientras elimina olores.",
+      },
+      benefits: {
+        en: ["Long-lasting fresh scent", "Neutral pH formula", "Cleans and deodorizes", "Safe for many surfaces"],
+        es: ["Aroma fresco duradero", "Fórmula de pH neutro", "Limpia y desodoriza", "Seguro para múltiples superficies"],
+      },
+      howToUse: {
+        en: "Dilute as needed, apply to surfaces or floors, and wipe or mop clean.",
+        es: "Diluir según necesidad, aplicar en superficies o pisos y limpiar con paño o trapeador.",
+      },
+    },
+  },
+  {
+    id: "falconpro-new-car",
+    brandSlug: "falconpro",
+    slug: "new-car",
+    name: "New Car",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "16 oz", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Long-lasting “new car” scent air freshener and neutral pH cleaner. Can be mixed with other FalconPro products or used alone.",
+        es: "Ambientador de aroma “auto nuevo” y limpiador de pH neutro. Puede mezclarse con otros productos FalconPro o usarse solo.",
+      },
+      benefits: {
+        en: ["Long-lasting new car scent", "Neutral pH cleaner", "Mixable with other FalconPro products", "Use on floors and surfaces"],
+        es: ["Aroma duradero a auto nuevo", "Limpiador de pH neutro", "Mezclable con otros productos FalconPro", "Uso en pisos y superficies"],
+      },
+      howToUse: {
+        en: "Use alone or diluted as needed. Apply to surfaces or floors and wipe or mop clean.",
+        es: "Usar solo o diluido según necesidad. Aplicar en superficies o pisos y limpiar con paño o trapeador.",
+      },
+    },
+  },
+  {
+    id: "falconpro-baby-powder",
+    brandSlug: "falconpro",
+    slug: "baby-powder",
+    name: "Baby Powder",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Fresh baby powder-scented air freshener and neutral pH cleaner suitable for floors and surfaces.",
+        es: "Ambientador con aroma a talco y limpiador de pH neutro apto para pisos y superficies.",
+      },
+      benefits: {
+        en: ["Fresh baby powder scent", "Neutral pH cleaner", "Cleans and deodorizes", "Safe for floors and surfaces"],
+        es: ["Aroma fresco a talco", "Limpiador de pH neutro", "Limpia y desodoriza", "Seguro para pisos y superficies"],
+      },
+      howToUse: {
+        en: "Dilute as needed, apply to surfaces or floors, and wipe or mop clean.",
+        es: "Diluir según necesidad, aplicar en superficies o pisos y limpiar con paño o trapeador.",
+      },
+    },
+  },
+  {
     id: "falconpro-wash-wax",
     brandSlug: "falconpro",
     slug: "wash-wax",
