@@ -30,11 +30,18 @@ export function SiteHeader() {
 
   const scrollToStore = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    const storeSection = document.getElementById("location")
-    if (storeSection) {
-      storeSection.scrollIntoView({ behavior: "smooth" })
-    }
     setMobileMenuOpen(false)
+
+    if (pathname !== "/") {
+      // If not on home page, navigate to home with hash
+      router.push("/#location")
+    } else {
+      // If already on home page, scroll to the section
+      const storeSection = document.getElementById("location")
+      if (storeSection) {
+        storeSection.scrollIntoView({ behavior: "smooth" })
+      }
+    }
   }
 
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
