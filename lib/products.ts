@@ -1,5 +1,18 @@
 export type Variant = {
-  size: "1L" | "5L" | "1 Gal" | "5 Gal" | "32 oz" | "16 oz" | "1 Pint" | "1 Quart"
+  size:
+    | "1L"
+    | "5L"
+    | "1 Gal"
+    | "5 Gal"
+    | "32 oz"
+    | "16 oz"
+    | "1 Pint"
+    | "1 Quart"
+    | "1.5\""
+    | "3.5\""
+    | "5.5\""
+    | "6.5\""
+    | "7.5\""
   image: string
   sku?: string
   price?: number
@@ -1246,6 +1259,215 @@ export const PRODUCTS: Product[] = [
     },
   },
   {
+    id: "falconpro-ocean-mist",
+    brandSlug: "falconpro",
+    slug: "ocean-mist",
+    name: "Ocean Mist",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Long-lasting, fresh-scented air freshener that also works as a powerful neutral pH all-purpose cleaner. Designed to eliminate tough odors while safely cleaning floors and surfaces in cars, homes, offices, and commercial spaces.",
+        es: "Ambientador de aroma fresco y duradero que también funciona como limpiador multiusos de pH neutro. Elimina olores difíciles mientras limpia de forma segura pisos y superficies en autos, hogares y oficinas.",
+      },
+      benefits: {
+        en: [
+          "Cleans and freshens simultaneously",
+          "Long-lasting Ocean Mist fragrance",
+          "Neutral pH formula",
+          "All-purpose cleaner",
+          "Safe for wood, laminate, vinyl, and tile floors",
+          "Eliminates stubborn odors",
+        ],
+        es: [
+          "Limpia y refresca",
+          "Fragancia Ocean Mist de larga duración",
+          "Fórmula de pH neutro",
+          "Limpiador multiusos",
+          "Seguro para madera, laminado, vinilo y baldosa",
+          "Elimina olores fuertes",
+        ],
+      },
+      howToUse: {
+        en: "Dilute if desired. Spray or mop onto surface and wipe clean. Use as an air freshener or surface cleaner.",
+        es: "Diluir si se desea. Rociar o trapear y limpiar la superficie.",
+      },
+    },
+  },
+  {
+    id: "falconpro-black-freeze",
+    brandSlug: "falconpro",
+    slug: "black-freeze",
+    name: "Black Freeze",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Fresh, long-lasting air freshener combined with a neutral pH all-purpose cleaner. Effectively eliminates odors while cleaning floors and surfaces, leaving behind a bold, clean fragrance.",
+        es: "Ambientador duradero con limpiador multiusos de pH neutro. Elimina olores mientras limpia eficazmente superficies y pisos, dejando una fragancia intensa y limpia.",
+      },
+      benefits: {
+        en: [
+          "Cleans and deodorizes",
+          "Long-lasting Black Freeze scent",
+          "Neutral pH formula",
+          "Multi-surface cleaner",
+          "Safe for wood, laminate, vinyl, and tile floors",
+        ],
+        es: [
+          "Limpia y desodoriza",
+          "Fragancia Black Freeze de larga duración",
+          "pH neutro",
+          "Uso en múltiples superficies",
+          "Seguro para madera, vinilo, laminado y baldosa",
+        ],
+      },
+      howToUse: {
+        en: "Apply by spray or mop. Wipe or rinse as needed.",
+        es: "Aplicar con atomizador o trapeador y limpiar.",
+      },
+    },
+  },
+  {
+    id: "falconpro-cherry",
+    brandSlug: "falconpro",
+    slug: "cherry",
+    name: "Cherry",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "New and fresh cherry-scented air freshener that doubles as a neutral pH all-purpose cleaner. Eliminates odors while safely cleaning floors and surfaces.",
+        es: "Ambientador con aroma a cereza fresca y duradera que también actúa como limpiador multiusos de pH neutro. Elimina olores y limpia superficies y pisos de forma segura.",
+      },
+      benefits: {
+        en: [
+          "Cleans and freshens",
+          "Long-lasting cherry fragrance",
+          "Neutral pH",
+          "All-purpose cleaner",
+          "Safe for wood, laminate, vinyl, and tile floors",
+        ],
+        es: [
+          "Limpia y refresca",
+          "Fragancia a cereza de larga duración",
+          "pH neutro",
+          "Limpiador multiusos",
+          "Seguro para madera, vinilo, laminado y baldosa",
+        ],
+      },
+      howToUse: {
+        en: "Spray or mop onto surface and wipe clean.",
+        es: "Rociar o trapear y limpiar la superficie.",
+      },
+    },
+  },
+  {
+    id: "falconpro-glass-surface-cleaner",
+    brandSlug: "falconpro",
+    slug: "glass-surface-cleaner",
+    name: "FalconPro Glass & Surface Cleaner",
+    image: "/placeholder.jpg",
+    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Multi-purpose cleaner designed to clean and shine glass and non-porous surfaces. Cuts through dirt, grime, and stains on windows, mirrors, countertops, and more. Also effective as a windshield washer fluid for removing bugs and road grime.",
+        es: "Limpiador multiusos diseñado para limpiar y dar brillo a vidrios y superficies no porosas. Elimina suciedad, grasa y manchas en ventanas, espejos y encimeras. También funciona como limpiaparabrisas.",
+      },
+      benefits: {
+        en: [
+          "Cleans and shines glass surfaces",
+          "Cuts tough dirt and grime",
+          "Multi-surface application",
+          "Ideal for windows, mirrors, countertops",
+          "Effective windshield cleaner",
+        ],
+        es: [
+          "Limpia y da brillo al vidrio",
+          "Elimina suciedad difícil",
+          "Uso en múltiples superficies",
+          "Ideal para ventanas y espejos",
+          "Limpieza eficaz del parabrisas",
+        ],
+      },
+      howToUse: {
+        en: "Spray onto surface and wipe with a clean cloth or paper towel.",
+        es: "Rociar y limpiar con paño limpio o toalla de papel.",
+      },
+    },
+  },
+  {
+    id: "falconpro-water-spot-remover",
+    brandSlug: "falconpro",
+    slug: "water-spot-remover",
+    name: "FalconPro Water Spot Remover (Spot Not)",
+    image: "/placeholder.jpg",
+    variants: [{ size: "32 oz", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Powerful acid-based water spot remover designed to eliminate hard water deposits, rust, soap scum, bird droppings, and mineral stains. Thick formula clings to surfaces for fast, effective cleaning. Do not use on aluminum.",
+        es: "Removedor potente a base de ácido diseñado para eliminar manchas de agua dura, óxido, residuos de jabón y depósitos minerales. No usar en aluminio.",
+      },
+      benefits: {
+        en: [
+          "Removes hard water spots and mineral deposits",
+          "Eliminates rust, soap scum, and stains",
+          "Thick, fast-acting formula",
+          "Safe for glass and painted surfaces",
+          "Professional-strength performance",
+        ],
+        es: [
+          "Elimina manchas de agua dura",
+          "Remueve óxido y residuos minerales",
+          "Fórmula espesa de acción rápida",
+          "Seguro para vidrio y pintura",
+          "Uso profesional",
+        ],
+      },
+      howToUse: {
+        en: "Apply to affected area, allow short dwell time, agitate if needed, and rinse thoroughly.",
+        es: "Aplicar, dejar actuar brevemente, frotar si es necesario y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "falconpro-brillo",
+    brandSlug: "falconpro",
+    slug: "brillo",
+    name: "Brillo",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "5 Gal", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Water-based brightener formulated to restore a deep black finish to wheel wells, undercarriages, and exterior plastic surfaces. Delivers a clean satin shine without greasy residue using a simple spray-and-wipe application.",
+        es: "Abrillantador a base de agua formulado para restaurar un acabado negro profundo en guardafangos, chasis y plásticos exteriores. Proporciona un brillo satinado limpio sin residuos grasos.",
+      },
+      benefits: {
+        en: [
+          "Restores deep black appearance",
+          "Satin finish without grease",
+          "Water-based formula",
+          "Ideal for wheel wells and undercarriages",
+          "Fast, professional results",
+        ],
+        es: [
+          "Restaura el color negro profundo",
+          "Acabado satinado sin grasa",
+          "Fórmula a base de agua",
+          "Ideal para pasos de rueda y bajos",
+          "Resultados rápidos y profesionales",
+        ],
+      },
+      howToUse: {
+        en: "Spray directly onto surface and wipe evenly with cloth or applicator.",
+        es: "Rociar directamente sobre la superficie y distribuir con un paño o aplicador.",
+      },
+    },
+  },
+  {
     id: "falconpro-new-car",
     brandSlug: "falconpro",
     slug: "new-car",
@@ -1614,6 +1836,806 @@ export const PRODUCTS: Product[] = [
       howToUse: {
         en: "Apply with a cutting or polishing pad using a rotary or DA polisher. Work at moderate speed until defects are removed, then wipe residue with a clean microfiber towel.",
         es: "Aplicar con pad de corte o pulido usando pulidora rotativa o DA. Trabajar a velocidad media hasta eliminar defectos y retirar residuos con una toalla de microfibra limpia.",
+      },
+    },
+  },
+  {
+    id: "lake-country-heavy-polishing-cutting-pad-blue",
+    brandSlug: "lake-country",
+    slug: "heavy-polishing-cutting-pad-blue",
+    name: "Lake Country Heavy Polishing (Cutting) Pad – Blue",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "3.5\"", image: "/placeholder.jpg" },
+      { size: "5.5\"", image: "/placeholder.jpg" },
+      { size: "6.5\"", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Foam cutting pad designed for heavy polishing and paint correction. Ideal for removing defects during the cutting stage while maintaining control and consistency.",
+        es: "Pad de espuma diseñado para pulido de corte agresivo y corrección de pintura. Ideal para eliminar defectos durante la etapa de corte con control y consistencia.",
+      },
+      benefits: {
+        en: [
+          "Heavy cutting performance",
+          "Ideal for paint correction",
+          "Durable foam construction",
+          "Consistent cutting results",
+          "Pad Type: Foam",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Mini Polisher, Random Orbital DA",
+        ],
+        es: [
+          "Alto poder de corte",
+          "Ideal para corrección de pintura",
+          "Espuma duradera",
+          "Resultados uniformes",
+          "Tipo de Pad: Espuma",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Mini pulidora, pulidora orbital DA",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a mini polisher or random orbital DA.",
+        es: "Fijar al plato y usar con mini pulidora o pulidora orbital DA.",
+      },
+    },
+  },
+  {
+    id: "lake-country-polishing-2-step-pad-orange",
+    brandSlug: "lake-country",
+    slug: "polishing-2-step-pad-orange",
+    name: "Lake Country Polishing (2-Step) Pad – Orange",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "3.5\"", image: "/placeholder.jpg" },
+      { size: "5.5\"", image: "/placeholder.jpg" },
+      { size: "6.5\"", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Medium-cut foam polishing pad designed for two-step correction processes. Works perfectly with hybrid polishes to remove moderate defects while refining the surface.",
+        es: "Pad de espuma de corte medio diseñado para procesos de corrección en dos pasos. Ideal para eliminar defectos moderados y refinar la superficie.",
+      },
+      benefits: {
+        en: [
+          "Medium cutting and polishing capability",
+          "Ideal for 2-step correction",
+          "Balanced correction and finish",
+          "Durable foam design",
+          "Pad Type: Foam",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Mini Polisher, Random Orbital DA",
+        ],
+        es: [
+          "Corte medio y capacidad de pulido",
+          "Ideal para corrección en 2 pasos",
+          "Balance entre corrección y acabado",
+          "Diseño de espuma resistente",
+          "Tipo de Pad: Espuma",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Mini pulidora, pulidora orbital DA",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a mini polisher or random orbital DA.",
+        es: "Fijar al plato y usar con mini pulidora o pulidora orbital DA.",
+      },
+    },
+  },
+  {
+    id: "lake-country-finishing-pad-black",
+    brandSlug: "lake-country",
+    slug: "finishing-pad-black",
+    name: "Lake Country Finishing Pad – Black",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "5.5\"", image: "/placeholder.jpg" },
+      { size: "6.5\"", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Soft foam finishing pad designed for final polishing stages. Ideal for applying finishing polishes, sealants, or waxes to achieve maximum gloss.",
+        es: "Pad de espuma suave diseñado para las etapas finales de pulido. Ideal para aplicar pulimentos de acabado, selladores o ceras y lograr máximo brillo.",
+      },
+      benefits: {
+        en: [
+          "Perfect for finishing stages",
+          "Enhances gloss and clarity",
+          "Soft foam for minimal cut",
+          "Smooth final results",
+          "Pad Type: Foam",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Mini Polisher, Random Orbital DA",
+        ],
+        es: [
+          "Ideal para acabado final",
+          "Aumenta brillo y claridad",
+          "Corte mínimo",
+          "Resultados suaves y uniformes",
+          "Tipo de Pad: Espuma",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Mini pulidora, pulidora orbital DA",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a mini polisher or random orbital DA.",
+        es: "Fijar al plato y usar con mini pulidora o pulidora orbital DA.",
+      },
+    },
+  },
+  {
+    id: "lake-country-heavy-cutting-microfiber-pad-blue",
+    brandSlug: "lake-country",
+    slug: "heavy-cutting-microfiber-pad-blue",
+    name: "Lake Country Heavy Cutting Microfiber Pad – Blue",
+    image: "/placeholder.jpg",
+    variants: [{ size: "5.5\"", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "High-performance microfiber cutting pad engineered for aggressive defect removal and fast paint correction.",
+        es: "Pad de microfibra de alto rendimiento diseñado para eliminación agresiva de defectos y corrección rápida de pintura.",
+      },
+      benefits: {
+        en: [
+          "Aggressive cutting power",
+          "Microfiber surface for fast correction",
+          "Removes deep defects",
+          "Professional-grade durability",
+          "Pad Type: Microfiber",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Mini Polisher, Random Orbital DA",
+        ],
+        es: [
+          "Corte agresivo",
+          "Superficie de microfibra para corrección rápida",
+          "Elimina defectos profundos",
+          "Calidad profesional",
+          "Tipo de Pad: Microfibra",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Mini pulidora, pulidora orbital DA",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a mini polisher or random orbital DA.",
+        es: "Fijar al plato y usar con mini pulidora o pulidora orbital DA.",
+      },
+    },
+  },
+  {
+    id: "lake-country-light-cutting-microfiber-pad-orange",
+    brandSlug: "lake-country",
+    slug: "light-cutting-microfiber-pad-orange",
+    name: "Lake Country Light Cutting Microfiber Pad – Orange",
+    image: "/placeholder.jpg",
+    variants: [
+      { size: "1.5\"", image: "/placeholder.jpg" },
+      { size: "5.5\"", image: "/placeholder.jpg" },
+      { size: "6.5\"", image: "/placeholder.jpg" },
+    ],
+    content: {
+      description: {
+        en: "Microfiber pad designed for light cutting and surface refinement. Ideal for removing light defects while maintaining paint clarity.",
+        es: "Pad de microfibra diseñado para corte ligero y refinamiento de superficies. Ideal para eliminar defectos leves manteniendo la claridad de la pintura.",
+      },
+      benefits: {
+        en: [
+          "Light cutting capability",
+          "Controlled correction",
+          "Microfiber face for refinement",
+          "Multiple size options",
+          "Pad Type: Microfiber",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Mini Polisher, Random Orbital DA",
+        ],
+        es: [
+          "Corte ligero",
+          "Corrección controlada",
+          "Microfibra para refinamiento",
+          "Varias opciones de tamaño",
+          "Tipo de Pad: Microfibra",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Mini pulidora, pulidora orbital DA",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a mini polisher or random orbital DA.",
+        es: "Fijar al plato y usar con mini pulidora o pulidora orbital DA.",
+      },
+    },
+  },
+  {
+    id: "lake-country-curved-edge-cutting-pad-yellow",
+    brandSlug: "lake-country",
+    slug: "curved-edge-cutting-pad-yellow",
+    name: "Curved Edge Cutting Pad – Yellow",
+    image: "/placeholder.jpg",
+    variants: [{ size: "7.5\"", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Smooth surface cutting pad designed exclusively for rotary machines. Curved edge helps center the pad on the backing plate for improved balance and control.",
+        es: "Pad de corte de superficie lisa diseñado exclusivamente para pulidoras rotativas. El borde curvado ayuda a centrar el pad para mejor control y balance.",
+      },
+      benefits: {
+        en: [
+          "Designed for rotary polishers",
+          "Curved edge for pad centering",
+          "Smooth surface cutting",
+          "Ideal for heavy correction",
+          "Pad Type: Foam",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Rotary",
+        ],
+        es: [
+          "Diseñado para pulidoras rotativas",
+          "Borde curvado para mejor centrado",
+          "Corte uniforme",
+          "Ideal para corrección pesada",
+          "Tipo de Pad: Espuma",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Rotativa",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a rotary polisher.",
+        es: "Fijar al plato y usar con pulidora rotativa.",
+      },
+    },
+  },
+  {
+    id: "lake-country-curved-edge-finishing-pad-black",
+    brandSlug: "lake-country",
+    slug: "curved-edge-finishing-pad-black",
+    name: "Curved Edge Finishing Pad – Black",
+    image: "/placeholder.jpg",
+    variants: [{ size: "7.5\"", image: "/placeholder.jpg" }],
+    content: {
+      description: {
+        en: "Smooth surface finishing pad for rotary machines, designed to deliver consistent finishing results with improved balance.",
+        es: "Pad de acabado de superficie lisa para pulidoras rotativas, diseñado para ofrecer resultados uniformes y mayor estabilidad.",
+      },
+      benefits: {
+        en: [
+          "Finishing pad for rotary use",
+          "Curved edge for improved control",
+          "Smooth, even finish",
+          "Ideal for final polishing stages",
+          "Pad Type: Foam",
+          "Attachment: Hook & Loop",
+          "Recommended Tools: Rotary",
+        ],
+        es: [
+          "Pad de acabado para rotativa",
+          "Borde curvado para mejor control",
+          "Acabado uniforme",
+          "Ideal para etapas finales de pulido",
+          "Tipo de Pad: Espuma",
+          "Fijación: Hook & Loop",
+          "Herramientas Recomendadas: Rotativa",
+        ],
+      },
+      howToUse: {
+        en: "Attach to a backing plate and use with a rotary polisher.",
+        es: "Fijar al plato y usar con pulidora rotativa.",
+      },
+    },
+  },
+  {
+    id: "ps-rehab-correction-creme",
+    brandSlug: "ps",
+    slug: "rehab-correction-creme",
+    name: "P&S Rehab Correction Crème",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Medium-cut polish and compound in one, designed to remove swirls, scratches, oxidation, and light sanding marks while leaving a high-gloss, refined finish. Advanced abrasives provide strong correction with minimal dusting, making it ideal for one-step corrections and production detailing.",
+        es: "Pulimento y compuesto de corte medio en un solo paso, diseñado para eliminar remolinos, rayones, oxidación y marcas leves de lijado, dejando un acabado brillante y refinado.",
+      },
+      benefits: {
+        en: [
+          "Medium cut with high-gloss finish",
+          "Removes swirls, scratches, and oxidation",
+          "One-step correction solution",
+          "Low dusting and easy wipe-off",
+          "Safe on all modern clear coats",
+          "Ideal for professional and high-volume use",
+        ],
+        es: [
+          "Corte medio con alto brillo",
+          "Elimina rayones y oxidación",
+          "Corrección en un solo paso",
+          "Bajo polvo y fácil remoción",
+          "Seguro para clear coats modernos",
+          "Ideal para uso profesional",
+        ],
+      },
+      howToUse: {
+        en: "Apply with a polishing or medium-cut pad using a DA or rotary polisher. Work at medium speed until defects are removed, then wipe clean.",
+        es: "Aplicar con pad de pulido o corte medio usando pulidora DA o rotativa. Trabajar a velocidad media y limpiar residuos.",
+      },
+    },
+  },
+  {
+    id: "ps-play-maker-polish",
+    brandSlug: "ps",
+    slug: "play-maker-polish",
+    name: "P&S Play Maker Polish",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "One-step polish that removes light to moderate defects while delivering high gloss in a single pass. Finishes smooth and clear, making it perfect for fast, production-style detailing.",
+        es: "Pulimento de un solo paso diseñado para eliminar defectos leves a moderados y lograr alto brillo en una sola pasada.",
+      },
+      benefits: {
+        en: [
+          "One-step cut and finish",
+          "Removes swirls, haze, and light scratches",
+          "High-gloss finish",
+          "Low dust and easy wipe-off",
+          "Works on all paint and clear coats",
+        ],
+        es: [
+          "Corte y acabado en un solo paso",
+          "Elimina remolinos y marcas leves",
+          "Acabado brillante",
+          "Bajo polvo",
+          "Compatible con todo tipo de pintura",
+        ],
+      },
+      howToUse: {
+        en: "Apply with polishing or medium-cut pad using DA or rotary. Work at medium speed and wipe clean.",
+        es: "Aplicar con pad de pulido usando DA o rotativa. Limpiar residuos con microfibra.",
+      },
+    },
+  },
+  {
+    id: "ps-carpet-bomber",
+    brandSlug: "ps",
+    slug: "carpet-bomber",
+    name: "P&S Carpet Bomber – Carpet & Upholstery Cleaner",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Powerful citrus-based cleaner that breaks down heavy stains, grease, and dirt from carpets, upholstery, and fabrics. Lifts contamination deep from fibers without leaving residue.",
+        es: "Limpiador a base de cítricos diseñado para eliminar manchas difíciles, grasa y suciedad de alfombras y tapicería.",
+      },
+      benefits: {
+        en: [
+          "Citrus-based deep cleaning formula",
+          "Removes heavy stains and grease",
+          "Safe for carpets and upholstery",
+          "Works with brushes or extractors",
+          "Leaves fabric fresh and clean",
+        ],
+        es: [
+          "Fórmula cítrica de limpieza profunda",
+          "Elimina manchas difíciles y grasa",
+          "Seguro para alfombras y tapicería",
+          "Funciona con cepillos o extractores",
+          "Deja la tela fresca y limpia",
+        ],
+      },
+      howToUse: {
+        en: "Dilute as needed. Spray, agitate with brush, and wipe or extract.",
+        es: "Diluir según necesidad. Rociar, agitar con cepillo y limpiar o extraer.",
+      },
+    },
+  },
+  {
+    id: "ps-terminator-spot-stain-remover",
+    brandSlug: "ps",
+    slug: "terminator-spot-stain-remover",
+    name: "P&S Terminator – Spot & Stain Remover",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Professional-strength spot and stain remover that eliminates organic stains such as food, pet accidents, blood, and coffee without damaging fabric.",
+        es: "Removedor profesional de manchas orgánicas para alfombras y tapicería.",
+      },
+      benefits: {
+        en: [
+          "Removes tough organic stains",
+          "Safe for carpets and upholstery",
+          "Works deep into fibers",
+          "Ideal pre-treatment before extraction",
+        ],
+        es: [
+          "Elimina manchas orgánicas difíciles",
+          "Seguro para alfombras y tapicería",
+          "Actúa en profundidad en las fibras",
+          "Ideal como pretratamiento antes de extracción",
+        ],
+      },
+      howToUse: {
+        en: "Spray on stain, allow to dwell, agitate lightly, and wipe or extract.",
+        es: "Rociar sobre la mancha, dejar actuar, agitar suavemente y limpiar o extraer.",
+      },
+    },
+  },
+  {
+    id: "ps-xpress-interior-cleaner",
+    brandSlug: "ps",
+    slug: "xpress-interior-cleaner",
+    name: "P&S Xpress Interior Cleaner",
+    image: "/ps-xpress-interior-cleaner.png",
+    content: {
+      description: {
+        en: "Ready-to-use interior cleaner that safely cleans all interior surfaces without leaving residue or shine. Leaves a factory-matte finish.",
+        es: "Limpiador interior listo para usar que limpia sin dejar brillo ni residuos.",
+      },
+      benefits: {
+        en: [
+          "Safe on all interior surfaces",
+          "No residue or greasy finish",
+          "Factory-matte appearance",
+          "Ready-to-use formula",
+        ],
+        es: [
+          "Seguro para todas las superficies interiores",
+          "Sin residuos ni brillo graso",
+          "Acabado mate tipo fábrica",
+          "Fórmula lista para usar",
+        ],
+      },
+      howToUse: {
+        en: "Spray on towel or surface, wipe clean, buff if needed.",
+        es: "Rociar en la toalla o superficie, limpiar y pulir si es necesario.",
+      },
+    },
+  },
+  {
+    id: "ps-brake-buster-wheel-tire-cleaner",
+    brandSlug: "ps",
+    slug: "brake-buster-wheel-tire-cleaner",
+    name: "P&S Brake Buster – Wheel & Tire Cleaner",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Non-acid wheel and tire cleaner that safely removes brake dust, grease, and grime while clinging to surfaces for better dwell time.",
+        es: "Limpiador no ácido para ruedas y llantas de alto rendimiento.",
+      },
+      benefits: {
+        en: [
+          "Non-acid formula",
+          "Safe for most wheel finishes",
+          "Cleans wheels, tires, and wheel wells",
+          "Professional-grade performance",
+        ],
+        es: [
+          "Fórmula no ácida",
+          "Seguro para la mayoría de acabados de ruedas",
+          "Limpia ruedas, llantas y pasos de rueda",
+          "Rendimiento profesional",
+        ],
+      },
+      howToUse: {
+        en: "Spray on cool wheels, agitate, rinse thoroughly.",
+        es: "Rociar sobre ruedas frías, agitar y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "ps-bead-maker-paint-protectant",
+    brandSlug: "ps",
+    slug: "bead-maker-paint-protectant",
+    name: "P&S Bead Maker – Paint Protectant",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "High-gloss paint protectant that enhances slickness and water beading while repelling dust and dirt. Ideal as drying aid or standalone protectant.",
+        es: "Protector de pintura de alto brillo con efecto hidrofóbico.",
+      },
+      benefits: {
+        en: [
+          "Extreme gloss and slick finish",
+          "Hydrophobic protection",
+          "Easy spray-on application",
+          "Safe on paint, glass, and trim",
+        ],
+        es: [
+          "Brillo extremo y acabado resbaloso",
+          "Protección hidrofóbica",
+          "Aplicación fácil en spray",
+          "Seguro para pintura, vidrio y molduras",
+        ],
+      },
+      howToUse: {
+        en: "Spray and wipe evenly, buff to shine.",
+        es: "Rociar y distribuir, pulir para dar brillo.",
+      },
+    },
+  },
+  {
+    id: "ps-iron-buster-iron-fallout-remover",
+    brandSlug: "ps",
+    slug: "iron-buster-iron-fallout-remover",
+    name: "P&S Iron Buster – Iron & Fallout Remover",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Reactive iron remover that dissolves embedded iron and fallout contamination. Turns purple to show active cleaning.",
+        es: "Removedor de hierro y contaminación con reacción visual.",
+      },
+      benefits: {
+        en: [
+          "Removes iron and brake dust",
+          "Color-changing formula",
+          "Safe on paint, wheels, and glass",
+        ],
+        es: [
+          "Elimina hierro y polvo de frenos",
+          "Fórmula con cambio de color",
+          "Seguro en pintura, ruedas y vidrio",
+        ],
+      },
+      howToUse: {
+        en: "Spray, allow to react, rinse thoroughly.",
+        es: "Rociar, dejar reaccionar y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "ps-finisher-peroxide-treatment",
+    brandSlug: "ps",
+    slug: "finisher-peroxide-treatment",
+    name: "P&S Finisher – Peroxide Treatment",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Step #3 of the Double Black Interior Cleaning System. Breaks down odor-causing molecules, organic stains, and helps sterilize surfaces without leaving residue.",
+        es: "Tratamiento final con peróxido para eliminar olores y manchas orgánicas sin residuos químicos.",
+      },
+      benefits: {
+        en: [
+          "Step #3 in the Double Black Interior Cleaning System",
+          "Targets odor-causing molecules",
+          "Helps break down organic stains",
+          "Leaves no residue",
+        ],
+        es: [
+          "Paso #3 del sistema Double Black Interior",
+          "Ataca moléculas causantes de olores",
+          "Ayuda a eliminar manchas orgánicas",
+          "No deja residuos",
+        ],
+      },
+      howToUse: {
+        en: "Apply to interior surfaces as the final step, then wipe clean.",
+        es: "Aplicar en superficies interiores como paso final y limpiar.",
+      },
+    },
+  },
+  {
+    id: "ps-rags-to-riches-microfiber-detergent",
+    brandSlug: "ps",
+    slug: "rags-to-riches-microfiber-detergent",
+    name: "P&S Rags to Riches – Microfiber Detergent",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Specialized detergent designed to restore microfiber towels by removing waxes, sealants, and polishing oils.",
+        es: "Detergente especializado para restaurar microfibra.",
+      },
+      benefits: {
+        en: ["Restores absorbency", "Extends microfiber life", "Leaves no residue"],
+        es: ["Restaura la absorción", "Extiende la vida de la microfibra", "No deja residuos"],
+      },
+      howToUse: {
+        en: "Wash microfiber warm, air dry or low heat.",
+        es: "Lavar microfibra en tibio y secar al aire o con baja temperatura.",
+      },
+    },
+  },
+  {
+    id: "ps-swift-clean-shine",
+    brandSlug: "ps",
+    slug: "swift-clean-shine",
+    name: "P&S Swift Clean & Shine",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "All-in-one interior cleaner and shine product for leather, vinyl, and plastic. Cleans and leaves a conditioned appearance.",
+        es: "Limpiador interior todo en uno con acabado acondicionado.",
+      },
+      benefits: {
+        en: [
+          "All-in-one interior cleaning and shine",
+          "Works on leather, vinyl, and plastic",
+          "Leaves a conditioned appearance",
+        ],
+        es: [
+          "Limpieza interior y acabado en uno",
+          "Funciona en cuero, vinilo y plástico",
+          "Deja apariencia acondicionada",
+        ],
+      },
+      howToUse: {
+        en: "Apply to a towel or surface, wipe clean, and buff if desired.",
+        es: "Aplicar en toalla o superficie, limpiar y pulir si se desea.",
+      },
+    },
+  },
+  {
+    id: "ps-inspiration-defender-sio2-protectant",
+    brandSlug: "ps",
+    slug: "inspiration-defender-sio2-protectant",
+    name: "P&S Inspiration Defender – SiO₂ Protectant",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "SiO₂ protectant designed as a coating topper or standalone protection. Delivers gloss, slickness, and durable protection.",
+        es: "Protector SiO₂ ideal como mantenimiento o protección independiente.",
+      },
+      benefits: {
+        en: [
+          "SiO₂-based protection",
+          "Adds gloss and slickness",
+          "Works as a topper or standalone",
+          "Durable protection layer",
+        ],
+        es: [
+          "Protección a base de SiO₂",
+          "Aporta brillo y suavidad",
+          "Funciona como topper o protección independiente",
+          "Capa de protección duradera",
+        ],
+      },
+      howToUse: {
+        en: "Spray onto surface and wipe evenly. Buff to a high-gloss finish.",
+        es: "Rociar sobre la superficie y distribuir. Pulir para alto brillo.",
+      },
+    },
+  },
+  {
+    id: "ps-dynamic-dressing-rtu",
+    brandSlug: "ps",
+    slug: "dynamic-dressing-rtu",
+    name: "P&S Dynamic Dressing RTU",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Ready-to-use version of Dynamic Dressing, pre-diluted 4:1 for convenience and consistent results.",
+        es: "Abrillantador listo para usar, fácil y práctico.",
+      },
+      benefits: {
+        en: [
+          "Ready-to-use for convenience",
+          "Pre-diluted 4:1",
+          "Consistent results",
+          "Easy application",
+        ],
+        es: [
+          "Listo para usar",
+          "Pre-diluido 4:1",
+          "Resultados consistentes",
+          "Aplicación sencilla",
+        ],
+      },
+      howToUse: {
+        en: "Apply to the surface and spread evenly with an applicator or towel.",
+        es: "Aplicar sobre la superficie y distribuir con aplicador o toalla.",
+      },
+    },
+  },
+  {
+    id: "ps-clarity-cream-glass-polish",
+    brandSlug: "ps",
+    slug: "clarity-cream-glass-polish",
+    name: "P&S Clarity Cream – Glass Polish",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Glass polish designed to remove water spots, mineral deposits, and wiper marks while restoring clarity.",
+        es: "Pulidor de vidrio profesional para máxima claridad.",
+      },
+      benefits: {
+        en: [
+          "Removes water spots and mineral deposits",
+          "Reduces wiper marks",
+          "Restores glass clarity",
+        ],
+        es: [
+          "Elimina manchas de agua y depósitos minerales",
+          "Reduce marcas de limpiaparabrisas",
+          "Restaura la claridad del vidrio",
+        ],
+      },
+      howToUse: {
+        en: "Apply with a glass polishing pad or microfiber, then buff clean.",
+        es: "Aplicar con pad para vidrio o microfibra y pulir hasta limpiar.",
+      },
+    },
+  },
+  {
+    id: "ps-frostbite-snow-foam-shampoo",
+    brandSlug: "ps",
+    slug: "frostbite-snow-foam-shampoo",
+    name: "P&S Frostbite – Snow Foam Shampoo",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "High-foaming, pH-neutral snow foam shampoo that loosens dirt safely before contact washing.",
+        es: "Champú snow foam de alto espumado y pH neutro.",
+      },
+      benefits: {
+        en: [
+          "High-foaming snow foam",
+          "pH-neutral formula",
+          "Loosens dirt before contact wash",
+          "Safe on paint and clear coat",
+        ],
+        es: [
+          "Alto espumado tipo snow foam",
+          "Fórmula pH neutro",
+          "Afloja suciedad antes del lavado",
+          "Seguro para pintura y clear coat",
+        ],
+      },
+      howToUse: {
+        en: "Dilute for foam cannon, apply, allow to dwell, then rinse.",
+        es: "Diluir para foam cannon, aplicar, dejar actuar y enjuagar.",
+      },
+    },
+  },
+  {
+    id: "ps-pearl-auto-shampoo",
+    brandSlug: "ps",
+    slug: "pearl-auto-shampoo",
+    name: "P&S Pearl Auto Shampoo",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "High-foaming, pH-balanced shampoo that cleans gently while enhancing gloss and lubrication.",
+        es: "Champú automotriz balanceado que limpia y da brillo.",
+      },
+      benefits: {
+        en: [
+          "High-foaming formula",
+          "pH-balanced for gentle cleaning",
+          "Enhances gloss and lubrication",
+          "Safe for regular washes",
+        ],
+        es: [
+          "Fórmula de alta espuma",
+          "pH balanceado para limpieza suave",
+          "Aumenta brillo y lubricidad",
+          "Seguro para lavados regulares",
+        ],
+      },
+      howToUse: {
+        en: "Dilute in a wash bucket, wash with mitt, and rinse thoroughly.",
+        es: "Diluir en cubeta, lavar con guante y enjuagar completamente.",
+      },
+    },
+  },
+  {
+    id: "ps-absolute-rinseless-wash",
+    brandSlug: "ps",
+    slug: "absolute-rinseless-wash",
+    name: "P&S Absolute Rinseless Wash",
+    image: "/placeholder.jpg",
+    content: {
+      description: {
+        en: "Polymer-based rinseless wash that safely cleans vehicles using minimal water.",
+        es: "Lavado sin enjuague de alta lubricación para uso profesional.",
+      },
+      benefits: {
+        en: [
+          "Polymer-based rinseless formula",
+          "Cleans with minimal water",
+          "High lubrication for safer wiping",
+          "Ideal for professional use",
+        ],
+        es: [
+          "Fórmula sin enjuague a base de polímeros",
+          "Limpia con poca agua",
+          "Alta lubricación para limpieza segura",
+          "Ideal para uso profesional",
+        ],
+      },
+      howToUse: {
+        en: "Dilute as directed, wipe with a microfiber towel, and dry with a clean towel.",
+        es: "Diluir según indicaciones, limpiar con microfibra y secar con toalla limpia.",
       },
     },
   },
