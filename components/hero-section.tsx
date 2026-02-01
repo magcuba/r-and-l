@@ -39,7 +39,7 @@ export function HeroSection() {
             <div className="px-[10%] sm:px-0">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
-                  href="#brands"
+                  href="/shop"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   {t("shop_by_brand")}

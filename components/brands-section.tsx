@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react"
 import { useLanguage } from "@/components/language-provider"
 
 const brands = [
-  { name: "P&S", logo: "/ps-logo.png" },
-  { name: "Koch-Chemie", logo: "/koch-chemie-logo.png" },
-  { name: "FalconPro", logo: "/falconpro-logo.png" },
-  { name: "Lake Country", logo: "/lake-country-logo.png" },
+  { name: "P&S", slug: "ps", logo: "/ps-logo.png" },
+  { name: "Koch-Chemie", slug: "koch-chemie", logo: "/koch-chemie-logo.png" },
+  { name: "FalconPro", slug: "falconpro", logo: "/falconpro-logo.png" },
+  { name: "Lake Country", slug: "lake-country", logo: "/lake-country-logo.png" },
 ]
 
 export function BrandsSection() {
@@ -82,16 +82,18 @@ export function BrandsSection() {
           `}</style>
           <div className="flex gap-12 py-8">
             {[...brands, ...brands].map((brand, index) => (
-              <div
+              <a
                 key={`${brand.name}-${index}`}
-                className="flex-shrink-0 flex items-center justify-center w-40 h-20 transition-all opacity-100"
+                href={`/shop/${brand.slug}`}
+                className="flex-shrink-0 flex items-center justify-center w-40 h-20 transition-all opacity-100 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                aria-label={`Shop ${brand.name}`}
               >
                 <img
                   src={brand.logo || "/placeholder.svg"}
                   alt={brand.name}
                   className="max-w-full max-h-full object-contain"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
