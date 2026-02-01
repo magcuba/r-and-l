@@ -30,6 +30,12 @@ export const BRANDS: Brand[] = [
     logo: "/lake-country-logo.png",
     featured: true,
   },
+  {
+    name: "Power Kleen",
+    slug: "power-kleen",
+    logo: "/power-kleen-logo.png",
+    featured: true,
+  },
 ]
 
 export const FEATURED_BRANDS = BRANDS.filter((b) => b.featured)

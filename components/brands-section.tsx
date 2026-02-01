@@ -8,6 +8,7 @@ const brands = [
   { name: "Koch-Chemie", slug: "koch-chemie", logo: "/koch-chemie-logo.png" },
   { name: "FalconPro", slug: "falconpro", logo: "/falconpro-logo.png" },
   { name: "Lake Country", slug: "lake-country", logo: "/lake-country-logo.png" },
+  { name: "Power Kleen", slug: "power-kleen", logo: "/power-kleen-logo.png" },
 ]
 
 export function BrandsSection() {

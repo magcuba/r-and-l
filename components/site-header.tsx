@@ -195,10 +195,6 @@ export function SiteHeader() {
               </div>
             </div>
 
-            <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">
-              {t("blog")}
-            </Link>
-
             <a
               href="#location"
               onClick={scrollToStore}
@@ -265,14 +261,6 @@ export function SiteHeader() {
                 </div>
               </div>
             )}
-
-            <Link
-              href="/blog"
-              className="text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {t("blog")}
-            </Link>
 
             <a
               href="#location"

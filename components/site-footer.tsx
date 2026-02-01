@@ -33,12 +33,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {t("blog")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/store" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/#location" className="text-muted-foreground hover:text-foreground transition-colors">
                   {t("store_hours_location")}
                 </Link>
               </li>

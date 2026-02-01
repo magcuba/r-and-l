@@ -1844,11 +1844,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "heavy-polishing-cutting-pad-blue",
     name: "Lake Country Heavy Polishing (Cutting) Pad – Blue",
-    image: "/placeholder.jpg",
+    image: "/images/HeavypolishingPad3inch.png",
     variants: [
-      { size: "3.5\"", image: "/placeholder.jpg" },
-      { size: "5.5\"", image: "/placeholder.jpg" },
-      { size: "6.5\"", image: "/placeholder.jpg" },
+      { size: "3.5\"", image: "/images/HeavypolishingPad3inch.png" },
+      { size: "5.5\"", image: "/images/HeavyPolishing5and6inch.png" },
+      { size: "6.5\"", image: "/images/HeavyPolishing5and6inch.png" },
     ],
     content: {
       description: {
@@ -1886,11 +1886,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "polishing-2-step-pad-orange",
     name: "Lake Country Polishing (2-Step) Pad – Orange",
-    image: "/placeholder.jpg",
+    image: "/images/Polishingpad3Inch.png",
     variants: [
-      { size: "3.5\"", image: "/placeholder.jpg" },
-      { size: "5.5\"", image: "/placeholder.jpg" },
-      { size: "6.5\"", image: "/placeholder.jpg" },
+      { size: "3.5\"", image: "/images/Polishingpad3Inch.png" },
+      { size: "5.5\"", image: "/images/POlishingpad5inchand6inch.png" },
+      { size: "6.5\"", image: "/images/POlishingpad5inchand6inch.png" },
     ],
     content: {
       description: {
@@ -1928,10 +1928,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "finishing-pad-black",
     name: "Lake Country Finishing Pad – Black",
-    image: "/placeholder.jpg",
+    image: "/images/LakeCountryfinishpad5and6inch.png",
     variants: [
-      { size: "5.5\"", image: "/placeholder.jpg" },
-      { size: "6.5\"", image: "/placeholder.jpg" },
+      { size: "5.5\"", image: "/images/LakeCountryfinishpad5and6inch.png" },
+      { size: "6.5\"", image: "/images/LakeCountryfinishpad5and6inch.png" },
     ],
     content: {
       description: {
@@ -1969,8 +1969,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "heavy-cutting-microfiber-pad-blue",
     name: "Lake Country Heavy Cutting Microfiber Pad – Blue",
-    image: "/placeholder.jpg",
-    variants: [{ size: "5.5\"", image: "/placeholder.jpg" }],
+    image: "/images/HeavyCuttingMicrofiber5inch.png",
+    variants: [{ size: "5.5\"", image: "/images/HeavyCuttingMicrofiber5inch.png" }],
     content: {
       description: {
         en: "High-performance microfiber cutting pad engineered for aggressive defect removal and fast paint correction.",
@@ -2007,11 +2007,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "light-cutting-microfiber-pad-orange",
     name: "Lake Country Light Cutting Microfiber Pad – Orange",
-    image: "/placeholder.jpg",
+    image: "/images/Lightcuttingmicrofiber5and6inch.png",
     variants: [
-      { size: "1.5\"", image: "/placeholder.jpg" },
-      { size: "5.5\"", image: "/placeholder.jpg" },
-      { size: "6.5\"", image: "/placeholder.jpg" },
+      { size: "1.5\"", image: "/images/Lightcutting1.5inchmicrofiber.png" },
+      { size: "5.5\"", image: "/images/Lightcuttingmicrofiber5and6inch.png" },
+      { size: "6.5\"", image: "/images/Lightcuttingmicrofiber5and6inch.png" },
     ],
     content: {
       description: {
@@ -2049,8 +2049,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "curved-edge-cutting-pad-yellow",
     name: "Curved Edge Cutting Pad – Yellow",
-    image: "/placeholder.jpg",
-    variants: [{ size: "7.5\"", image: "/placeholder.jpg" }],
+    image: "/images/CurvededgeCuttingPad7inch.png",
+    variants: [{ size: "7.5\"", image: "/images/CurvededgeCuttingPad7inch.png" }],
     content: {
       description: {
         en: "Smooth surface cutting pad designed exclusively for rotary machines. Curved edge helps center the pad on the backing plate for improved balance and control.",
@@ -2087,8 +2087,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "lake-country",
     slug: "curved-edge-finishing-pad-black",
     name: "Curved Edge Finishing Pad – Black",
-    image: "/placeholder.jpg",
-    variants: [{ size: "7.5\"", image: "/placeholder.jpg" }],
+    image: "/images/Curvededgefinishgpad7inch.png",
+    variants: [{ size: "7.5\"", image: "/images/Curvededgefinishgpad7inch.png" }],
     content: {
       description: {
         en: "Smooth surface finishing pad for rotary machines, designed to deliver consistent finishing results with improved balance.",
@@ -2125,7 +2125,7 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "rehab-correction-creme",
     name: "P&S Rehab Correction Crème",
-    image: "/placeholder.jpg",
+    image: "/images/RehabQT.png",
     content: {
       description: {
         en: "Medium-cut polish and compound in one, designed to remove swirls, scratches, oxidation, and light sanding marks while leaving a high-gloss, refined finish. Advanced abrasives provide strong correction with minimal dusting, making it ideal for one-step corrections and production detailing.",
@@ -2160,7 +2160,7 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "play-maker-polish",
     name: "P&S Play Maker Polish",
-    image: "/placeholder.jpg",
+    image: "/images/PlayMakerQt.png",
     content: {
       description: {
         en: "One-step polish that removes light to moderate defects while delivering high gloss in a single pass. Finishes smooth and clear, making it perfect for fast, production-style detailing.",
@@ -2193,7 +2193,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "carpet-bomber",
     name: "P&S Carpet Bomber – Carpet & Upholstery Cleaner",
-    image: "/placeholder.jpg",
+    image: "/images/CarpetBomberPint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/CarpetBomberPint.png" },
+      { size: "1 Gal", image: "/images/CarpetBombergallon.png" },
+    ],
     content: {
       description: {
         en: "Powerful citrus-based cleaner that breaks down heavy stains, grease, and dirt from carpets, upholstery, and fabrics. Lifts contamination deep from fibers without leaving residue.",
@@ -2226,7 +2230,12 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "terminator-spot-stain-remover",
     name: "P&S Terminator – Spot & Stain Remover",
-    image: "/placeholder.jpg",
+    image: "/images/TerminatorPint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/TerminatorPint.png"},
+      { size: "1 Gal", image: "/images/TerminatorGallon.png" },
+      { size: "5 Gal", image: "/images/Temrinator5Gallon.png" },
+    ],
     content: {
       description: {
         en: "Professional-strength spot and stain remover that eliminates organic stains such as food, pet accidents, blood, and coffee without damaging fabric.",
@@ -2258,6 +2267,10 @@ export const PRODUCTS: Product[] = [
     slug: "xpress-interior-cleaner",
     name: "P&S Xpress Interior Cleaner",
     image: "/ps-xpress-interior-cleaner.png",
+    variants: [
+      { size: "1 Pint", image: "/images/XpressINteriorPint.png" },
+      { size: "1 Gal", image: "/ps-xpress-interior-cleaner.png" },
+    ],
     content: {
       description: {
         en: "Ready-to-use interior cleaner that safely cleans all interior surfaces without leaving residue or shine. Leaves a factory-matte finish.",
@@ -2288,7 +2301,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "brake-buster-wheel-tire-cleaner",
     name: "P&S Brake Buster – Wheel & Tire Cleaner",
-    image: "/placeholder.jpg",
+    image: "/images/Brakebusterpint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/Brakebusterpint.png" },
+      { size: "1 Gal", image: "/images/BrakeBustergallon.png" },
+    ],
     content: {
       description: {
         en: "Non-acid wheel and tire cleaner that safely removes brake dust, grease, and grime while clinging to surfaces for better dwell time.",
@@ -2319,7 +2336,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "bead-maker-paint-protectant",
     name: "P&S Bead Maker – Paint Protectant",
-    image: "/placeholder.jpg",
+    image: "/images/Beadmakerpint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/Beadmakerpint.png" },
+      { size: "1 Gal", image: "/images/baedmakergallon.png" },
+    ],
     content: {
       description: {
         en: "High-gloss paint protectant that enhances slickness and water beading while repelling dust and dirt. Ideal as drying aid or standalone protectant.",
@@ -2350,7 +2371,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "iron-buster-iron-fallout-remover",
     name: "P&S Iron Buster – Iron & Fallout Remover",
-    image: "/placeholder.jpg",
+    image: "/images/IronBusterPint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/IronBusterPint.png" },
+      { size: "1 Gal", image: "/images/IronbusterGallon.png" },
+    ],
     content: {
       description: {
         en: "Reactive iron remover that dissolves embedded iron and fallout contamination. Turns purple to show active cleaning.",
@@ -2379,7 +2404,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "finisher-peroxide-treatment",
     name: "P&S Finisher – Peroxide Treatment",
-    image: "/placeholder.jpg",
+    image: "/images/Finisherpint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/Finisherpint.png" },
+      { size: "1 Gal", image: "/images/FinisherGallon.png" },
+    ],
     content: {
       description: {
         en: "Step #3 of the Double Black Interior Cleaning System. Breaks down odor-causing molecules, organic stains, and helps sterilize surfaces without leaving residue.",
@@ -2410,7 +2439,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "rags-to-riches-microfiber-detergent",
     name: "P&S Rags to Riches – Microfiber Detergent",
-    image: "/placeholder.jpg",
+    image: "/images/Ragstorichesquart.png",
+    variants: [
+      { size: "1 Quart", image: "/images/Ragstorichesquart.png" },
+      { size: "1 Gal", image: "/images/Ragstorichesgallon.png" },
+    ],
     content: {
       description: {
         en: "Specialized detergent designed to restore microfiber towels by removing waxes, sealants, and polishing oils.",
@@ -2431,7 +2464,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "swift-clean-shine",
     name: "P&S Swift Clean & Shine",
-    image: "/placeholder.jpg",
+    image: "/images/Swiftpint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/Swiftpint.png" },
+      { size: "1 Gal", image: "/images/Swiftgallon.png" },
+    ],
     content: {
       description: {
         en: "All-in-one interior cleaner and shine product for leather, vinyl, and plastic. Cleans and leaves a conditioned appearance.",
@@ -2460,7 +2497,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "inspiration-defender-sio2-protectant",
     name: "P&S Inspiration Defender – SiO₂ Protectant",
-    image: "/placeholder.jpg",
+    image: "/images/Insipirationdefenderpint.png",
+    variants: [
+      { size: "1 Pint", image: "/images/Insipirationdefenderpint.png" },
+      { size: "1 Gal", image: "/images/Insipirationdefendergallon.png" },
+    ],
     content: {
       description: {
         en: "SiO₂ protectant designed as a coating topper or standalone protection. Delivers gloss, slickness, and durable protection.",
@@ -2491,7 +2532,7 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "dynamic-dressing-rtu",
     name: "P&S Dynamic Dressing RTU",
-    image: "/placeholder.jpg",
+    image: "/images/DynamicDressingRTU.png",
     content: {
       description: {
         en: "Ready-to-use version of Dynamic Dressing, pre-diluted 4:1 for convenience and consistent results.",
@@ -2522,7 +2563,7 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "clarity-cream-glass-polish",
     name: "P&S Clarity Cream – Glass Polish",
-    image: "/placeholder.jpg",
+    image: "/images/ClarityCreamPint.png",
     content: {
       description: {
         en: "Glass polish designed to remove water spots, mineral deposits, and wiper marks while restoring clarity.",
@@ -2551,7 +2592,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "frostbite-snow-foam-shampoo",
     name: "P&S Frostbite – Snow Foam Shampoo",
-    image: "/placeholder.jpg",
+    image: "/images/FrostbiteQuart.png",
+    variants: [
+      { size: "1 Quart", image: "/images/FrostbiteQuart.png" },
+      { size: "1 Gal", image: "/images/FrostbiteGallon.png" },
+    ],
     content: {
       description: {
         en: "High-foaming, pH-neutral snow foam shampoo that loosens dirt safely before contact washing.",
@@ -2582,7 +2627,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "pearl-auto-shampoo",
     name: "P&S Pearl Auto Shampoo",
-    image: "/placeholder.jpg",
+    image: "/images/PearlShampooQuart.png",
+    variants: [
+      { size: "1 Quart", image: "/images/PearlShampooQuart.png" },
+      { size: "1 Gal", image: "/images/PearlShampooGallon.png" },
+    ],
     content: {
       description: {
         en: "High-foaming, pH-balanced shampoo that cleans gently while enhancing gloss and lubrication.",
@@ -2613,7 +2662,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "ps",
     slug: "absolute-rinseless-wash",
     name: "P&S Absolute Rinseless Wash",
-    image: "/placeholder.jpg",
+    image: "/images/AbsoluterinselessWashQuart.png",
+    variants: [
+      { size: "1 Quart", image: "/images/AbsoluterinselessWashQuart.png" },
+      { size: "1 Gal", image: "/images/ABsoluterinselesswashgallon.png" },
+    ],
     content: {
       description: {
         en: "Polymer-based rinseless wash that safely cleans vehicles using minimal water.",
@@ -2636,6 +2689,80 @@ export const PRODUCTS: Product[] = [
       howToUse: {
         en: "Dilute as directed, wipe with a microfiber towel, and dry with a clean towel.",
         es: "Diluir según indicaciones, limpiar con microfibra y secar con toalla limpia.",
+      },
+    },
+  },
+  {
+    id: "power-kleen-sandstorm",
+    brandSlug: "power-kleen",
+    slug: "sandstorm",
+    name: "Sandstorm",
+    image: "/images/SandStormGallon.png",
+    variants: [{ size: "1 Gal", image: "/images/SandStormGallon.png" }],
+    content: {
+      description: {
+        en: "Heavy-duty concrete dissolver originally developed for the Ready Mix industry. Sandstorm is a liquid compound formulated to remove hardened concrete buildup from equipment by attacking concrete at the molecular level and breaking it back down into mud—without the use of harsh acids. Made with a naturally occurring active ingredient commonly found in sugar cane syrup, Sandstorm is 100% biodegradable, non-corrosive, non-regulated, and non-irritating to skin.",
+        es: "Disolvente de concreto de alta resistencia desarrollado originalmente para la industria Ready Mix. Sandstorm elimina acumulaciones de concreto endurecido atacándolo a nivel molecular y devolviéndolo a su estado original sin el uso de ácidos agresivos. Su ingrediente activo es de origen natural, comúnmente encontrado en el jarabe de caña de azúcar. Es 100% biodegradable, no corrosivo, no regulado y no irritante para la piel.",
+      },
+      benefits: {
+        en: [
+          "Dissolves hardened concrete buildup",
+          "Acid-free formula (no muriatic, hydrochloric, sulfuric, or hydrofluoric acids)",
+          "Attacks concrete at the molecular level",
+          "Non-corrosive and non-regulated",
+          "Non-skin irritant",
+          "100% biodegradable",
+          "Safe for equipment and surfaces",
+        ],
+        es: [
+          "Disuelve concreto endurecido",
+          "Fórmula libre de ácidos agresivos",
+          "Acción molecular efectiva",
+          "No corrosivo ni regulado",
+          "Seguro para la piel",
+          "100% biodegradable",
+          "Seguro para equipos y superficies",
+        ],
+      },
+      howToUse: {
+        en: "Apply directly to concrete buildup and allow time to penetrate. Agitate if necessary and rinse thoroughly with water.",
+        es: "Aplicar directamente sobre el concreto acumulado, dejar actuar, frotar si es necesario y enjuagar con agua.",
+      },
+    },
+  },
+  {
+    id: "power-kleen-whoof",
+    brandSlug: "power-kleen",
+    slug: "whoof",
+    name: "Whoof",
+    image: "/images/Whoof.png",
+    variants: [{ size: "1 Gal", image: "/images/Whoof.png" }],
+    content: {
+      description: {
+        en: "Professional-grade air freshener designed to neutralize unpleasant odors in seconds. Whoof eliminates odors and smoke in as little as five seconds while refreshing stale air. Its time-released odor wick technology continues to combat lingering odors long after application. Safe and versatile, Whoof can be used with foggers, sprayers, mops, or sponges.",
+        es: "Ambientador profesional diseñado para neutralizar olores desagradables en segundos. Whoof elimina olores y humo en tan solo cinco segundos y refresca el aire viciado. Su tecnología de liberación prolongada continúa combatiendo olores persistentes después de la aplicación. Puede aplicarse con nebulizadores, atomizadores, trapeadores o esponjas.",
+      },
+      benefits: {
+        en: [
+          "Neutralizes odors in seconds",
+          "Eliminates smoke and stale air",
+          "Time-released odor control technology",
+          "Long-lasting deodorizing effect",
+          "Versatile application methods",
+          "Professional-grade performance",
+        ],
+        es: [
+          "Neutraliza olores rápidamente",
+          "Elimina humo y aire estancado",
+          "Tecnología de liberación prolongada",
+          "Efecto desodorizante duradero",
+          "Aplicación versátil",
+          "Calidad profesional",
+        ],
+      },
+      howToUse: {
+        en: "Apply using fogger, sprayer, mop, or sponge. Allow product to disperse and refresh the area.",
+        es: "Aplicar con nebulizador, atomizador, trapeador o esponja. Dejar que el producto actúe y refresque el ambiente.",
       },
     },
   },
