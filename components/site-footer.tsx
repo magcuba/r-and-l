@@ -62,7 +62,7 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold">{t("footer_follow_us")}</h3>
             <div className="flex gap-4 justify-center md:justify-start">
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/rluniversalsuppliesen/"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >

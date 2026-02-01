@@ -66,7 +66,7 @@ export function SiteHeader() {
             <span className="text-muted-foreground hidden sm:inline">{t("follow_us")}</span>
             <div className="flex gap-2">
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/rluniversalsuppliesen/"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >

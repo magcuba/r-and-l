@@ -1,5 +1,5 @@
 import { VideoLinksCard } from "@/components/video-links-card"
-import { Youtube, Instagram } from "lucide-react"
+import { Instagram, Facebook } from "lucide-react"
 
 const howToVideos = [
   {
@@ -19,7 +19,7 @@ const howToVideos = [
   {
     title: "Interior Detailing Like a Pro",
     platform: "instagram" as const,
-    url: "https://instagram.com/p/example",
+    url: "https://www.instagram.com/rluniversalsuppliesen/",
     thumbnail: "/car-detailing-polish.jpg",
     description: "Professional interior detailing tips and tricks",
   },
@@ -43,7 +43,7 @@ const recommendations = [
   {
     title: "Winter Car Care Essentials",
     platform: "instagram" as const,
-    url: "https://instagram.com/p/example2",
+    url: "https://www.instagram.com/rluniversalsuppliesen/",
     thumbnail: "/car-detailing-before-after.jpg",
     description: "Must-have products to protect your car during winter months",
   },
@@ -128,16 +128,16 @@ export default function BlogPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <a
-                href="https://youtube.com"
+                href="https://www.facebook.com/share/17yRkRphLn/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-background text-foreground hover:bg-background/90 px-6 py-3 rounded-lg font-medium transition-colors"
               >
-                <Youtube className="h-5 w-5" />
-                {"YouTube"}
+                <Facebook className="h-5 w-5" />
+                {"Facebook"}
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/rluniversalsuppliesen/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-background text-foreground hover:bg-background/90 px-6 py-3 rounded-lg font-medium transition-colors"
