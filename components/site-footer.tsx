@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Facebook, Youtube } from "lucide-react"
+import { Instagram, Facebook } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export function SiteFooter() {
@@ -83,15 +83,6 @@ export function SiteFooter() {
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
-              </Link>
-
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Youtube className="h-5 w-5" />
-                <span className="sr-only">YouTube</span>
               </Link>
             </div>
           </div>

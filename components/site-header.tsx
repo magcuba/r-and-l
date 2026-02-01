@@ -4,7 +4,7 @@ import type React from "react"
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Instagram, Facebook, Youtube, Globe, Menu, X, ChevronDown, ChevronRight, Moon, Sun } from "lucide-react"
+import { Instagram, Facebook, Globe, Menu, X, ChevronDown, ChevronRight, Moon, Sun } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import { FEATURED_BRANDS } from "@/lib/brands"
@@ -92,15 +92,6 @@ export function SiteHeader() {
               >
                 <Facebook className="h-4 w-4" />
                 <span className="sr-only">Facebook</span>
-              </Link>
-
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Youtube className="h-4 w-4" />
-                <span className="sr-only">YouTube</span>
               </Link>
             </div>
           </div>
