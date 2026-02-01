@@ -67,6 +67,19 @@ video_2_title: "Before & After Results",
 video_3_title: "Complete Wash Tutorial",
 video_4_title: "Ceramic Coating Demo",
 
+// Blog
+blog_title: "Car Care Blog",
+blog_subtitle: "Expert tips, how-to guides, and product recommendations for keeping your vehicle in pristine condition",
+blog_how_to_title: "How To Guides",
+blog_how_to_subtitle: "Learn professional car care techniques from our expert tutorials",
+blog_recommendations_title: "Product Recommendations",
+blog_recommendations_subtitle: "Discover our top picks for every car care situation",
+blog_cta_title: "Stay Updated with Our Latest Content",
+blog_cta_subtitle: "Follow us on social media for daily tips, product reviews, and exclusive car care content",
+blog_cta_facebook: "Facebook",
+blog_cta_instagram: "Instagram",
+blog_cta_tiktok: "TikTok",
+
 
 // Footer
 footer_tagline: "Your trusted source for premium car wash and detailing products.",
@@ -143,6 +156,21 @@ video_1_title: "Técnica de Cañón de Espuma",
 video_2_title: "Resultados Antes y Después",
 video_3_title: "Tutorial Completo de Lavado",
 video_4_title: "Demostración de Recubrimiento Cerámico",
+
+// Blog
+blog_title: "Blog de Cuidado Automotriz",
+blog_subtitle:
+  "Consejos expertos, guias practicas y recomendaciones de productos para mantener tu vehiculo en excelente estado",
+blog_how_to_title: "Guias Practicas",
+blog_how_to_subtitle: "Aprende tecnicas profesionales de cuidado del auto con nuestros tutoriales",
+blog_recommendations_title: "Recomendaciones de Productos",
+blog_recommendations_subtitle: "Descubre nuestras mejores opciones para cada situacion",
+blog_cta_title: "Mantente al Dia con Nuestro Contenido",
+blog_cta_subtitle:
+  "Siguenos en redes sociales para consejos diarios, reseñas de productos y contenido exclusivo",
+blog_cta_facebook: "Facebook",
+blog_cta_instagram: "Instagram",
+blog_cta_tiktok: "TikTok",
 
 
 // Footer

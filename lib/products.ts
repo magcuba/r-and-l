@@ -773,11 +773,11 @@ export const PRODUCTS: Product[] = [
     id: "falconpro-pot-pan-dish-washing-detergent",
     brandSlug: "falconpro",
     slug: "pot-pan-dish-washing-detergent",
-    name: "FalconPro Pot & Pan Dish Washing Detergent",
-    image: "/placeholder.jpg",
+    name: "Pot & Pan Dish Washing Detergent",
+    image: "/images/PortandPanddetergentGallon.png",
     variants: [
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/images/PortandPanddetergentGallon.png" },
+      { size: "5 Gal", image: "/images/PortandPanddetergentGallon.png" },
     ],
     content: {
       description: {
@@ -814,9 +814,9 @@ export const PRODUCTS: Product[] = [
     id: "falconpro-pink-hand-soap",
     brandSlug: "falconpro",
     slug: "pink-hand-soap",
-    name: "FalconPro Pink Hand Soap",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    name: "Pink Hand Soap",
+    image: "/images/PinkHandSoap1Gallon.png",
+    variants: [{ size: "1 Gal", image: "/images/PinkHandSoap1Gallon.png" }],
     content: {
       description: {
         en: "Moisturizing hand soap formulated with protective ingredients to gently clean and soften skin. Effectively removes light-duty soils while producing a thick, luxurious lather. Ideal for offices, restaurants, supermarkets, bakeries, hotels, schools, and public restrooms. Biodegradable surfactants ensure effective and responsible cleaning.",
@@ -851,8 +851,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "formula-83-degreaser",
     name: "Formula 83 Degreaser",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/F831Gal.png",
+    variants: [{ size: "1 Gal", image: "/images/F831Gal.png" }],
     content: {
       description: {
         en: "Heavy-duty industrial degreaser formulated for superior removal of grease, oil, and grime. This concentrated, biodegradable formula offers controlled foam for fast rinsing and can be diluted for economical use. Highly versatile, it can be applied with sprayers, mops, brushes, pressure sprayers, or automatic scrubbers.",
@@ -887,10 +887,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "purple-lightning",
     name: "Purple Lightning",
-    image: "/placeholder.jpg",
+    image: "/images/Purplelightening1Gallon.png",
     variants: [
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/images/Purplelightening1Gallon.png" },
+      { size: "5 Gal", image: "/images/Purplelightening1Gallon.png" },
     ],
     content: {
       description: {
@@ -926,10 +926,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "black-lightning",
     name: "Black Lightning",
-    image: "/placeholder.jpg",
+    image: "/Blacklightening1Gal.png",
     variants: [
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/Blacklightening1Gal.png" },
+      { size: "5 Gal", image: "/Blacklightening1Gal.png" },
     ],
     content: {
       description: {
@@ -964,9 +964,9 @@ export const PRODUCTS: Product[] = [
     id: "falconpro-sterling-metal-polish",
     brandSlug: "falconpro",
     slug: "sterling-metal-polish",
-    name: "FalconPro Sterling Metal Polish",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Pint", image: "/placeholder.jpg" }],
+    name: "Sterling Metal Polish",
+    image: "/images/SterlingemtalpolishPint.png",
+    variants: [{ size: "1 Pint", image: "/images/SterlingemtalpolishPint.png" }],
     content: {
       description: {
         en: "Premium metal polish designed to clean, restore, and protect aluminum, chrome, brass, and stainless steel. Removes tarnish, oxidation, and surface contaminants while leaving a brilliant, long-lasting shine with a protective coating to help prevent future tarnishing.",
@@ -999,8 +999,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "bug-off",
     name: "Bug Off",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/BuggoffGal.png",
+    variants: [{ size: "1 Gal", image: "/images/BuggoffGal.png" }],
     content: {
       description: {
         en: "Fast-acting, high-foaming bug remover that softens and removes bugs, bird droppings, tree sap, brake dust, and road film. Produces stable foam when used with foam-generating equipment and rinses freely without residue.",
@@ -1033,10 +1033,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "aluminum-brightener",
     name: "Aluminum Brightener",
-    image: "/placeholder.jpg",
+    image: "/AluminumBright1Gal.png",
     variants: [
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/AluminumBright1Gal.png" },
+      { size: "5 Gal", image: "/AluminumBright1Gal.png" },
     ],
     content: {
       description: {
@@ -1068,11 +1068,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "carpet-interior-cleaner",
     name: "Carpet & Interior Cleaner",
-    image: "/placeholder.jpg",
+    image: "/images/CarpetClaner1Gal.png",
     variants: [
-      { size: "16 oz", image: "/placeholder.jpg" },
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "16 oz", image: "/images/CarpetClaner1Gal.png" },
+      { size: "1 Gal", image: "/images/CarpetClaner1Gal.png" },
+      { size: "5 Gal", image: "/images/CarpetClaner1Gal.png" },
     ],
     content: {
       description: {
@@ -1104,8 +1104,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "super-high-gloss-protectant",
     name: "Super High Gloss Protectant",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/SuperhighGlossProtectant1Gal.png",
+    variants: [{ size: "1 Gal", image: "/images/SuperhighGlossProtectant1Gal.png" }],
     content: {
       description: {
         en: "Premium protectant for rubber, vinyl, plastic, and leather surfaces. Provides deep gloss and UV protection while preventing cracking and fading. Do not use on floors, fabrics, or pedals.",
@@ -1136,8 +1136,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "formula83-interior-shine-protectant",
     name: "Formula83 Interior Shine & Protectant",
-    image: "/placeholder.jpg",
-    variants: [{ size: "16 oz", image: "/placeholder.jpg" }],
+    image: "/images/Interiorshineandprotectant16oz.png",
+    variants: [{ size: "16 oz", image: "/images/Interiorshineandprotectant16oz.png" }],
     content: {
       description: {
         en: "Interior protectant that restores dashboards, vinyl, and plastic with a satin, non-greasy finish. Provides UV protection and long-lasting appearance enhancement.",
@@ -1168,8 +1168,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "premium-tire-gel",
     name: "Premium Tire Gel",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/Premiumtiregel1Gal.png",
+    variants: [{ size: "1 Gal", image: "/images/Premiumtiregel1Gal.png" }],
     content: {
       description: {
         en: "Water-based tire gel delivering ultra-high gloss without sling. Thick formula coats evenly and repels water for long-lasting shine.",
@@ -1190,11 +1190,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "super-high-gloss-silicone-tire-dressing",
     name: "Super High Gloss Silicone Tire Dressing",
-    image: "/placeholder.jpg",
+    image: "/images/Tireshine16oz.png",
     variants: [
-      { size: "16 oz", image: "/placeholder.jpg" },
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "16 oz", image: "/images/Tireshine16oz.png" },
+      { size: "1 Gal", image: "/images/SuperhighGlossProtectant1Gal.png" },
+      { size: "5 Gal", image: "/images/SuperhighGlossProtectant1Gal.png" },
     ],
     content: {
       description: {
@@ -1216,10 +1216,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "blue-silicone",
     name: "Blue Silicone",
-    image: "/placeholder.jpg",
+    image: "/images/BlueSilicone.png",
     variants: [
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/images/BlueSilicone.png" },
+      { size: "5 Gal", image: "/images/BlueSilicone.png" },
     ],
     content: {
       description: {
@@ -1241,8 +1241,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "spring-breeze",
     name: "Spring Breeze",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/SpringBreeze1Gal.png",
+    variants: [{ size: "1 Gal", image: "/images/SpringBreeze1Gal.png" }],
     content: {
       description: {
         en: "Long-lasting air freshener and neutral pH all-purpose cleaner. Cleans and freshens floors and surfaces while eliminating odors.",
@@ -1263,8 +1263,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "ocean-mist",
     name: "Ocean Mist",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/Oceanmist1Gal.png",
+    variants: [{ size: "1 Gal", image: "/images/Oceanmist1Gal.png" }],
     content: {
       description: {
         en: "Long-lasting, fresh-scented air freshener that also works as a powerful neutral pH all-purpose cleaner. Designed to eliminate tough odors while safely cleaning floors and surfaces in cars, homes, offices, and commercial spaces.",
@@ -1299,8 +1299,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "black-freeze",
     name: "Black Freeze",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/Blackfreezegal.png",
+    variants: [{ size: "1 Gal", image: "/Blackfreezegal.png" }],
     content: {
       description: {
         en: "Fresh, long-lasting air freshener combined with a neutral pH all-purpose cleaner. Effectively eliminates odors while cleaning floors and surfaces, leaving behind a bold, clean fragrance.",
@@ -1333,8 +1333,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "cherry",
     name: "Cherry",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/images/CherryGal.png",
+    variants: [{ size: "1 Gal", image: "/images/CherryGal.png" }],
     content: {
       description: {
         en: "New and fresh cherry-scented air freshener that doubles as a neutral pH all-purpose cleaner. Eliminates odors while safely cleaning floors and surfaces.",
@@ -1366,9 +1366,9 @@ export const PRODUCTS: Product[] = [
     id: "falconpro-glass-surface-cleaner",
     brandSlug: "falconpro",
     slug: "glass-surface-cleaner",
-    name: "FalconPro Glass & Surface Cleaner",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    name: "Glass & Surface Cleaner",
+    image: "/images/Glass_SurfaceCleaner.png",
+    variants: [{ size: "1 Gal", image: "/images/Glass_SurfaceCleaner.png" }],
     content: {
       description: {
         en: "Multi-purpose cleaner designed to clean and shine glass and non-porous surfaces. Cuts through dirt, grime, and stains on windows, mirrors, countertops, and more. Also effective as a windshield washer fluid for removing bugs and road grime.",
@@ -1400,9 +1400,9 @@ export const PRODUCTS: Product[] = [
     id: "falconpro-water-spot-remover",
     brandSlug: "falconpro",
     slug: "water-spot-remover",
-    name: "FalconPro Water Spot Remover (Spot Not)",
-    image: "/placeholder.jpg",
-    variants: [{ size: "32 oz", image: "/placeholder.jpg" }],
+    name: "Water Spot Remover (Spot Not)",
+    image: "/images/WaterSpotRemover.png",
+    variants: [{ size: "32 oz", image: "/images/WaterSpotRemover.png" }],
     content: {
       description: {
         en: "Powerful acid-based water spot remover designed to eliminate hard water deposits, rust, soap scum, bird droppings, and mineral stains. Thick formula clings to surfaces for fast, effective cleaning. Do not use on aluminum.",
@@ -1435,10 +1435,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "brillo",
     name: "Brillo",
-    image: "/placeholder.jpg",
+    image: "/images/BrilloGal.png",
     variants: [
-      { size: "1 Gal", image: "/placeholder.jpg" },
-      { size: "5 Gal", image: "/placeholder.jpg" },
+      { size: "1 Gal", image: "/images/BrilloGal.png" },
+      { size: "5 Gal", image: "/images/BrilloGal.png" },
     ],
     content: {
       description: {
@@ -1472,10 +1472,10 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "new-car",
     name: "New Car",
-    image: "/placeholder.jpg",
+    image: "/images/Newcar16oz.png",
     variants: [
-      { size: "16 oz", image: "/placeholder.jpg" },
-      { size: "1 Gal", image: "/placeholder.jpg" },
+      { size: "16 oz", image: "/images/Newcar16oz.png" },
+      { size: "1 Gal", image: "/images/Newcar1gal.png" },
     ],
     content: {
       description: {
@@ -1497,8 +1497,8 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "baby-powder",
     name: "Baby Powder",
-    image: "/placeholder.jpg",
-    variants: [{ size: "1 Gal", image: "/placeholder.jpg" }],
+    image: "/Babypowder1gal.png",
+    variants: [{ size: "1 Gal", image: "/Babypowder1gal.png" }],
     content: {
       description: {
         en: "Fresh baby powder-scented air freshener and neutral pH cleaner suitable for floors and surfaces.",
@@ -1762,11 +1762,11 @@ export const PRODUCTS: Product[] = [
     brandSlug: "falconpro",
     slug: "big-bite-compound",
     name: "Big Bite Compound",
-    image: "/images/BigBiteGallon.png",
+    image: "/images/BigBiteQuart.png",
     variants: [
+      { size: "1 Quart", image: "/images/BigBiteQuart.png" },
       { size: "1 Gal", image: "/images/BigBiteGallon.png" },
-      { size: "1 Quart", image: "/images/BigBiteGallon.png" },
-    ],
+          ],
     content: {
       description: {
         en: "High-performance heavy-cut compound formulated with advanced technology to remove deep scratches and severe paint defects while restoring a high-gloss finish. Effectively eliminates 1000 to 1500 grit sanding marks on freshly painted or fully cured paint. Silicone-free and body shop safe.",
