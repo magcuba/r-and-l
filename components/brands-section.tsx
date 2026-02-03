@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { useLanguage } from "@/components/language-provider"
+import Image from "next/image"
+import Link from "next/link"
 
 const brands = [
   { name: "P&S", slug: "ps", logo: "/ps-logo.png" },
@@ -83,18 +85,20 @@ export function BrandsSection() {
           `}</style>
           <div className="flex gap-12 py-8">
             {[...brands, ...brands].map((brand, index) => (
-              <a
+              <Link
                 key={`${brand.name}-${index}`}
                 href={`/shop/${brand.slug}`}
                 className="flex-shrink-0 flex items-center justify-center w-40 h-20 transition-all opacity-100 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 aria-label={`Shop ${brand.name}`}
               >
-                <img
+                <Image
                   src={brand.logo || "/placeholder.svg"}
                   alt={brand.name}
+                  width={160}
+                  height={80}
                   className="max-w-full max-h-full object-contain"
                 />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

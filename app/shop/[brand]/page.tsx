@@ -30,12 +30,12 @@ export default async function BrandPage({
     <main className="container max-w-7xl mx-auto px-4 py-12 space-y-10">
       {/* Header */}
       <div className="flex items-start gap-4">
-        <div className="relative h-16 w-16 overflow-hidden rounded-xl border bg-muted">
+        <div className="relative h-20 w-20 sm:h-16 sm:w-16 shrink-0 aspect-square overflow-hidden rounded-lg border bg-muted">
           <Image
             src={brand.logo || "/placeholder.png"}
             alt={`${brand.name} logo`}
             fill
-            className="object-contain p-2"
+            className="object-contain p-1.5"
           />
         </div>
 
@@ -87,7 +87,7 @@ export default async function BrandPage({
                     src={product.image || "/placeholder.png"}
                     alt={product.name}
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-2 sm:p-3 md:p-4"
                   />
                 </div>
 

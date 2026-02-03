@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -17,20 +16,10 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/images/logo.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: "/apple-icon.png",
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
   },
 }
 
@@ -57,7 +46,6 @@ export default function RootLayout({
           </LanguageProvider>
         </ThemeProvider>
 
-        <Analytics />
       </body>
     </html>
   )

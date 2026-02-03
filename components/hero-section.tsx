@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react"
 import { useLanguage } from "@/components/language-provider"
+import Image from "next/image"
+import Link from "next/link"
 
 export function HeroSection() {
   const { t } = useLanguage()
@@ -38,12 +40,12 @@ export function HeroSection() {
 
             <div className="px-[10%] sm:px-0">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a
+                <Link
                   href="/shop"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   {t("shop_by_brand")}
-                </a>
+                </Link>
 
                 <a
                   href="#location"
@@ -63,7 +65,14 @@ export function HeroSection() {
                   index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <img src={video.url || "/placeholder.svg"} alt={video.title} className="h-full w-full object-cover" />
+                <Image
+                  src={video.url || "/placeholder.svg"}
+                  alt={video.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority={index === 0}
+                  className="object-cover"
+                />
               </div>
             ))}
 

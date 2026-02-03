@@ -3,6 +3,7 @@
 import { Play } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { useMemo } from "react"
+import Image from "next/image"
 
 interface VideoLink {
   id: string
@@ -76,10 +77,12 @@ export function VideoLinksSection() {
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <div className="aspect-[3/4] relative">
-                <img
+                <Image
                   src={video.thumbnail || "/placeholder.svg"}
                   alt={video.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
                 />
 
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center">

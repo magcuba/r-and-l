@@ -4,7 +4,7 @@ import type React from "react"
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Instagram, Facebook, Globe, Menu, X, ChevronDown, ChevronRight, Moon, Sun } from "lucide-react"
+import { Instagram, Facebook, Globe, Menu, X, ChevronDown, ChevronRight, Moon, Sun, Mail, Phone, MessageCircle } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import { FEATURED_BRANDS } from "@/lib/brands"
@@ -20,6 +20,7 @@ export function SiteHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false)
+  const [mobileQuoteOpen, setMobileQuoteOpen] = useState(false)
   const sortedFeaturedBrands = [...FEATURED_BRANDS].sort((a, b) => a.name.localeCompare(b.name))
 
   const toggleTheme = () => {
@@ -186,6 +187,55 @@ export function SiteHeader() {
               </div>
             </div>
 
+            {/* Get a Quote: Hover Dropdown */}
+            <div className="relative group">
+              <button
+                type="button"
+                className="text-sm font-medium hover:text-primary transition-colors inline-flex items-center gap-1"
+              >
+                Get a quote
+                <ChevronDown className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity" />
+              </button>
+
+              <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div className="w-64 rounded-lg border bg-background shadow-md p-2">
+                  <div className="px-2 py-2 text-xs font-semibold text-muted-foreground">Contact</div>
+
+                  <div className="flex flex-col">
+                    <a
+                      href="mailto:rluniversalsupplies@gmail.com"
+                      className="rounded-md px-3 py-2 text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
+                      aria-label="Email us"
+                      title="Email"
+                    >
+                      <Mail className="h-4 w-4" />
+                      Email
+                    </a>
+                    <a
+                      href="https://wa.me/18136029576"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-md px-3 py-2 text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
+                      aria-label="Chat on WhatsApp"
+                      title="WhatsApp"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp
+                    </a>
+                    <a
+                      href="tel:+18136029576"
+                      className="rounded-md px-3 py-2 text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
+                      aria-label="Call us"
+                      title="Phone"
+                    >
+                      <Phone className="h-4 w-4" />
+                      Phone
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <a
               href="#location"
               onClick={scrollToStore}
@@ -249,6 +299,51 @@ export function SiteHeader() {
                   >
                     View all brands
                   </Link>
+                </div>
+              </div>
+            )}
+
+            <button
+              type="button"
+              className="w-full text-left text-base font-medium hover:text-primary transition-colors py-2 border-b border-muted flex items-center justify-between"
+              onClick={() => setMobileQuoteOpen((prev) => !prev)}
+            >
+              <span>Get a quote</span>
+              <ChevronDown className={`h-5 w-5 transition-transform ${mobileQuoteOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {mobileQuoteOpen && (
+              <div className="pb-2 border-b border-muted">
+                <div className="flex flex-col gap-1 py-2">
+                  <a
+                    href="mailto:rluniversalsupplies@gmail.com"
+                    className="px-3 py-2 rounded-md text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
+                    aria-label="Email us"
+                    title="Email"
+                  >
+                    <Mail className="h-4 w-4" />
+                    Email
+                  </a>
+                  <a
+                    href="https://wa.me/18136029576"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 rounded-md text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
+                    aria-label="Chat on WhatsApp"
+                    title="WhatsApp"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    WhatsApp
+                  </a>
+                  <a
+                    href="tel:+18136029576"
+                    className="px-3 py-2 rounded-md text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
+                    aria-label="Call us"
+                    title="Phone"
+                  >
+                    <Phone className="h-4 w-4" />
+                    Phone
+                  </a>
                 </div>
               </div>
             )}
