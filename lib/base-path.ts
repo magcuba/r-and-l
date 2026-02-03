@@ -4,5 +4,6 @@ export function withBasePath(src: string): string {
   if (!src) return src
   if (!src.startsWith("/")) return src
   if (!basePath) return src
+  if (src.startsWith(`${basePath}/`) || src === basePath) return src
   return `${basePath}${src}`
 }
