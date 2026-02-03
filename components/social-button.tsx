@@ -47,13 +47,14 @@ export function SocialButton({ className, ...props }: SocialButtonProps) {
 
   return (
     <div
-      className="relative"
+      className="relative h-10"
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >
       <motion.div
         animate={{ opacity: isVisible ? 0 : 1 }}
         transition={{ duration: 0.2, ease: "easeInOut" }}
+        className={cn(isVisible ? "pointer-events-none" : "pointer-events-auto")}
       >
         <Button
           type="button"
@@ -78,7 +79,12 @@ export function SocialButton({ className, ...props }: SocialButtonProps) {
 
       <motion.div
         animate={{ width: isVisible ? "auto" : 0 }}
-        className="absolute top-0 left-0 flex h-10 overflow-hidden"
+        className={cn(
+          "absolute top-0 left-0 flex h-10 overflow-hidden",
+          isVisible ? "pointer-events-auto" : "pointer-events-none",
+        )}
+        onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}
         transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
       >
         {shareButtons.map((button, i) => {
