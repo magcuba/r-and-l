@@ -30,13 +30,13 @@ function getSizes(product: Product): Size[] {
 
 function getImageForSize(product: Product, size: Size): string {
   const v = product.variants?.find((x) => x.size === size)
-  return v?.image || product.image || "/placeholder.png"
+  return v?.image || product.image || withBasePath("/placeholder.png")
 }
 
 export function ProductHero({ product }: { product: Product }) {
   const sizes = useMemo(() => getSizes(product), [product])
   const [size, setSize] = useState<Size>(() => getDefaultSize(product))
-  const img = useMemo(() => withBasePath(getImageForSize(product, size)), [product, size])
+  const img = useMemo(() => getImageForSize(product, size), [product, size])
 
   const hasVariants = sizes.length > 1
 

@@ -93,7 +93,7 @@ export function BrandsSection() {
                 aria-label={`Shop ${brand.name}`}
               >
                 <Image
-                  src={withBasePath(brand.logo || "/placeholder.svg")}
+                  src={brand.logo || withBasePath("/placeholder.svg")}
                   alt={brand.name}
                   width={160}
                   height={80}

@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/base-path"
+
 export type Brand = {
   name: string
   slug: string
@@ -5,7 +7,7 @@ export type Brand = {
   featured?: boolean
 }
 
-export const BRANDS: Brand[] = [
+const RAW_BRANDS: Brand[] = [
   {
     name: "P&S",
     slug: "ps",
@@ -37,5 +39,10 @@ export const BRANDS: Brand[] = [
     featured: true,
   },
 ]
+
+export const BRANDS: Brand[] = RAW_BRANDS.map((brand) => ({
+  ...brand,
+  logo: brand.logo ? withBasePath(brand.logo) : undefined,
+}))
 
 export const FEATURED_BRANDS = BRANDS.filter((b) => b.featured)

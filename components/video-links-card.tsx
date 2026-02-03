@@ -37,7 +37,7 @@ export function VideoLinksCard({ title, platform, url, thumbnail, description }:
       <Card className="overflow-hidden transition-all hover:shadow-lg hover:scale-[1.02] h-full">
         <div className="relative aspect-video overflow-hidden bg-muted">
           <Image
-            src={withBasePath(thumbnail || "/placeholder.svg")}
+            src={thumbnail || withBasePath("/placeholder.svg")}
             alt={title}
             fill
             className="object-cover transition-transform group-hover:scale-105"

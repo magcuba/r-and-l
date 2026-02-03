@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/base-path"
+
 export type Variant = {
   size:
     | "1L"
@@ -36,7 +38,7 @@ export type Product = {
   }
 }
 
-export const PRODUCTS: Product[] = [
+const RAW_PRODUCTS: Product[] = [
   {
     id: "kc-protector-wax-pw",
     brandSlug: "koch-chemie",
@@ -2767,3 +2769,12 @@ export const PRODUCTS: Product[] = [
     },
   },
 ]
+
+export const PRODUCTS: Product[] = RAW_PRODUCTS.map((product) => ({
+  ...product,
+  image: withBasePath(product.image),
+  variants: product.variants?.map((variant) => ({
+    ...variant,
+    image: withBasePath(variant.image),
+  })),
+}))

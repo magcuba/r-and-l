@@ -33,7 +33,7 @@ export default async function BrandPage({
       <div className="flex items-start gap-4">
         <div className="relative h-20 w-20 sm:h-16 sm:w-16 shrink-0 aspect-square overflow-hidden rounded-lg border bg-muted">
           <Image
-            src={withBasePath(brand.logo || "/placeholder.png")}
+            src={brand.logo || withBasePath("/placeholder.png")}
             alt={`${brand.name} logo`}
             fill
             className="object-contain p-1.5"
@@ -85,7 +85,7 @@ export default async function BrandPage({
                 {/* Image area */}
                 <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
                   <Image
-                    src={withBasePath(product.image || "/placeholder.png")}
+                    src={product.image || withBasePath("/placeholder.png")}
                     alt={product.name}
                     fill
                     className="object-contain p-2 sm:p-3 md:p-4"
