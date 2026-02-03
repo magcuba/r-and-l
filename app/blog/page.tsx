@@ -3,6 +3,7 @@
 import { VideoLinksCard } from "@/components/video-links-card"
 import { useLanguage } from "@/components/language-provider"
 import { Instagram, Facebook } from "lucide-react"
+import { withBasePath } from "@/lib/base-path"
 
 const howToVideos = [
   {
@@ -12,7 +13,7 @@ const howToVideos = [
     },
     platform: "youtube" as const,
     url: "https://youtube.com/watch?v=example1",
-    thumbnail: "/ceramic-coating-application.png",
+    thumbnail: withBasePath("/ceramic-coating-application.png"),
     description: {
       en: "Step-by-step guide to applying ceramic coating for long-lasting protection",
       es: "Guía paso a paso para aplicar recubrimiento cerámico y lograr protección duradera",
@@ -25,7 +26,7 @@ const howToVideos = [
     },
     platform: "tiktok" as const,
     url: "https://tiktok.com/@example/video/1",
-    thumbnail: "/car-wash-foam-cannon-action.jpg",
+    thumbnail: withBasePath("/car-wash-foam-cannon-action.jpg"),
     description: {
       en: "Master the foam cannon for the ultimate pre-wash",
       es: "Domina el foam cannon para el prelavado perfecto",
@@ -38,7 +39,7 @@ const howToVideos = [
     },
     platform: "instagram" as const,
     url: "https://www.instagram.com/rluniversalsuppliesen/",
-    thumbnail: "/car-detailing-polish.jpg",
+    thumbnail: withBasePath("/car-detailing-polish.jpg"),
     description: {
       en: "Professional interior detailing tips and tricks",
       es: "Consejos y trucos de detallado interior profesional",
@@ -51,7 +52,7 @@ const howToVideos = [
     },
     platform: "youtube" as const,
     url: "https://youtube.com/watch?v=example2",
-    thumbnail: "/professional-car-wash-tutorial.jpg",
+    thumbnail: withBasePath("/professional-car-wash-tutorial.jpg"),
     description: {
       en: "Learn the fundamentals of paint correction and polishing",
       es: "Aprende los fundamentos de la corrección y pulido de pintura",
@@ -67,7 +68,7 @@ const recommendations = [
     },
     platform: "youtube" as const,
     url: "https://youtube.com/watch?v=example3",
-    thumbnail: "/car-wash-foam-spray.jpg",
+    thumbnail: withBasePath("/car-wash-foam-spray.jpg"),
     description: {
       en: "Our top product recommendations for maintaining black paint",
       es: "Nuestras mejores recomendaciones para mantener la pintura negra",
@@ -80,7 +81,7 @@ const recommendations = [
     },
     platform: "instagram" as const,
     url: "https://www.instagram.com/rluniversalsuppliesen/",
-    thumbnail: "/car-detailing-before-after.jpg",
+    thumbnail: withBasePath("/car-detailing-before-after.jpg"),
     description: {
       en: "Must-have products to protect your car during winter months",
       es: "Productos imprescindibles para proteger tu auto en invierno",
@@ -93,7 +94,7 @@ const recommendations = [
     },
     platform: "tiktok" as const,
     url: "https://tiktok.com/@example/video/2",
-    thumbnail: "/car-detailing-polish.jpg",
+    thumbnail: withBasePath("/car-detailing-polish.jpg"),
     description: {
       en: "Fast and effective products for maintaining your car's shine",
       es: "Productos rápidos y efectivos para mantener el brillo del auto",
@@ -106,7 +107,7 @@ const recommendations = [
     },
     platform: "youtube" as const,
     url: "https://youtube.com/watch?v=example4",
-    thumbnail: "/car-wash-foam-cannon-action.jpg",
+    thumbnail: withBasePath("/car-wash-foam-cannon-action.jpg"),
     description: {
       en: "The best wheel cleaners for different types of wheels",
       es: "Los mejores limpiadores para diferentes tipos de ruedas",

@@ -11,6 +11,7 @@ import { FEATURED_BRANDS } from "@/lib/brands"
 import { useLanguage } from "@/components/language-provider"
 import { useRouter, usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
+import { withBasePath } from "@/lib/base-path"
 
 export function SiteHeader() {
   const { lang, toggleLang, t } = useLanguage()
@@ -132,7 +133,7 @@ export function SiteHeader() {
             className="flex items-center space-x-2 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
           >
             <Image
-              src="/images/logo.png"
+              src={withBasePath("/images/logo.png")}
               alt="R&L Logo"
               width={240}
               height={120}

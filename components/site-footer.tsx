@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Instagram, Facebook } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { withBasePath } from "@/lib/base-path"
 
 export function SiteFooter() {
   const { t } = useLanguage()
@@ -14,7 +15,13 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2">
-              <Image src="/images/logo.png" alt="R&L Logo" width={140} height={70} className="h-16 w-auto" />
+              <Image
+                src={withBasePath("/images/logo.png")}
+                alt="R&L Logo"
+                width={140}
+                height={70}
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-sm text-muted-foreground text-pretty">{t("footer_tagline")}</p>
           </div>

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react"
 import { useLanguage } from "@/components/language-provider"
 import Image from "next/image"
 import Link from "next/link"
+import { withBasePath } from "@/lib/base-path"
 
 export function HeroSection() {
   const { t } = useLanguage()
@@ -11,9 +12,9 @@ export function HeroSection() {
 
   const videos = useMemo(
     () => [
-      { id: 1, title: t("hero_slide_1_title"), url: "/car-wash-foam-spray.jpg" },
-      { id: 2, title: t("hero_slide_2_title"), url: "/car-detailing-polish.jpg" },
-      { id: 3, title: t("hero_slide_3_title"), url: "/car-care-products-store.jpg" },
+      { id: 1, title: t("hero_slide_1_title"), url: withBasePath("/car-wash-foam-spray.jpg") },
+      { id: 2, title: t("hero_slide_2_title"), url: withBasePath("/car-detailing-polish.jpg") },
+      { id: 3, title: t("hero_slide_3_title"), url: withBasePath("/car-care-products-store.jpg") },
     ],
     [t],
   )
@@ -66,7 +67,7 @@ export function HeroSection() {
                 }`}
               >
                 <Image
-                  src={video.url || "/placeholder.svg"}
+                  src={video.url || withBasePath("/placeholder.svg")}
                   alt={video.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

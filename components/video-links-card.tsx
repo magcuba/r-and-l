@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Play, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/base-path"
 
 interface VideoLinksCardProps {
   title: string
@@ -36,7 +37,7 @@ export function VideoLinksCard({ title, platform, url, thumbnail, description }:
       <Card className="overflow-hidden transition-all hover:shadow-lg hover:scale-[1.02] h-full">
         <div className="relative aspect-video overflow-hidden bg-muted">
           <Image
-            src={thumbnail || "/placeholder.svg"}
+            src={withBasePath(thumbnail || "/placeholder.svg")}
             alt={title}
             fill
             className="object-cover transition-transform group-hover:scale-105"

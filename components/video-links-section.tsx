@@ -4,6 +4,7 @@ import { Play } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { useMemo } from "react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/base-path"
 
 interface VideoLink {
   id: string
@@ -25,28 +26,28 @@ export function VideoLinksSection() {
         id: "1",
         platform: "tiktok",
         url: "https://www.tiktok.com/@rluniversalsupplies?_r=1&_t=ZP-9356bCPOkJy",
-        thumbnail: "/car-wash-foam-cannon-action.jpg",
+        thumbnail: withBasePath("/car-wash-foam-cannon-action.jpg"),
         title: t("video_1_title"),
       },
       {
         id: "2",
         platform: "facebook",
         url: "https://www.facebook.com/share/17yRkRphLn/?mibextid=wwXIfr",
-        thumbnail: "/car-detailing-before-after.jpg",
+        thumbnail: withBasePath("/car-detailing-before-after.jpg"),
         title: t("video_2_title"),
       },
       {
         id: "3",
         platform: "instagram",
         url: "https://www.instagram.com/rluniversalsuppliesen/",
-        thumbnail: "/professional-car-wash-tutorial.jpg",
+        thumbnail: withBasePath("/professional-car-wash-tutorial.jpg"),
         title: t("video_3_title"),
       },
       {
         id: "4",
         platform: "tiktok",
         url: "https://www.tiktok.com/@rluniversalsupplies?_r=1&_t=ZP-9356bCPOkJy",
-        thumbnail: "/ceramic-coating-application.png",
+        thumbnail: withBasePath("/ceramic-coating-application.png"),
         title: t("video_4_title"),
       },
     ]
@@ -78,7 +79,7 @@ export function VideoLinksSection() {
             >
               <div className="aspect-[3/4] relative">
                 <Image
-                  src={video.thumbnail || "/placeholder.svg"}
+                  src={video.thumbnail || withBasePath("/placeholder.svg")}
                   alt={video.title}
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"

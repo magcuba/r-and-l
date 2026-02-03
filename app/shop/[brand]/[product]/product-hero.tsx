@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { useMemo, useState } from "react"
 import type { Product, Variant } from "@/lib/products"
+import { withBasePath } from "@/lib/base-path"
 
 type Size = Variant["size"]
 
@@ -35,7 +36,7 @@ function getImageForSize(product: Product, size: Size): string {
 export function ProductHero({ product }: { product: Product }) {
   const sizes = useMemo(() => getSizes(product), [product])
   const [size, setSize] = useState<Size>(() => getDefaultSize(product))
-  const img = useMemo(() => getImageForSize(product, size), [product, size])
+  const img = useMemo(() => withBasePath(getImageForSize(product, size)), [product, size])
 
   const hasVariants = sizes.length > 1
 

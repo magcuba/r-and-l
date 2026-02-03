@@ -4,13 +4,14 @@ import { useEffect, useRef, useState } from "react"
 import { useLanguage } from "@/components/language-provider"
 import Image from "next/image"
 import Link from "next/link"
+import { withBasePath } from "@/lib/base-path"
 
 const brands = [
-  { name: "P&S", slug: "ps", logo: "/ps-logo.png" },
-  { name: "Koch-Chemie", slug: "koch-chemie", logo: "/koch-chemie-logo.png" },
-  { name: "FalconPro", slug: "falconpro", logo: "/falconpro-logo.png" },
-  { name: "Lake Country", slug: "lake-country", logo: "/lake-country-logo.png" },
-  { name: "Power Kleen", slug: "power-kleen", logo: "/power-kleen-logo.png" },
+  { name: "P&S", slug: "ps", logo: withBasePath("/ps-logo.png") },
+  { name: "Koch-Chemie", slug: "koch-chemie", logo: withBasePath("/koch-chemie-logo.png") },
+  { name: "FalconPro", slug: "falconpro", logo: withBasePath("/falconpro-logo.png") },
+  { name: "Lake Country", slug: "lake-country", logo: withBasePath("/lake-country-logo.png") },
+  { name: "Power Kleen", slug: "power-kleen", logo: withBasePath("/power-kleen-logo.png") },
 ]
 
 export function BrandsSection() {
@@ -92,7 +93,7 @@ export function BrandsSection() {
                 aria-label={`Shop ${brand.name}`}
               >
                 <Image
-                  src={brand.logo || "/placeholder.svg"}
+                  src={withBasePath(brand.logo || "/placeholder.svg")}
                   alt={brand.name}
                   width={160}
                   height={80}

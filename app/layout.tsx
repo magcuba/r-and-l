@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { ThemeProvider } from "@/components/theme-provider"
+import { withBasePath } from "@/lib/base-path"
 
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -16,10 +17,10 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "/images/logo.png", type: "image/png", sizes: "512x512" },
+      { url: withBasePath("/favicon.png"), type: "image/png", sizes: "32x32" },
+      { url: withBasePath("/images/logo.png"), type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+    apple: [{ url: withBasePath("/apple-touch-icon.png"), type: "image/png", sizes: "180x180" }],
   },
 }
 

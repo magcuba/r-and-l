@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/components/language-provider"
+import { withBasePath } from "@/lib/base-path"
 
 interface Product {
   id: number
@@ -14,49 +15,49 @@ const bestSellers: Product[] = [
   {
     id: 1,
     name: "Falcon Pro Wash & Wax Concentrate",
-    image: "/falcon-pro-wash-wax.png",
+    image: withBasePath("/falcon-pro-wash-wax.png"),
     category: "Washing",
   },
   {
     id: 2,
     name: "Koch Chemie Protector Wax",
-    image: "/koch-chemie-protector-wax.png",
+    image: withBasePath("/koch-chemie-protector-wax.png"),
     category: "Protection",
   },
   {
     id: 3,
     name: "P&S Xpress Interior Cleaner",
-    image: "/ps-xpress-interior-cleaner.png",
+    image: withBasePath("/ps-xpress-interior-cleaner.png"),
     category: "Interior",
   },
   {
     id: 4,
     name: "WAB Aluminum & Stainless Steel Cleaner",
-    image: "/wab-aluminum-cleaner.png",
+    image: withBasePath("/wab-aluminum-cleaner.png"),
     category: "Cleaning",
   },
   {
     id: 5,
     name: "Falcon Pro Wash & Wax Concentrate",
-    image: "/falcon-pro-wash-wax.png",
+    image: withBasePath("/falcon-pro-wash-wax.png"),
     category: "Washing",
   },
   {
     id: 6,
     name: "Koch Chemie Protector Wax",
-    image: "/koch-chemie-protector-wax.png",
+    image: withBasePath("/koch-chemie-protector-wax.png"),
     category: "Protection",
   },
   {
     id: 7,
     name: "P&S Xpress Interior Cleaner",
-    image: "/ps-xpress-interior-cleaner.png",
+    image: withBasePath("/ps-xpress-interior-cleaner.png"),
     category: "Interior",
   },
   {
     id: 8,
     name: "WAB Aluminum & Stainless Steel Cleaner",
-    image: "/wab-aluminum-cleaner.png",
+    image: withBasePath("/wab-aluminum-cleaner.png"),
     category: "Cleaning",
   },
 ]
@@ -102,7 +103,7 @@ export function BestSellersSection() {
                   >
                     <div className="relative h-56 bg-muted p-4">
                       <Image
-                        src={product.image || "/placeholder.svg"}
+                        src={withBasePath(product.image || "/placeholder.svg")}
                         alt={product.name}
                         fill
                         className="object-contain"
